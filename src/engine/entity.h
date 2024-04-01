@@ -111,6 +111,8 @@ public:
     const uint8_t getAliveMembersCount() const;
     uint8_t getMemberPosition(const std::shared_ptr<const Entity> &member) const;
     void swapMembers(const uint8_t &index1, const uint8_t &index2);
+    void swapMembers(const std::shared_ptr<Entity> &member1, const std::shared_ptr<Entity> &member2);
+    bool hasMember(const std::shared_ptr<const Entity> &member) const;
     void arrangeMembers();
     void clear();
     void memberDied(const std::shared_ptr<Entity> &member);

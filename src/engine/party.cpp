@@ -66,6 +66,31 @@ void Party::swapMembers(const uint8_t &index1, const uint8_t &index2) {
     }
 }
 
+void Party::swapMembers(const std::shared_ptr<Entity> &member1, const std::shared_ptr<Entity> &member2) {
+    if (member1 == member2)
+        return;
+    else if (hasMember(member1) && hasMember(member2)) {
+        uint8_t index1 = getMemberPosition(member1);
+        uint8_t index2 = getMemberPosition(member2);
+        swapMembers(index1, index2);
+    } else if (!hasMember(member1) && hasMember(member2)) {
+        uint8_t old_idx = getMemberPosition(member2);
+        removeMember(member2);
+        addMember(member1);
+        uint8_t new_idx = getMemberPosition(member1);
+        swapMembers(old_idx, new_idx);
+    } else if (hasMember(member1) && !hasMember(member2)) {
+        uint8_t old_idx = getMemberPosition(member1);
+        removeMember(member1);
+        addMember(member2);
+        uint8_t new_idx = getMemberPosition(member2);
+        swapMembers(old_idx, new_idx);
+    } else {
+        throw std::runtime_error("Members not found in the party");
+    }
+    logging::debug("Swapped members " + member1->getName() + " and " + member2->getName());
+}
+
 void Party::arrangeMembers() {
     // move dead members to the end
     // bubble sort
@@ -86,6 +111,10 @@ void Party::memberDied(const std::shared_ptr<Entity> &member) {
     logging::debug("Member " + member->getName() + " died");
     // arrangeMembers();
     // removeMember(member);
+}
+
+bool Party::hasMember(const std::shared_ptr<const Entity> &member) const {
+    return std::find(m_members.begin(), m_members.end(), member) != m_members.end();
 }
 
 }   // namespace entities

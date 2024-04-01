@@ -21,6 +21,7 @@ class PartyMenu : public GameState {
         kMain,
         kInventory,
         kSkills,
+        kTeammateChoice,
     };
 
     std::shared_ptr<engine::entities::Party> getParty() {
@@ -31,6 +32,8 @@ class PartyMenu : public GameState {
         m_engine = gm->m_engine;
         m_selected_hero = 0;
         m_selected_skill = 0;
+        m_selected_item = 0;
+        m_selected_teammate = 0;
         km.reset();
         for (auto &hero : getParty()->getMembers()) {
             views::Entity::getView(hero)->setSelection(views::Entity::Selection::kSelectable).setDrawStats(false);
@@ -59,6 +62,12 @@ class PartyMenu : public GameState {
         }
         if (km.isClicked(keyboard::KEY_O)) {
             m_state = PartyMenuState::kSkills;
+        }
+        if (km.isClicked(keyboard::KEY_C)) {
+            const auto &teammates = m_engine.lock()->getCampTeammates();
+            m_selected_teammate = std::find(teammates.begin(), teammates.end(), getParty()->getMember(m_selected_hero))
+                - teammates.begin();
+            m_state = PartyMenuState::kTeammateChoice;
         }
     }
 
@@ -109,6 +118,30 @@ class PartyMenu : public GameState {
         }
     }
 
+    void updateTeammateChoice(GameMachine *gm) {
+        const auto &teammates = m_engine.lock()->getCampTeammates();
+
+        if (km.isClicked(keyboard::MOVE_LEFT) || km.isClicked(keyboard::MOVE_RIGHT)) {
+            views::Entity::getView(teammates[m_selected_teammate])
+                ->setSelection(views::Entity::Selection::kSelectable)
+                .setDrawStats(false);
+            if (km.isClicked(keyboard::MOVE_LEFT)) {
+                m_selected_teammate = (m_selected_teammate + teammates.size() - 1) % teammates.size();
+            } else if (km.isClicked(keyboard::MOVE_RIGHT)) {
+                m_selected_teammate = (m_selected_teammate + 1) % teammates.size();
+            }
+            views::Entity::getView(teammates[m_selected_teammate])
+                ->setSelection(views::Entity::Selection::kSelected)
+                .setDrawStats(true);
+        }
+        if (km.isClicked(keyboard::KEY_ENTER)) {
+            auto hero = getParty()->getMember(m_selected_hero);
+            auto teammate = teammates[m_selected_teammate];
+            getParty()->swapMembers(hero, teammate);
+            m_state = PartyMenuState::kMain;
+        }
+    }
+
     void update(GameMachine *gm) override {
         km.update();
 
@@ -122,6 +155,8 @@ class PartyMenu : public GameState {
             updateInventory(gm);
         } else if (m_state == PartyMenuState::kSkills) {
             updateSkills(gm);
+        } else if (m_state == PartyMenuState::kTeammateChoice) {
+            updateTeammateChoice(gm);
         }
 
         render(gm->m_renderer.lock());
@@ -273,12 +308,35 @@ class PartyMenu : public GameState {
         }
     }
 
+    void drawTeammateChoice(const std::shared_ptr<graphics::Renderer> &r) {
+        auto party = getParty();
+        auto hero = party->getMember(m_selected_hero);
+        const auto &teammates = m_engine.lock()->getCampTeammates();
+        Vector2d base = utils::getEntityPosition(1);
+        Vector2d offset = utils::getEntityPosition(1) - utils::getEntityPosition(0);
+        for (uint8_t i = 0; i < teammates.size(); i++) {
+            auto teammate = teammates[i];
+            auto view = views::Entity::getView(teammate);
+            view->setPosition(base + offset * i);
+            if (m_state == PartyMenuState::kTeammateChoice) {
+                if (i == m_selected_teammate) {
+                    view->setSelection(views::Entity::Selection::kSelected);
+                } else {
+                    view->setSelection(views::Entity::Selection::kSelectable);
+                }
+            }
+            r->draw(view);
+        }
+    }
+
     void render(const std::shared_ptr<graphics::Renderer> &r) {
         r->clear();
         auto party = getParty();
-        for (uint8_t i = 0; i < party->getMembersCount(); i++) {
-            auto hero = party->getMember(i);
-            r->draw(views::Entity::getView(hero)->setPosition(utils::getEntityPosition(3 - i)));
+        if (m_state != PartyMenuState::kTeammateChoice) {
+            for (uint8_t i = 0; i < party->getMembersCount(); i++) {
+                auto hero = party->getMember(i);
+                r->draw(views::Entity::getView(hero)->setPosition(utils::getEntityPosition(3 - i)));
+            }
         }
         r->draw(graphics::Text("Party Menu")
                     .setFontSize(50)
@@ -290,6 +348,9 @@ class PartyMenu : public GameState {
             r->draw(graphics::Text("Press O to open skills")
                         .setFontSize(20)
                         .setPosition({cfg::WINDOW_WIDTH / 20, cfg::WINDOW_HEIGHT / 18 + 100}));
+            r->draw(graphics::Text("Press C to change member")
+                        .setFontSize(20)
+                        .setPosition({cfg::WINDOW_WIDTH / 20, cfg::WINDOW_HEIGHT / 18 + 130}));
             drawInventory(r);
             drawSkills(r);
         }
@@ -305,6 +366,12 @@ class PartyMenu : public GameState {
                         .setPosition({cfg::WINDOW_WIDTH / 20, cfg::WINDOW_HEIGHT / 18 + 70}));
             drawSkills(r);
         }
+        if (m_state == PartyMenuState::kTeammateChoice) {
+            r->draw(graphics::Text("Press Enter to select")
+                        .setFontSize(20)
+                        .setPosition({cfg::WINDOW_WIDTH / 20, cfg::WINDOW_HEIGHT / 18 + 70}));
+            drawTeammateChoice(r);
+        }
         r->display();
     }
 
@@ -313,6 +380,7 @@ class PartyMenu : public GameState {
     uint8_t m_selected_hero;
     uint8_t m_selected_skill;
     uint32_t m_selected_item;
+    uint32_t m_selected_teammate;
     PartyMenuState m_state;
 };
 
