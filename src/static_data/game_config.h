@@ -26,6 +26,7 @@ const keyboard::Key CONTROLS_SECONDARY = keyboard::Key::KEY_C;
 const uint32_t DIALOGUE_FONT_SIZE = 24;
 const uint32_t DIALOGUE_FONT_SPEED = 30;
 const std::string FONT_PATH = "courier";
+const std::string DEFAULT_FONT = "courier";
 
 // !! Later put fonts into epic-dungeons/res/fonts !!
 #ifdef _WIN32

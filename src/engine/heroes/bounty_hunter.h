@@ -17,8 +17,8 @@ public:
         m_name = "Bounty Hunter";
         m_health = 25;
         m_max_health = 25;
-        m_weapon = std::make_shared<items::AbandonedAxe>();
-        m_armor = std::make_shared<items::BountyHunterArmor>();
+        setWeapon(std::make_shared<items::AbandonedAxe>());
+        setArmor(std::make_shared<items::BountyHunterArmor>());
         addSkill<skills::CollectBounty>();
         addSkill<skills::TargetTag>();
     }

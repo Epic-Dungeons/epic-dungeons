@@ -1,4 +1,5 @@
 #pragma once
+#include "game_object.h"
 #include <cstdint>
 #include <memory>
 #include <string>
@@ -20,7 +21,8 @@ enum class TargetType {
     kOtherParty,
 };
 
-struct Skill {
+struct Skill : public GameObject, public std::enable_shared_from_this<Skill> {
+    Skill() = default;
     virtual ~Skill() = default;
 
     std::string id;

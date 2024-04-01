@@ -1,8 +1,8 @@
 #include "dungeon/makers/dungeon-maker.h"
+#include "graphics/graphics.h"
 #include "gui_controller/controller.h"
 #include "keyboard/keyboard.h"
 #include "logging/logger.h"
-#include "renderer/graphics.h"
 #include "static_data/game_config.h"
 #include <SFML/Graphics.hpp>
 #include <chrono>
@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
         }
         frames_counter++;
         accumulated_time += delta_time;
-        
+
         if (frames_counter == frames_to_average) {
             uint64_t average_time = accumulated_time / frames_to_average;
 

@@ -17,8 +17,8 @@ public:
         m_name = "Grave Robber";
         m_health = 40;
         m_max_health = 40;
-        m_weapon = std::make_shared<items::PickAndKnives>();
-        m_armor = std::make_shared<items::GraveRobberArmor>();
+        setWeapon(std::make_shared<items::PickAndKnives>());
+        setArmor(std::make_shared<items::GraveRobberArmor>());
         addSkill<skills::Pick>();
         addSkill<skills::FlashingDaggers>();
     }

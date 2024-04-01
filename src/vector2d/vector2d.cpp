@@ -1,53 +1,82 @@
 #include "vector2d.h"
 #include <cmath>
 using namespace std;
-Vector2d::Vector2d(float x, float y) : m_x(x), m_y(y) {};
-Vector2d::Vector2d(sf::Vector2u vector) : m_x(vector.x), m_y(vector.y) {};
+Vector2d::Vector2d(const float &x, const float &y) : x(x), y(y) {};
 
-Vector2d Vector2d::operator+(const Vector2d &other) const {
-    return Vector2d(m_x + other.m_x, m_y + other.m_y);
+Vector2d &Vector2d::operator=(const Vector2d &other) {
+    const_cast<float &>(x) = other.x;
+    const_cast<float &>(y) = other.y;
+    return *this;
 }
 
-Vector2d Vector2d::operator-(const Vector2d &other) const {
-    return Vector2d(m_x - other.m_x, m_y - other.m_y);
+const Vector2d Vector2d::operator+(const Vector2d &other) const {
+    return Vector2d(x + other.x, y + other.y);
 }
 
-Vector2d Vector2d::operator-() const {
-    return Vector2d(-m_x, -m_y);
+const Vector2d Vector2d::operator-(const Vector2d &other) const {
+    return Vector2d(x - other.x, y - other.y);
 }
 
-Vector2d Vector2d::operator*(float b) const {
-    return Vector2d(m_x * b, m_y * b);
+const Vector2d Vector2d::operator-() const {
+    return Vector2d(-x, -y);
 }
 
-Vector2d Vector2d::operator/(float b) const {
-    return Vector2d(m_x / b, m_y / b);
+const Vector2d Vector2d::operator*(const float &b) const {
+    return Vector2d(x * b, y * b);
 }
 
-Vector2d Vector2d::round() const {
-    return Vector2d(roundf(m_x), roundf(m_y));
+const Vector2d Vector2d::operator/(const float &b) const {
+    return Vector2d(x / b, y / b);
 }
 
-float Vector2d::length_squared() const {
-    return pow(m_x, 2) + pow(m_y, 2);
+const Vector2d Vector2d::round() const {
+    return Vector2d(roundf(x), roundf(y));
 }
 
-float Vector2d::length() const {
+const float Vector2d::length_squared() const {
+    return x * x + y * y;
+}
+
+const float Vector2d::length() const {
     return sqrt(length_squared());
 }
 
-Vector2d Vector2d::normalized() const {
-    return (*this) / length();
+const Vector2d Vector2d::normalized() const {
+    return *this / length();
 }
 
-int Vector2d::manhattan_length() const {
-    return std::round(fabs(m_x) + fabs(m_y));
+const int Vector2d::manhattan_length() const {
+    return abs(x) + abs(y);
 }
 
-float Vector2d::x() const {
-    return m_x;
+const sf::Vector2f Vector2d::toSF() const {
+    return sf::Vector2f(x, y);
 }
 
-float Vector2d::y() const {
-    return m_y;
+const string Vector2d::toString() const {
+    return "(" + to_string(x) + ", " + to_string(y) + ")";
+}
+
+const Vector2d &Vector2d::operator+=(const Vector2d &other) {
+    const_cast<float &>(x) += other.x;
+    const_cast<float &>(y) += other.y;
+    return *this;
+}
+
+const Vector2d &Vector2d::operator-=(const Vector2d &other) {
+    const_cast<float &>(x) -= other.x;
+    const_cast<float &>(y) -= other.y;
+    return *this;
+}
+
+const Vector2d &Vector2d::operator*=(const float &b) {
+    const_cast<float &>(x) *= b;
+    const_cast<float &>(y) *= b;
+    return *this;
+}
+
+const Vector2d &Vector2d::operator/=(const float &b) {
+    const_cast<float &>(x) /= b;
+    const_cast<float &>(y) /= b;
+    return *this;
 }

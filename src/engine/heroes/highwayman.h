@@ -17,8 +17,8 @@ public:
         m_name = "Highwayman";
         m_health = 23;
         m_max_health = 23;
-        m_weapon = std::make_shared<items::Pistol>();
-        m_armor = std::make_shared<items::HighwaymanArmor>();
+        setWeapon(std::make_shared<items::Pistol>());
+        setArmor(std::make_shared<items::HighwaymanArmor>());
         addSkill<skills::PistolShot>();
         addSkill<skills::WickedSlice>();
     }

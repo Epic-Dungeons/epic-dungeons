@@ -17,8 +17,8 @@ public:
         m_name = "Abomination";
         m_health = 26;
         m_max_health = 26;
-        m_weapon = std::make_shared<items::IncubatingMutation>();
-        m_armor = std::make_shared<items::AbominationArmor>();
+        setWeapon(std::make_shared<items::IncubatingMutation>());
+        setArmor(std::make_shared<items::AbominationArmor>());
         addSkill<skills::Manacles>();
         addSkill<skills::Vomit>();
     }

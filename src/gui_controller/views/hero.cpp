@@ -4,6 +4,7 @@
 namespace gui {
 namespace views {
 
+namespace {
 static std::map<std::string, std::shared_ptr<graphics::Animation>> animations;
 static std::map<std::string, std::shared_ptr<graphics::Sprite>> sprites;
 
@@ -20,117 +21,115 @@ static std::shared_ptr<graphics::Sprite> getSprite(const std::string &path) {
     }
     return sprites[path];
 }
-
-const Vector2d getPosition(uint8_t position) {
-    static const float space_left = 0.0f;
-    static const float space_right = cfg::WINDOW_WIDTH * 0.95f;
-    static const float space_width = space_right - space_left;
-    static const float entities_bottom = cfg::WINDOW_HEIGHT * 9 / 12;
-    static const float mid = (space_left + space_right) / 2;
-    static const float team_width = space_width * 4.2 / 9;
-    static const float team_spacing = team_width * 0.28;
-    static const float team_mid_offset = team_width * 1.7 / 10;
-
-    static std::vector<Vector2d> positions = {
-        {mid - team_mid_offset - team_spacing * 3, entities_bottom},
-        {mid - team_mid_offset - team_spacing * 2, entities_bottom},
-        {mid - team_mid_offset - team_spacing * 1, entities_bottom},
-        {mid - team_mid_offset - team_spacing * 0, entities_bottom},
-        {mid + team_mid_offset + team_spacing * 0, entities_bottom},
-        {mid + team_mid_offset + team_spacing * 1, entities_bottom},
-        {mid + team_mid_offset + team_spacing * 2, entities_bottom},
-        {mid + team_mid_offset + team_spacing * 3, entities_bottom},
-    };
-    return positions[position];
-};
-
-const void Entity::render(const std::shared_ptr<graphics::Renderer> &renderer, const uint8_t &position,
-                          const float &animation_progress) {
-    auto entity = m_entity.lock();
-    std::shared_ptr<graphics::Sprite> sprite;
-    float dh = 0;
-    if (entity->isAlive()) {
-        sprite = m_animations[m_state]->getFrame();
-        sprite->setScale(1);
-        sprite->setRotation(animation_progress * 360);
-    } else {
-        sprite = m_grave;
-        sprite->setScale(0.32);
-        dh = sin(animation_progress * 3.14) * 15;
-    }
-    if (position <= 3)
-        sprite->setFlip(false, false);
-    else
-        sprite->setFlip(true, false);
-
-    Vector2d bottom_center = getPosition(position);
-    static const float entity_width = cfg::WINDOW_WIDTH / (8);
-    const float entity_height = sprite->getSize().y();
-
-    Vector2d size = {entity_width, entity_height};
-    Vector2d top_left = bottom_center - Vector2d {size.x() / 2, size.y()};
-    Vector2d bottom_left = top_left + Vector2d {0, size.y()};
-    // if (entity->isAlive())
-    // sprite->setColor("#ffffff");
-    // else
-    // sprite->setColor("#ff0000");
-    renderer->draw(*sprite, top_left.x(), top_left.y() - dh);
-    graphics::Text name = graphics::Text(entity->getName(), "arial", 20).setStyle(sf::Text::Bold);
-    graphics::Text health = graphics::Text("Health: " + std::to_string(entity->getHealth()), "arial", 20);
-
-    float width = size.x();
-    float name_offset = 0;
-    float health_offset = 0;
-    if (position <= 3) {
-        name_offset = 0;
-        health_offset = 0;
-    } else {
-        name_offset = width - name.getSize().x();
-        health_offset = width - health.getSize().x();
-    }
-
-    renderer->draw(name, bottom_left.x() + name_offset, bottom_left.y());
-    renderer->draw(health, bottom_left.x() + health_offset, bottom_left.y() + 20);
-    if (m_selection == Selection::kSelected) {
-        Vector2d bottom_center = getPosition(position);
-        renderer->draw(graphics::Text("/\\", "arial", 20).setStyle(sf::Text::Bold).setColor("#00ff00"),
-                       bottom_center.x(), bottom_center.y() + 40);
-    }
-    if (m_selection == Selection::kTarget) {
-        Vector2d bottom_center = getPosition(position);
-        renderer->draw(graphics::Text("/\\", "arial", 20).setStyle(sf::Text::Bold).setColor("#ff0000"),
-                       bottom_center.x(), bottom_center.y() + 40);
-    }
-    if (m_selection == Selection::kSelectable) {
-        Vector2d bottom_center = getPosition(position);
-        renderer->draw(graphics::Text("X", "arial", 20).setStyle(sf::Text::Bold).setColor("#999999"), bottom_center.x(),
-                       bottom_center.y() + 40);
-    }
-    if (m_selection == Selection::kTargetable) {
-        Vector2d bottom_center = getPosition(position);
-        renderer->draw(graphics::Text("X", "arial", 20).setStyle(sf::Text::Bold).setColor("#999999"), bottom_center.x(),
-                       bottom_center.y() + 40);
-    }
-    if (m_selection == Selection::kNotSelectable) {
-        Vector2d bottom_center = getPosition(position);
-        renderer->draw(graphics::Text("X", "arial", 20).setStyle(sf::Text::Bold).setColor("#000000"), bottom_center.x(),
-                       bottom_center.y() + 40);
-    }
-    if (m_selection == Selection::kNotTargetable) {
-        Vector2d bottom_center = getPosition(position);
-        renderer->draw(graphics::Text("X", "arial", 20).setStyle(sf::Text::Bold).setColor("#000000"), bottom_center.x(),
-                       bottom_center.y() + 40);
-    }
-}
+}   // namespace
 
 void Entity::bind(const std::shared_ptr<engine::entities::Entity> &entity) {
     m_entity = entity;
-    std::string path = "heroes/" + entity->getId();
-    m_animations[State::kIdle] = getAnimation(path + "/idle.gif");
-    m_animations[State::kCombat] = getAnimation(path + "/combat.gif");
-    m_portrait = getSprite(path + "/portrait.png");
-    m_grave = getSprite("heroes/grave.png");
-    m_grave->setScale(0.32);
+    m_animations.clear();
+    m_portrait = nullptr;
+    m_grave = nullptr;
+
+    if (entity) {
+        m_portrait = getSprite("heroes/" + entity->getId() + "/portrait.png");
+        m_grave = getSprite("heroes/grave.png");
+        m_grave->setScale(0.4f).setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER);
+        m_animations[State::kIdle] = getAnimation("heroes/" + entity->getId() + "/idle.gif");
+        m_animations[State::kCombat] = getAnimation("heroes/" + entity->getId() + "/combat.gif");
+    }
+}
+
+void Entity::draw(const graphics::Renderer &renderer) const {
+    auto entity = m_entity.lock();
+    if (!entity) {
+        throw std::runtime_error("Entity is not bound");
+        return;
+    }
+    if (m_draw_stats)
+        drawStats(renderer, {0, 0});
+
+    static std::map<Selection, graphics::Color> selection_colors = {
+        {Selection::kNone, 0xffffff},
+        {Selection::kSelected, 0xffffff},
+        {Selection::kSelectable, 0x666666},
+        {Selection::kNotSelectable, 0x222222},
+    };
+
+    const graphics::Color &selection_color = selection_colors.find(m_selection)->second;
+
+    if (!entity->isAlive()) {
+        renderer.draw(m_grave->setPosition(m_position).setColor(selection_color));
+        return;
+    }
+    graphics::AnimationPtr animation = m_animations.find(m_state)->second;
+    if (animation) {
+        animation->setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER).setColor(selection_color);
+        renderer.draw(animation->setPosition(m_position));
+    } else {
+        logging::error("No animation found for state " + std::to_string(static_cast<uint8_t>(m_state)));
+        renderer.draw(graphics::Sprite("missing.png").setPosition(m_position));
+    }
+}
+
+void Entity::drawStats(const graphics::Renderer &renderer, const Vector2d &position) const {
+    auto entity = m_entity.lock();
+    if (!entity) {
+        throw std::runtime_error("Entity is not bound");
+        return;
+    }
+
+    std::string health = "HP: " + std::to_string(entity->getHealth()) + "/" + std::to_string(entity->getMaxHealth());
+    std::string speed = "SPD: " + std::to_string(entity->getSpeed());
+    // std::string attack = "ATK: " + std::to_string(entity->getAttack()) + "%";
+    std::string defense = "DEF: " + std::to_string(entity->getDodge()) + "%";
+    std::string crit = "CRT: " + std::to_string(entity->getCrit()) + "%";
+    std::string damage =
+        "DMG: " + std::to_string(entity->getMinDamage()) + "-" + std::to_string(entity->getMaxDamage());
+
+    graphics::Text stats(health + "\n" + speed + "\n" +
+                         //   attack + "\n" +
+                         defense + "\n" + crit + "\n" + damage);
+
+    renderer.draw(stats.setOrigin(graphics::Text::Origin::TOP_CENTER).setPosition(position + m_position));
+}
+
+Entity &Entity::setPosition(const Vector2d &position) {
+    m_position = position;
+    return *this;
+}
+
+Entity &Entity::setState(const State &state) {
+    m_state = state;
+    return *this;
+}
+
+Entity &Entity::setSelection(const Selection &selection) {
+    m_selection = selection;
+    return *this;
+}
+
+Entity &Entity::setDrawStats(bool draw_stats) {
+    m_draw_stats = draw_stats;
+    return *this;
+}
+
+const graphics::SpritePtr &Entity::getPortrait() const {
+    return m_portrait;
+}
+
+void Entity::reset() {
+    m_state = State::kIdle;
+    m_selection = Selection::kNone;
+    m_position = {0, 0};
+    m_draw_stats = false;
+}
+
+const std::shared_ptr<Entity> Entity::getView(const std::shared_ptr<engine::entities::Entity> &entity) {
+    auto view = ViewManager::getView(*entity);
+    if (view)
+        return std::dynamic_pointer_cast<Entity>(view);
+    std::shared_ptr<Entity> new_view = std::make_shared<Entity>(entity);
+    ViewManager::bind(*entity, new_view);
+    return new_view;
 }
 
 }   // namespace views

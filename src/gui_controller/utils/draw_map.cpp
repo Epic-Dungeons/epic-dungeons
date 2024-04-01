@@ -1,8 +1,8 @@
 #include "dungeon/dungeon.h"
 #include "engine/engine.h"
+#include "graphics/graphics.h"
 #include "gui_controller/utils.h"
 #include "logging/logger.h"
-#include "renderer/graphics.h"
 #include <map>
 
 namespace gui {
@@ -64,8 +64,8 @@ void drawMap(const std::shared_ptr<graphics::Renderer> &renderer, const std::sha
     }
     dx *= cell_size * animation_progress;
     dy *= cell_size * animation_progress;
-    float x_offset = cx - center.x() + dx;
-    float y_offset = cy - center.y() + dy;
+    float x_offset = cx - center.x + dx;
+    float y_offset = cy - center.y + dy;
     cx -= x_offset;
     cy -= y_offset;
 
@@ -93,20 +93,20 @@ void drawMap(const std::shared_ptr<graphics::Renderer> &renderer, const std::sha
         base_sprite->toSize(w, w);
         x -= w / 2;
         y -= w / 2;
-        float alpha_distance = (center.x() - x) * (center.x() - x) + (center.y() - y) * (center.y() - y);
+        float alpha_distance = (center.x - x) * (center.x - x) + (center.y - y) * (center.y - y);
         alpha_distance = 1 - alpha_distance / (cell_size * cell_size * 168);
         alpha_distance *= 255;
         alpha_distance = std::max(0, std::min(255, static_cast<int>(alpha_distance)));
         base_sprite->setColor({255, 255, 255, (uint8_t) alpha_distance});
-        r->draw(*base_sprite, x, y);
+        r->draw(base_sprite->setPosition({x, y}));
         if (marker_sprite) {
             marker_sprite->toSize(w, w);
             marker_sprite->setColor({255, 255, 255, (uint8_t) alpha_distance});
-            r->draw(*marker_sprite, x, y);
+            r->draw(marker_sprite->setPosition({x, y}));
         }
         if (cell == m_target_room) {
             m_selected_room_sprite->toSize(w, w);
-            r->draw(*m_selected_room_sprite, x, y);
+            r->draw(m_selected_room_sprite->setPosition({x, y}));
         }
     }
     float x = cx + dx;
@@ -117,7 +117,7 @@ void drawMap(const std::shared_ptr<graphics::Renderer> &renderer, const std::sha
     }
     w = ((float) nw - w) * animation_progress + w;
     m_current_cell_sprite->toSize(w, w);
-    r->draw(*m_current_cell_sprite, x - w / 2, y - w / 2);
+    r->draw(m_current_cell_sprite->setPosition({x - w / 2, y - w / 2}));
 }
 }   // namespace utils
 }   // namespace gui

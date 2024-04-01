@@ -5,6 +5,9 @@
 
 namespace engine {
 namespace entities {
-class Hero : public Entity {};
+class Hero : public Entity {
+public:
+    Hero() : Entity() {}
+};
 }   // namespace entities
 }   // namespace engine

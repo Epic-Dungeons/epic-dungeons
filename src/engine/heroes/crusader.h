@@ -17,8 +17,8 @@ public:
         m_name = "Crusader";
         m_health = 40;
         m_max_health = 40;
-        m_weapon = std::make_shared<items::Longsword>();
-        m_armor = std::make_shared<items::CrusaderArmor>();
+        setWeapon(std::make_shared<items::Longsword>());
+        setArmor(std::make_shared<items::CrusaderArmor>());
         addSkill<skills::Smite>();
         addSkill<skills::ZealousAccusation>();
     }

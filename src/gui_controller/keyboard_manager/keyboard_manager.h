@@ -25,8 +25,38 @@ public:
         return m_cur_state[key];
     }
 
+    bool isPressed(const keyboard::Hotkey &hotkey) const {
+        switch (hotkey) {
+            case keyboard::Hotkey::MOVE_UP:
+                return isPressed(keyboard::Key::KEY_UP) || isPressed(keyboard::Key::KEY_W);
+            case keyboard::Hotkey::MOVE_DOWN:
+                return isPressed(keyboard::Key::KEY_DOWN) || isPressed(keyboard::Key::KEY_S);
+            case keyboard::Hotkey::MOVE_LEFT:
+                return isPressed(keyboard::Key::KEY_LEFT) || isPressed(keyboard::Key::KEY_A);
+            case keyboard::Hotkey::MOVE_RIGHT:
+                return isPressed(keyboard::Key::KEY_RIGHT) || isPressed(keyboard::Key::KEY_D);
+            default:
+                return false;
+        }
+    }
+
     bool isClicked(const keyboard::Key &key) const {
         return m_cur_state[key] && !m_prev_state[key];
+    }
+
+    bool isClicked(const keyboard::Hotkey &hotkey) const {
+        switch (hotkey) {
+            case keyboard::Hotkey::MOVE_UP:
+                return isClicked(keyboard::Key::KEY_UP) || isClicked(keyboard::Key::KEY_W);
+            case keyboard::Hotkey::MOVE_DOWN:
+                return isClicked(keyboard::Key::KEY_DOWN) || isClicked(keyboard::Key::KEY_S);
+            case keyboard::Hotkey::MOVE_LEFT:
+                return isClicked(keyboard::Key::KEY_LEFT) || isClicked(keyboard::Key::KEY_A);
+            case keyboard::Hotkey::MOVE_RIGHT:
+                return isClicked(keyboard::Key::KEY_RIGHT) || isClicked(keyboard::Key::KEY_D);
+            default:
+                return false;
+        }
     }
 
 private:

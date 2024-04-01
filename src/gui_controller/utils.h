@@ -1,5 +1,5 @@
 #pragma once
-#include "renderer/graphics.h"
+#include "graphics/graphics.h"
 #include "vector2d/vector2d.h"
 #include <memory>
 
@@ -42,6 +42,8 @@ void drawQueue(const std::shared_ptr<graphics::Renderer> &renderer,
 
 void drawSkills(const std::shared_ptr<graphics::Renderer> &renderer,
                 const std::vector<std::shared_ptr<engine::skills::Skill>> &queue, const uint32_t &selected = 10);
+
+const Vector2d &getEntityPosition(const uint8_t &position);
 
 }   // namespace utils
 }   // namespace gui

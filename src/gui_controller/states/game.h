@@ -30,6 +30,7 @@ public:
             return;
         }
         game_machine.update(controller);
+        if (keyboard::isPressed(keyboard::KEY_U)) {}
     }
 
     void exit(Controller *controller) override {

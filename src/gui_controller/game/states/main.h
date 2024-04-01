@@ -1,8 +1,9 @@
 #pragma once
-#include <cmath>
-#include "gui_controller/timed_count.h"
+#include "graphics/graphics.h"
 #include "gui_controller/game/game_machine.h"
+#include "gui_controller/timed_count.h"
 #include "keyboard/keyboard.h"
+#include <cmath>
 
 namespace gui {
 namespace game {
@@ -28,10 +29,12 @@ class Main : public GameState {
     }
 
     void update(GameMachine *gm) override {
+        gm->changeState(GUIGameState::kCellMovement);
+        return;
         m_anim.update(gm->getDeltaTime());
         if (!m_anim.isEnded()) {
             render(gm->m_renderer.lock().get());
-            return;
+            // return;
         }
 
         if (is_ending) {
@@ -51,12 +54,22 @@ class Main : public GameState {
 
     void render(graphics::Renderer *r) {
         u_int8_t alpha = std::round(m_anim.get());
-        r->draw(graphics::Text("A long time ago, far, far away...", "story", 50), 100, 100);
-        r->draw(graphics::Text("There was a heroes, who was destined to save the world.", "story", 50), 100, 150);
-        r->draw(graphics::Text("But first, he had to find the way to the dungeon.", "story", 50), 100, 200);
-        r->draw(graphics::Text("And so, the adventure begins...", "story", 50), 100, 250);
-        r->draw(graphics::Text("Press ENTER to start", "story", 50), 100, 600);
-        r->drawRec({0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}});
+        r->draw(graphics::Text("A long time ago, far, far away...")
+                    .setFont("story")
+                    .setFontSize(50)
+                    .setPosition({100, 100}));
+        r->draw(graphics::Text("There was a heroes, who was destined to save the world.")
+                    .setFont("story")
+                    .setFontSize(50)
+                    .setPosition({100, 150}));
+        r->draw(graphics::Text("But first, he had to find the way to the dungeon.")
+                    .setFont("story")
+                    .setFontSize(50)
+                    .setPosition({100, 200}));
+        r->draw(
+            graphics::Text("And so, the adventure begins...").setFont("story").setFontSize(50).setPosition({100, 250}));
+        r->draw(graphics::Text("Press ENTER to start").setFont("story").setFontSize(50).setPosition({100, 600}));
+        r->draw(graphics::Rectangle(0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}));
         r->display();
     }
 };

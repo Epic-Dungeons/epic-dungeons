@@ -17,8 +17,8 @@ public:
         m_name = "Hellion";
         m_health = 26;
         m_max_health = 26;
-        m_weapon = std::make_shared<items::Glaive>();
-        m_armor = std::make_shared<items::HellionArmor>();
+        setWeapon(std::make_shared<items::Glaive>());
+        setArmor(std::make_shared<items::HellionArmor>());
         addSkill<skills::WickedHack>();
         addSkill<skills::IronSwan>();
     }

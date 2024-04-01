@@ -1,4 +1,6 @@
 #pragma once
+#include "game_object.h"
+#include "storage.h"
 #include <cstdint>
 #include <memory>
 #include <string>
@@ -30,40 +32,19 @@ struct Resistances {
     int32_t trap = 40;
 };
 
-class Entity : public std::enable_shared_from_this<Entity> {
+class Entity : public GameObject, public std::enable_shared_from_this<Entity> {
     friend class Party;
 
 public:
+    Entity();
+
     virtual ~Entity() {}
 
-    uint32_t getHealth() const {
-        return m_health;
-    }
-
-    uint32_t getMaxHealth() const {
-        return m_max_health;
-    }
-
-    const bool isAlive() const {
-        return m_is_alive;
-    }
-
-    void setWeapon(const std::shared_ptr<items::Weapon> &weapon) {
-        m_weapon = weapon;
-    }
-
-    const std::shared_ptr<items::Weapon> &getWeapon() const {
-        return m_weapon;
-    }
-
-    void setArmor(const std::shared_ptr<items::Armor> &armor) {
-        m_armor = armor;
-    }
-
-    const std::shared_ptr<items::Armor> &getArmor() const {
-        return m_armor;
-    }
-
+    const bool isAlive() const;
+    void setWeapon(const std::shared_ptr<items::Weapon> &weapon);
+    const std::shared_ptr<items::Weapon> &getWeapon() const;
+    void setArmor(const std::shared_ptr<items::Armor> &armor);
+    const std::shared_ptr<items::Armor> &getArmor() const;
     void updateHealth(const int32_t &amount);
 
     template<typename skill>
@@ -71,9 +52,7 @@ public:
         m_skills.push_back(std::make_shared<skill>());
     }
 
-    const std::vector<std::shared_ptr<skills::Skill>> &getSkills() {
-        return m_skills;
-    }
+    const std::vector<std::shared_ptr<skills::Skill>> &getSkills() const;
 
     virtual const skills::AttackResult takeAttack(const std::shared_ptr<Entity> &attacker,
                                                   const std::shared_ptr<skills::CombatSkill> &skill);
@@ -85,25 +64,22 @@ public:
 
     virtual const int32_t calculateDamage(const std::shared_ptr<skills::CombatSkill> &skill) const;
 
+    const int32_t getHealth() const;
+    const int32_t getMaxHealth() const;
     const int32_t getSpeed() const;
+    const int32_t getDodge() const;
+    const int32_t getProtection() const;
+    const int32_t getAttack() const;
+    const int32_t getCrit() const;
+    const int32_t getMinDamage() const;
+    const int32_t getMaxDamage() const;
 
     const uint8_t getPosition() const;
-
-    const std::string &getId() const {
-        return m_id;
-    }
-
-    const std::string &getName() const {
-        return m_name;
-    }
-
-    const Resistances &getResistances() const {
-        return m_resistances;
-    }
-
-    const std::shared_ptr<Party> getParty() const {
-        return m_party.lock();
-    }
+    const std::string &getId() const;
+    const std::string &getName() const;
+    const Resistances &getResistances() const;
+    const std::shared_ptr<Party> getParty() const;
+    const std::shared_ptr<items::Storage> &getInventory() const;
 
 protected:
     std::string m_id;
@@ -116,97 +92,28 @@ protected:
     std::vector<std::shared_ptr<skills::Skill>> m_skills;
     Resistances m_resistances;
     std::weak_ptr<Party> m_party;
+    std::shared_ptr<items::Storage> m_inventory;
 };
 
-class Party : public std::enable_shared_from_this<Party> {
+class Party : public GameObject, public std::enable_shared_from_this<Party> {
+    friend class Entity;
+
 public:
     Party() : m_members() {
         m_members.reserve(4);   // 4 is the max party size
     }
 
-    void addMember(const std::shared_ptr<Entity> &member) {
-        if (m_members.size() == 4) {
-            throw std::runtime_error("Party is full");
-            return;
-        }
-        if (member->m_party.lock() != nullptr) {
-            throw std::runtime_error("Entity is already in a party");
-            return;
-        }
-        member->m_party = shared_from_this();
-        m_members.push_back(member);
-    }
-
-    void removeMember(const std::shared_ptr<Entity> &member) {
-        auto it = std::find(m_members.begin(), m_members.end(), member);
-        if (it != m_members.end()) {
-            m_members.erase(it);
-            member->m_party.reset();
-        }
-    }
-
-    std::shared_ptr<Entity> getMember(const uint8_t &index) {
-        if (index < m_members.size()) {
-            return m_members[index];
-        }
-        return nullptr;
-    }
-
-    std::vector<std::shared_ptr<Entity>> getMembers() {
-        return m_members;
-    }
-
-    uint8_t getMembersCount() {
-        return m_members.size();
-    }
-
-    uint8_t getAliveMembersCount() {
-        uint8_t count = 0;
-        for (auto &member : m_members) {
-            if (member->isAlive()) {
-                count++;
-            }
-        }
-        return count;
-    }
-
-    uint8_t getMemberPosition(const std::shared_ptr<const Entity> &member) {
-        for (uint8_t i = 0; i < m_members.size(); i++) {
-            if (m_members[i] == member) {
-                return i;
-            }
-        }
-        return 0;
-    }
-
-    void swapMembers(const uint8_t &index1, const uint8_t &index2) {
-        if (index1 < m_members.size() && index2 < m_members.size()) {
-            std::swap(m_members[index1], m_members[index2]);
-        } else {
-            throw std::runtime_error("Index out of range");
-        }
-    }
-
-    void arrangeMembers() {
-        // move dead members to the end
-        // bubble sort
-        for (uint8_t i = 0; i < m_members.size(); i++) {
-            while (i + 1 < m_members.size() && !m_members[i]->isAlive() && m_members[i + 1]->isAlive())
-                swapMembers(i, i + 1);
-        }
-    }
-
-    void clear() {
-        for (auto &member : m_members) {
-            member->m_party.reset();
-        }
-        m_members.clear();
-    }
-
-    void memberDied(const std::shared_ptr<Entity> &member) {
-        arrangeMembers();
-        // removeMember(member);
-    }
+    void addMember(const std::shared_ptr<Entity> &member);
+    void removeMember(const std::shared_ptr<Entity> &member);
+    std::shared_ptr<Entity> getMember(const uint8_t &index) const;
+    std::vector<std::shared_ptr<Entity>> getMembers() const;
+    uint8_t getMembersCount() const;
+    const uint8_t getAliveMembersCount() const;
+    uint8_t getMemberPosition(const std::shared_ptr<const Entity> &member) const;
+    void swapMembers(const uint8_t &index1, const uint8_t &index2);
+    void arrangeMembers();
+    void clear();
+    void memberDied(const std::shared_ptr<Entity> &member);
 
 protected:
     std::vector<std::shared_ptr<Entity>> m_members;

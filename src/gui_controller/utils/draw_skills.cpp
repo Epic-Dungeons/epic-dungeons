@@ -35,14 +35,14 @@ void drawSkills(const std::shared_ptr<graphics::Renderer> &renderer,
         auto skill = skills[i];
         std::shared_ptr<graphics::Sprite> skill_sprite = getSkillSprite(skill->id);
         skill_sprite->toSize(cell_size, cell_size);
-        renderer->draw(*skill_sprite.get(), queue_left + i * (cell_size + spacing), queue_top);
+        renderer->draw(skill_sprite.get()->setPosition({queue_left + i * (cell_size + spacing), queue_top}));
     }
     if (selected < skills_size) {
         auto skill = skills[selected];
         std::shared_ptr<graphics::Sprite> skill_sprite = getSkillSprite(skill->id);
         skill_sprite->toSize(cell_size + selected_margin, cell_size + selected_margin);
-        renderer->draw(*skill_sprite.get(), queue_left + selected * (cell_size + spacing) - selected_margin / 2,
-                       queue_top - selected_margin / 2);
+        renderer->draw(skill_sprite.get()->setPosition(
+            {queue_left + selected * (cell_size + spacing) - selected_margin / 2, queue_top - selected_margin / 2}));
     }
 }
 

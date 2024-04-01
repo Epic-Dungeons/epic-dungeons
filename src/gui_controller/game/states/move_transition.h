@@ -15,8 +15,10 @@ class MoveTransition : public GameState {
 public:
     MoveTransition() {
         m_gradient = std::make_shared<graphics::Sprite>("utils/gradient.png");
-        m_gradient->setRotation(-90);
-        m_gradient->toSize(cfg::WINDOW_HEIGHT, cfg::WINDOW_WIDTH * 1.5);
+        m_gradient->setPosition({-(int32_t) (cfg::WINDOW_WIDTH / 2), 0})
+            .setRotation(-90)
+            .setOrigin(graphics::Sprite::Origin::TOP_RIGHT)
+            .toSize(cfg::WINDOW_HEIGHT, cfg::WINDOW_WIDTH * 1.5);
 
         auto sigm = [](float x) {
             return 1 / (1 + std::exp(-10 * (x - 0.5)));
@@ -58,9 +60,9 @@ public:
 
         if (d->getCurrentCell().lock()->isRoom() || d->getNextCell().lock()->isRoom()) {
             uint8_t alpha = 255 * animation_progress;
-            r->drawRec({0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}});
+            r->draw(graphics::Rectangle(0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}));
         }
-        r->draw(*m_gradient, -(cfg::WINDOW_WIDTH / 2), cfg::WINDOW_HEIGHT);
+        r->draw(m_gradient);
         Vector2d center = {cfg::WINDOW_WIDTH * 4 / 5, cfg::WINDOW_HEIGHT / 2};
         utils::drawMap(r, d, center, cfg::CELL_SIZE, animation_progress);
         r->display();

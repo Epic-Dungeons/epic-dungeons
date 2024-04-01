@@ -23,19 +23,19 @@ void drawQueue(const std::shared_ptr<graphics::Renderer> &renderer,
         auto entity = queue[i].lock();
         std::shared_ptr<graphics::Sprite> portrait = entity->getPortrait();
         portrait->toSize(cell_size, cell_size);
-        if (entity->getEntity().lock()->isAlive()) {
+        if (entity->getEntity()->isAlive()) {
             portrait->setColor({255, 255, 255, 255});
         } else {
             portrait->setColor({255, 9, 9, 65});
         }
-        renderer->draw(*portrait.get(), queue_left + i * (cell_size + spacing), queue_top);
+        renderer->draw(portrait.get()->setPosition({queue_left + i * (cell_size + spacing), queue_top}));
     }
     if (selected < queue_size) {
         auto entity = queue[selected].lock();
         std::shared_ptr<graphics::Sprite> portrait = entity->getPortrait();
         portrait->toSize(cell_size + selected_margin, cell_size + selected_margin);
-        renderer->draw(*portrait.get(), queue_left + selected * (cell_size + spacing) - selected_margin / 2,
-                       queue_top - selected_margin / 2);
+        renderer->draw(portrait.get()->setPosition(
+            {queue_left + selected * (cell_size + spacing) - selected_margin / 2, queue_top - selected_margin / 2}));
     }
 }
 

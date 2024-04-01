@@ -1,6 +1,6 @@
 #pragma once
 #include "engine/engine.h"
-#include "renderer/graphics.h"
+#include "graphics/graphics.h"
 
 namespace gui {
 class Controller;

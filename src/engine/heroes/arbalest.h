@@ -17,8 +17,8 @@ public:
         m_name = "Arbalest";
         m_health = 27;
         m_max_health = 27;
-        m_weapon = std::make_shared<items::Crossbow>();
-        m_armor = std::make_shared<items::ArbalestArmor>();
+        setWeapon(std::make_shared<items::Crossbow>());
+        setArmor(std::make_shared<items::ArbalestArmor>());
         addSkill<skills::SniperShot>();
         addSkill<skills::SuppresingFire>();
     }

@@ -17,8 +17,8 @@ public:
         m_name = "Antiquarian";
         m_health = 17;
         m_max_health = 17;
-        m_weapon = std::make_shared<items::MakeshiftCenser>();
-        m_armor = std::make_shared<items::AntiquarianArmor>();
+        setWeapon(std::make_shared<items::MakeshiftCenser>());
+        setArmor(std::make_shared<items::AntiquarianArmor>());
         addSkill<skills::KrisStab>();
         addSkill<skills::FesteringVapours>();
     }

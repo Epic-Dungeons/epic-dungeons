@@ -13,11 +13,11 @@ class Empty : public GameState {
         std::shared_ptr<graphics::Renderer> r = gm->m_renderer.lock();
         r->clear();
         if (gm->m_engine.lock()->getDungeon()->getCurrentCell().lock()->isVisited()) {
-            r->drawText(50, 50, "You are in an empty room");
+            r->draw(graphics::Text("You are in an empty room").setPosition({50, 50}));
         } else {
-            r->drawText(50, 50, "You are first time in this empty room");
+            r->draw(graphics::Text("You are first time in this empty room").setPosition({50, 50}));
         }
-        r->drawText(50, 100, "Press Enter to continue");
+        r->draw(graphics::Text("Press Enter to continue").setPosition({50, 100}));
         r->display();
     }
 

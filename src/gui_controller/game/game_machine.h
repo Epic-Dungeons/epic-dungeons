@@ -14,6 +14,7 @@ enum class GUIGameState {
     kBattle,
     kEmpty,
     kPostEvent,
+    kPartyMenu,
     kGameOver,
 
     // DEMO
@@ -55,6 +56,8 @@ public:
         m_delta_time = controller->getDeltaTime();
         if (m_next_state) {
             m_current_state = m_next_state;
+            m_previous_state_id = m_current_state_id;
+            m_current_state_id = m_next_state_id;
             m_next_state = nullptr;
             m_current_state->enter(this);
         }
@@ -75,6 +78,7 @@ public:
 
     void changeState(const GUIGameState &state) {
         m_next_state = m_states[state];
+        m_next_state_id = state;
     }
 
     void bindEngine(std::weak_ptr<engine::Engine> &engine) {
@@ -97,6 +101,9 @@ public:
 
     std::weak_ptr<engine::Engine> m_engine;
     std::weak_ptr<graphics::Renderer> m_renderer;
+    GUIGameState m_current_state_id;
+    GUIGameState m_previous_state_id;
+    GUIGameState m_next_state_id;
 
 protected:
     std::shared_ptr<GameState> m_current_state, m_next_state;

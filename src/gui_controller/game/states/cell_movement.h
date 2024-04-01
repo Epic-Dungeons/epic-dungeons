@@ -4,8 +4,9 @@
 #include "gui_controller/keyboard_manager/keyboard_manager.h"
 #include "gui_controller/timed_count.h"
 #include "gui_controller/utils.h"
-#include "static_data/game_config.h"
+#include "logging/logger.h"
 #include "sound_manager/sound_manager.h"
+#include "static_data/game_config.h"
 #include <cmath>
 #include <map>
 #include <memory>
@@ -16,8 +17,10 @@ class CellMovement : public GameState {
 public:
     CellMovement() {
         m_gradient = std::make_shared<graphics::Sprite>("utils/gradient.png");
-        m_gradient->setRotation(-90);
-        m_gradient->toSize(cfg::WINDOW_HEIGHT, cfg::WINDOW_WIDTH * 1.5);
+        m_gradient->setPosition({-(int32_t) (cfg::WINDOW_WIDTH / 2), 0})
+            .setRotation(-90)
+            .setOrigin(graphics::Sprite::Origin::TOP_RIGHT)
+            .toSize(cfg::WINDOW_HEIGHT, cfg::WINDOW_WIDTH * 1.5);
 
         auto sigm = [](float x) {
             return 1 / (1 + std::exp(-10 * (x - 0.5)));
@@ -55,6 +58,12 @@ public:
             gm->changeState(GUIGameState::kBattle);
             return;
         }
+
+        if (m_keyboard_manager.isClicked(keyboard::KEY_TAB)) {
+            gm->changeState(GUIGameState::kPartyMenu);
+            return;
+        }
+
         m_keyboard_manager.update();
         bool clicked_up =
             m_keyboard_manager.isClicked(keyboard::KEY_UP) || m_keyboard_manager.isClicked(keyboard::KEY_W);
@@ -116,8 +125,8 @@ public:
             utils::drawEntity(r, party->getMember(i), 3 - i);
         }
         uint8_t alpha = std::round(m_prev_anim.get());
-        r->drawRec({0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}});
-        r->draw(*m_gradient, -(cfg::WINDOW_WIDTH / 2), cfg::WINDOW_HEIGHT);
+        r->draw(graphics::Rectangle(0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}));
+        r->draw(m_gradient);
         Vector2d center = {cfg::WINDOW_WIDTH * 4 / 5, cfg::WINDOW_HEIGHT / 2};
         utils::drawMap(r, d, center, cfg::CELL_SIZE);
         utils::drawGUI(r, e);

@@ -21,7 +21,7 @@ void cellView(const std::shared_ptr<graphics::Renderer> &renderer, const std::sh
         for (auto &sprite : m_hall_backgrounds) {
             sprite.toSizeY(cfg::WINDOW_HEIGHT * 5 / 6);
         }
-        hall_width = m_hall_backgrounds[0].getSize().x();
+        hall_width = m_hall_backgrounds[0].getSize().x;
 
         m_room_backgrounds.push_back(graphics::Sprite("background/room/crypts/empty.png"));
         for (auto &sprite : m_room_backgrounds) {
@@ -39,7 +39,7 @@ void cellView(const std::shared_ptr<graphics::Renderer> &renderer, const std::sh
     if (is_in_room) {
         // uint8_t alpha = 255 * (1 - animation_progress);
         // m_room_backgrounds[0].setColor({255, 255, 255});
-        r->draw(m_room_backgrounds[0], 0, 0);
+        r->draw(m_room_backgrounds[0]);
         return;
     }
 
@@ -57,7 +57,8 @@ void cellView(const std::shared_ptr<graphics::Renderer> &renderer, const std::sh
     for (int i = 0; i < 5; i++) {
         int idx = (distance_to_target - i + 99) % 3;
         m_hall_backgrounds[idx].setColor({255, 255, 255, alpha});
-        r->draw(m_hall_backgrounds[idx], hall_width * (i - animation_progress * direction) - hall_width, 0);
+        r->draw(
+            m_hall_backgrounds[idx].setPosition({hall_width * (i - animation_progress * direction) - hall_width, 0}));
     }
 }
 

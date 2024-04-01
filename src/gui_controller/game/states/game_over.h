@@ -11,7 +11,10 @@ class GameOver : public GameState {
     virtual void enter(GameMachine *gm) {
         auto renderer = gm->m_renderer.lock();
         auto engine = gm->m_engine.lock();
-        renderer->draw(graphics::Text("Game Over", "arial", 100), cfg::WINDOW_WIDTH / 2 - 100, cfg::WINDOW_HEIGHT / 2);
+        renderer->draw(graphics::Text("Game Over")
+                           .setFontSize(100)
+                           .setOrigin(graphics::Text::Origin::CENTER)
+                           .setPosition({cfg::WINDOW_WIDTH / 2, cfg::WINDOW_HEIGHT / 2}));
         renderer->display();
     }
 };

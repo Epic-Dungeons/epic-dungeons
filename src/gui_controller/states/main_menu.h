@@ -1,8 +1,8 @@
 #pragma once
-#include <cmath>
-#include "gui_controller/timed_count.h"
 #include "gui_controller/controller.h"
+#include "gui_controller/timed_count.h"
 #include "keyboard/keyboard.h"
+#include <cmath>
 
 namespace gui {
 
@@ -16,7 +16,7 @@ public:
         auto sigm = [](float x) {
             return 1 / (1 + std::exp(-10 * (x - 0.5)));
         };
-        m_anim.init(255, 0, 1500, sigm);
+        m_anim.init(255, 0, 500, sigm);
         m_anim.start();
 
         render(controller->m_renderer.get());
@@ -28,7 +28,7 @@ public:
             render(controller->m_renderer.get());
             return;
         }
-        
+
         if (is_ending) {
             switch (m_selected) {
                 case 0:
@@ -78,18 +78,32 @@ public:
         renderer->clear();
 
         uint8_t alpha = std::round(m_anim.get());
-        static graphics::Sprite background = graphics::Sprite("background/main_menu/background.png").toSizeX(cfg::WINDOW_WIDTH);
-        static graphics::Text title = graphics::Text("Epic Dungeon", "medieval", 50);
+        static graphics::Sprite background = graphics::Sprite("background/main_menu/background.png")
+                                                 .toSizeX(cfg::WINDOW_WIDTH)
+                                                 .setPosition({0, 0});   // NOLINT
+        static graphics::Text title = graphics::Text("Epic Dungeon")
+                                          .setFontSize(50)
+                                          .setFont("medieval")
+                                          .setOrigin(graphics::Text::Origin::CENTER)
+                                          .setPosition({cfg::WINDOW_WIDTH / 2, 100});
 
-        renderer->draw(background, 0, 0);
-        renderer->draw(title, cfg::WINDOW_WIDTH / 3, 100);
+        renderer->draw(background);
+        renderer->draw(title);
         for (int i = 0; i < m_options.size(); i++) {
-            renderer->draw(graphics::Text(m_options[i], "story", 40), cfg::WINDOW_WIDTH * 16 / 36, 300 + i * 50);
+            graphics::Text option = graphics::Text(m_options[i])
+                                        .setPosition({cfg::WINDOW_WIDTH / 2, 300 + i * 50})
+                                        .setFont("story")
+                                        .setFontSize(40)
+                                        .setOrigin(graphics::Text::Origin::CENTER);
+            renderer->draw(option);
             if (i == m_selected) {
-                renderer->draw(graphics::Text("*", "story", 50), cfg::WINDOW_WIDTH * 16 / 36 - 20, 315 + i * 50);
+                renderer->draw(graphics::Text("*")
+                                   .setFont("story")
+                                   .setPosition({cfg::WINDOW_WIDTH * 16 / 36 - 20, 315 + i * 50})
+                                   .setFontSize(50));
             }
         }
-        renderer->drawRec({0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}});
+        renderer->draw(graphics::Rectangle(0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}));
         renderer->display();
     }
 

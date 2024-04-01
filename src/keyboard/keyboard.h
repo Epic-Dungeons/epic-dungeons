@@ -57,6 +57,13 @@ enum Key {
     KEY_SUPER,
 };
 
+enum Hotkey {
+    MOVE_UP,
+    MOVE_DOWN,
+    MOVE_LEFT,
+    MOVE_RIGHT,
+};
+
 class KeyboardController {
 public:
     static KeyboardController &getInstance() {

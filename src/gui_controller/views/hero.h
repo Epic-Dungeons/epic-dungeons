@@ -1,6 +1,7 @@
 #pragma once
 #include "engine/entity.h"
-#include "renderer/graphics.h"
+#include "graphics/graphics.h"
+#include "gui_controller/view.h"
 #include "vector2d/vector2d.h"
 #include <memory>
 #include <string>
@@ -8,9 +9,9 @@
 namespace gui {
 namespace views {
 
-class Entity {
+class Entity : public View {
 public:
-    Entity(const std::shared_ptr<engine::entities::Entity> &entity) {
+    Entity(const std::shared_ptr<engine::entities::Entity> &entity) : View() {
         bind(entity);
         reset();
     }
@@ -23,50 +24,40 @@ public:
     enum class Selection {
         kNone,
         kSelected,
-        kTarget,
         kSelectable,
-        kTargetable,
         kNotSelectable,
-        kNotTargetable,
     };
 
-    void setState(const State &state) {
-        m_state = state;
+    const std::shared_ptr<engine::entities::Entity> getEntity() const {
+        return m_entity.lock();
     }
 
-    void setSelection(const Selection &selection) {
-        m_selection = selection;
-    }
+    static const std::shared_ptr<Entity> getView(const std::shared_ptr<engine::entities::Entity> &entity);
 
-    const std::weak_ptr<engine::entities::Entity> &getEntity() const {
-        return m_entity;
-    }
+    void reset();
 
-    const void render(const std::shared_ptr<graphics::Renderer> &renderer, const uint8_t &position,
-                      const float &animation_progress = 0);
+    Entity &setState(const State &state);
+    Entity &setPosition(const Vector2d &position);
+    Entity &setSelection(const Selection &selection);
+    Entity &setDrawStats(bool draw_stats);
 
-    std::shared_ptr<graphics::Sprite> getPortrait() {
-        return m_portrait;
-    }
-
-    void reset() {
-        m_state = State::kIdle;
-        m_selection = Selection::kNone;
-    }
-
-    void bind(const std::shared_ptr<engine::entities::Entity> &entity);
-
-    bool isMine(const std::shared_ptr<engine::entities::Entity> &entity) {
-        return m_entity.lock() == entity;
-    }
+    const graphics::SpritePtr &getPortrait() const;
 
 protected:
+    void bind(const std::shared_ptr<engine::entities::Entity> &entity);
+    void draw(const graphics::Renderer &renderer) const override;
+    void drawStats(const graphics::Renderer &renderer, const Vector2d &position) const;
+
     std::weak_ptr<engine::entities::Entity> m_entity;
     std::map<State, std::shared_ptr<graphics::Animation>> m_animations;
     std::shared_ptr<graphics::Sprite> m_portrait;
     std::shared_ptr<graphics::Sprite> m_grave;
-    State m_state;
+    State m_state = State::kIdle;
     Selection m_selection;
+    Vector2d m_position = {0, 0};
+
+private:
+    bool m_draw_stats = false;
 };
 
 }   // namespace views
