@@ -19,6 +19,7 @@ public:
     enum class State {
         kIdle,
         kCombat,
+        kWalking,
     };
 
     enum class Selection {

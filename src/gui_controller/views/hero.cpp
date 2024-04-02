@@ -35,6 +35,7 @@ void Entity::bind(const std::shared_ptr<engine::entities::Entity> &entity) {
         m_grave->setScale(0.4f).setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER);
         m_animations[State::kIdle] = getAnimation("heroes/" + entity->getId() + "/idle.gif");
         m_animations[State::kCombat] = getAnimation("heroes/" + entity->getId() + "/combat.gif");
+        m_animations[State::kWalking] = getAnimation("heroes/" + entity->getId() + "/walk.gif");
     }
 }
 

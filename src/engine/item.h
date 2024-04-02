@@ -16,6 +16,11 @@ namespace items {
 struct Item : public GameObject {
     Item() : GameObject() {}
 
+    Item(const std::string &id, const std::string &name, const std::string &description = "", bool isStackable = false,
+         int32_t stackSize = 1) :
+        id(id),
+        name(name), description(description), isStackable(isStackable), stackSize(stackSize) {}
+
     std::string id;
     std::string name;
     std::string description = "";

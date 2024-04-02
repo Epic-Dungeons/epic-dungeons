@@ -4,7 +4,9 @@
 #include "gui_controller/keyboard_manager/keyboard_manager.h"
 #include "gui_controller/timed_count.h"
 #include "gui_controller/utils.h"
+#include "gui_controller/views/hero.h"
 #include "static_data/game_config.h"
+#include "vector2d/vector2d.h"
 #include <cmath>
 #include <map>
 #include <memory>
@@ -28,6 +30,10 @@ public:
 
     virtual void enter(GameMachine *gm) {
         m_anim.start();
+        sound::playSound("walking-sound", 80);
+        for (const auto &entity : gm->m_engine.lock()->getParty()->getMembers()) {
+            views::Entity::getView(entity)->setState(views::Entity::State::kWalking);
+        }
     }
 
     virtual void update(GameMachine *gm) {
@@ -70,6 +76,9 @@ public:
 
     void exit(GameMachine *gm) {
         gm->m_engine.lock()->getDungeon()->setCurrentCell(gm->m_engine.lock()->getDungeon()->getNextCell().lock());
+        for (const auto &entity : gm->m_engine.lock()->getParty()->getMembers()) {
+            views::Entity::getView(entity)->setState(views::Entity::State::kIdle);
+        }
     }
 
 private:
