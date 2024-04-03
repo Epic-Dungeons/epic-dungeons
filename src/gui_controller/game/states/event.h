@@ -10,8 +10,9 @@ namespace game {
 class Event : public GameState {
     virtual void enter(GameMachine *gm) {
         auto cell = gm->m_engine.lock()->getDungeon()->getCurrentCell().lock();
+        cell->visit();
         dungeon::CellType type = cell->getType();
-        GUIGameState next_state = GUIGameState::kPostEvent;
+        GUIGameState next_state = GUIGameState::kCellMovement;
         switch (type) {
             case dungeon::CellType::NOTHING:
                 // if (!cell->isVisited())
@@ -20,6 +21,9 @@ class Event : public GameState {
             case dungeon::CellType::FIGHT:
                 if (!cell->isVisited())
                     next_state = GUIGameState::kBattle;
+                break;
+            case dungeon::CellType::TREASURE:
+                next_state = GUIGameState::kTreasure;
                 break;
             default:
                 break;

@@ -16,19 +16,20 @@ namespace items {
 struct Item : public GameObject {
     Item() : GameObject() {}
 
-    Item(const std::string &id, const std::string &name, const std::string &description = "", bool isStackable = false,
-         int32_t stackSize = 1) :
+    Item(const std::string &id, const std::string &name, const std::string &description = "",
+         bool isStackable = false) :
         id(id),
-        name(name), description(description), isStackable(isStackable), stackSize(stackSize) {}
+        name(name), description(description), isStackable(isStackable) {}
 
     std::string id;
     std::string name;
     std::string description = "";
 
     bool isStackable = false;
-    int32_t stackSize = 1;
 
-    virtual ~Item() {};
+    virtual ~Item() {
+        logging::debug("Item destroyed: " + id + "(" + std::to_string(objectId) + ")");
+    };
 };
 
 struct Consumable : public Item {
@@ -46,6 +47,8 @@ struct Consumable : public Item {
     int32_t duration = 0;
 
     virtual void use(const std::shared_ptr<entities::Entity> &entity) = 0;
+
+    virtual ~Consumable() {};
 };
 
 struct Weapon : public Item {

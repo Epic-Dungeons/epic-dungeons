@@ -18,6 +18,8 @@ public:
     Chest &setPosition(const Vector2d &position);
     const bool isOpen() const;
     const std::shared_ptr<engine::Chest> getChest() const;
+    const std::shared_ptr<engine::items::Storage> getStorage() const;
+    const std::shared_ptr<Storage> getStorageView() const;
 
     Chest &nextItem();
     Chest &previousItem();

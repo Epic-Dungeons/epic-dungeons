@@ -14,6 +14,16 @@ class GameObject {
 public:
     GameObject() : objectId(object_counter++) {}
 
+    GameObject(const GameObject &other) : objectId(object_counter++) {}
+
+    GameObject &operator=(const GameObject &other) {
+        if (this == &other) {
+            return *this;
+        }
+        const_cast<size_t &>(objectId) = other.objectId;
+        return *this;
+    }
+
     virtual ~GameObject() = default;
 
     bool operator==(const GameObject &other) const {
@@ -26,4 +36,5 @@ public:
 
     const size_t objectId = 0;
 };
+
 }   // namespace engine

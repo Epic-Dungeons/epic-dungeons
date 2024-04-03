@@ -14,6 +14,7 @@ public:
     void start();
     void update();
     void update(uint64_t delta_time);
+    void setFunction(std::function<float(float)> f);
 
     const uint64_t getCurTime();
 

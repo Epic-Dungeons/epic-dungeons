@@ -67,11 +67,11 @@ void Chest::draw(const graphics::Renderer &renderer) const {
     m_sprite->setPosition(m_position).setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER);
     renderer.draw(*m_sprite);
 
-    if (is_open) {
-        renderer.draw(v_storage->setState(Storage::State::kSelection)
-                          .setName("Chest")
-                          .setPosition({cfg::WINDOW_WIDTH / 2, cfg::WINDOW_HEIGHT / 18}));
-    }
+    // if (is_open) {
+    //     renderer.draw(v_storage->setState(Storage::State::kSelection)
+    //                       .setName("Chest")
+    //                       .setPosition({cfg::WINDOW_WIDTH / 2, cfg::WINDOW_HEIGHT / 18}));
+    // }
 }
 
 Chest &Chest::setPosition(const Vector2d &position) {
@@ -95,6 +95,14 @@ Chest &Chest::previousItem() {
         return *this;
     v_storage->previousItem();
     return *this;
+}
+
+const std::shared_ptr<engine::items::Storage> Chest::getStorage() const {
+    return m_chest.lock()->getStorage();
+}
+
+const std::shared_ptr<Storage> Chest::getStorageView() const {
+    return v_storage;
 }
 
 }   // namespace views

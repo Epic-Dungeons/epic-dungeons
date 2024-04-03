@@ -4,6 +4,8 @@
 #include "gui_controller/keyboard_manager/keyboard_manager.h"
 #include "gui_controller/timed_count.h"
 #include "gui_controller/utils.h"
+#include "gui_controller/views/gradient.h"
+#include "gui_controller/views/map.h"
 #include "logging/logger.h"
 #include "sound_manager/sound_manager.h"
 #include "static_data/game_config.h"
@@ -16,16 +18,11 @@ namespace game {
 class CellMovement : public GameState {
 public:
     CellMovement() : GameState() {
-        m_gradient = std::make_shared<graphics::Sprite>("utils/gradient.png");
-        m_gradient->setPosition({-(int32_t) (cfg::WINDOW_WIDTH / 2), 0})
-            .setRotation(-90)
-            .setOrigin(graphics::Sprite::Origin::TOP_RIGHT)
-            .toSize(cfg::WINDOW_HEIGHT, cfg::WINDOW_WIDTH * 1.5);
-
         auto sigm = [](float x) {
             return 1 / (1 + std::exp(-10 * (x - 0.5)));
         };
         m_prev_anim.init(255, 0, 500, sigm);
+        v_map = views::Map::getView();
     }
 
     virtual void enter(GameMachine *gm) override {
@@ -33,15 +30,10 @@ public:
         std::shared_ptr<dungeon::Dungeon> d = gm->m_engine.lock().get()->getDungeon();
         std::shared_ptr<dungeon::Cell> current = d->getCurrentCell().lock();
         is_in_room = current->isRoom();
+        v_map->bind(d);
 
-        if (is_in_room) {
+        if (is_in_room)
             m_prev_anim.start();
-            neighbours = d->getRoomNeighbours(std::dynamic_pointer_cast<dungeon::Room>(current));
-            while (neighbours[r_selected].expired()) {
-                r_selected = (r_selected + 1) % 4;
-            }
-            d->setTargetRoom(neighbours[r_selected].lock());
-        }
         std::shared_ptr<graphics::Renderer> r = gm->m_renderer.lock();
     }
 
@@ -55,6 +47,7 @@ public:
         }
 
         if (m_keyboard_manager.isClicked(keyboard::KEY_F)) {
+            gm->m_engine.lock()->getDungeon()->getCurrentCell().lock()->setType(dungeon::CellType::TREASURE);
             gm->changeState(GUIGameState::kTreasure);
             return;
         }
@@ -65,14 +58,10 @@ public:
         }
 
         m_keyboard_manager.update();
-        bool clicked_up =
-            m_keyboard_manager.isClicked(keyboard::KEY_UP) || m_keyboard_manager.isClicked(keyboard::KEY_W);
-        bool clicked_down =
-            m_keyboard_manager.isClicked(keyboard::KEY_DOWN) || m_keyboard_manager.isClicked(keyboard::KEY_S);
-        bool clicked_right =
-            m_keyboard_manager.isClicked(keyboard::KEY_RIGHT) || m_keyboard_manager.isClicked(keyboard::KEY_D);
-        bool clicked_left =
-            m_keyboard_manager.isClicked(keyboard::KEY_LEFT) || m_keyboard_manager.isClicked(keyboard::KEY_A);
+        bool clicked_up = m_keyboard_manager.isClicked(keyboard::Hotkey::MOVE_UP);
+        bool clicked_down = m_keyboard_manager.isClicked(keyboard::Hotkey::MOVE_DOWN);
+        bool clicked_right = m_keyboard_manager.isClicked(keyboard::MOVE_RIGHT);
+        bool clicked_left = m_keyboard_manager.isClicked(keyboard::Hotkey::MOVE_LEFT);
         bool pressed_right =
             m_keyboard_manager.isPressed(keyboard::KEY_RIGHT) || m_keyboard_manager.isPressed(keyboard::KEY_D);
         bool pressed_left =
@@ -83,30 +72,30 @@ public:
 
         if (!is_in_room) {
             if (pressed_right) {
-                d->setNextCell(d->getNextOnPath().lock());
+                v_map->goForward();
                 gm->changeState(GUIGameState::kMoveTransition);
+                return;
             } else if (pressed_left) {
-                d->setNextCell(d->getPrevOnPath().lock());
+                v_map->goBackward();
                 gm->changeState(GUIGameState::kMoveTransition);
+                return;
             }
             render(r, gm->m_engine.lock());
             return;
         }
 
-        if (clicked_up && !neighbours[0].expired()) {
-            r_selected = 0;
-        } else if (clicked_right && !neighbours[1].expired()) {
-            r_selected = 1;
-        } else if (clicked_down && !neighbours[2].expired()) {
-            r_selected = 2;
-        } else if (clicked_left && !neighbours[3].expired()) {
-            r_selected = 3;
+        if (clicked_up) {
+            v_map->setTargetRoom(dungeon::Direction::UP);
+        } else if (clicked_right) {
+            v_map->setTargetRoom(dungeon::Direction::RIGHT);
+        } else if (clicked_down) {
+            v_map->setTargetRoom(dungeon::Direction::DOWN);
+        } else if (clicked_left) {
+            v_map->setTargetRoom(dungeon::Direction::LEFT);
         } else if (clicked_enter) {
-            d->setNextCell(d->getNextOnPath().lock());
+            v_map->goForward();
             gm->changeState(GUIGameState::kMoveTransition);
-        }
-        if (is_clicked) {
-            d->setTargetRoom(neighbours[r_selected].lock());
+            return;
         }
         render(r, gm->m_engine.lock());
     }
@@ -124,10 +113,9 @@ public:
         }
         uint8_t alpha = std::round(m_prev_anim.get());
         r->draw(graphics::Rectangle(0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT, {0, 0, 0, alpha}));
-        r->draw(m_gradient);
         Vector2d center = {cfg::WINDOW_WIDTH * 4 / 5, cfg::WINDOW_HEIGHT / 2};
-        utils::drawMap(r, d, center, cfg::CELL_SIZE);
-        utils::drawGUI(r, e);
+        r->draw(views::Gradient::getView());
+        r->draw(v_map->setPosition(center).setAnimationDuration(500));
         r->display();
     }
 
@@ -139,14 +127,13 @@ public:
 
 private:
     TimedCount m_prev_anim;
+    std::shared_ptr<views::Map> v_map;
 
     KeyboardManager m_keyboard_manager;
 
     bool is_in_room = true;
 
     int r_selected = 0;
-    std::vector<std::weak_ptr<dungeon::Room>> neighbours;
-    std::shared_ptr<graphics::Sprite> m_gradient;
 };
 }   // namespace game
 }   // namespace gui

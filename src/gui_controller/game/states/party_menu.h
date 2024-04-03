@@ -44,7 +44,7 @@ class PartyMenu : public GameState {
         views::Entity::getView(getParty()->getMember(m_selected_hero))
             ->setSelection(views::Entity::Selection::kSelected)
             .setDrawStats(true);
-        v_storage.bind(getParty()->getMember(m_selected_hero)->getInventory()).setMaxVisibleItems(5);
+        v_storage.bind(getParty()->getInventory()).setMaxVisibleItems(5);
         v_storage.setPosition({cfg::WINDOW_WIDTH * 2 / 3, cfg::WINDOW_HEIGHT / 18});
         v_skill_selection.setPosition({cfg::WINDOW_WIDTH * 2 / 3, cfg::WINDOW_HEIGHT / 2});
         v_skill_selection.bind(getParty()->getMember(m_selected_hero)->getSkills());
@@ -66,7 +66,7 @@ class PartyMenu : public GameState {
             views::Entity::getView(getParty()->getMember(m_selected_hero))
                 ->setSelection(views::Entity::Selection::kSelected)
                 .setDrawStats(true);
-            v_storage.bind(getParty()->getMember(m_selected_hero)->getInventory());
+            v_storage.bind(getParty()->getInventory());
             v_skill_selection.bind(getParty()->getMember(m_selected_hero)->getSkills());
             v_skill_info.bindEntity(getParty()->getMember(m_selected_hero));
         }
@@ -88,7 +88,7 @@ class PartyMenu : public GameState {
     }
 
     void updateInventory(GameMachine *gm) {
-        const auto &inventory = getParty()->getMember(m_selected_hero)->getInventory();
+        const auto &inventory = getParty()->getInventory();
         if (km.isClicked(keyboard::MOVE_UP)) {
             v_storage.previousItem();
         } else if (km.isClicked(keyboard::MOVE_DOWN)) {
@@ -113,7 +113,7 @@ class PartyMenu : public GameState {
             logging::info("Adding poison to inventory");
         }
         if (km.isClicked(keyboard::KEY_R)) {
-            inventory->addItem(std::make_shared<engine::items::Item>("item", "Item", "An item", 0, 1));
+            inventory->addItem(std::make_shared<engine::items::Item>("item", "Item", "An item", 0));
             logging::info("Adding poison to inventory");
         }
 

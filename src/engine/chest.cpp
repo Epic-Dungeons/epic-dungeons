@@ -17,7 +17,7 @@ std::shared_ptr<Chest> createChest() {
     // generate random items
     // gold from 3 to 10
     uint32_t gold_amount = 3 + rand() % 8;
-    chest->getStorage()->addItem(std::make_shared<items::GoldenCoin>(gold_amount));
+    chest->getStorage()->addItem(std::make_shared<items::GoldenCoin>(), gold_amount);
     // health potion
     static const float health_potion_chance = 0.5;
     if (rand() % 100 < health_potion_chance * 100)

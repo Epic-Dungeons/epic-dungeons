@@ -63,5 +63,9 @@ struct AttackResult {
     int32_t damage = 0;
 };
 
+struct ApplyItemSkill : public Skill {
+    uint8_t uses = 0;
+};
+
 }   // namespace skills
 }   // namespace engine

@@ -66,6 +66,10 @@ public:
         return m_type;
     }
 
+    void setType(const CellType &type) {
+        m_type = type;
+    }
+
     void visit() {
         m_is_visited = true;
     }

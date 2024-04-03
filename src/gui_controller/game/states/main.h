@@ -29,7 +29,7 @@ class Main : public GameState {
     }
 
     void update(GameMachine *gm) override {
-        gm->changeState(GUIGameState::kCellMovement);
+        gm->changeState(GUIGameState::kEvent);
         return;
         m_anim.update(gm->getDeltaTime());
         if (!m_anim.isEnded()) {
@@ -38,7 +38,7 @@ class Main : public GameState {
         }
 
         if (is_ending) {
-            gm->changeState(GUIGameState::kCellMovement);
+            gm->changeState(GUIGameState::kEvent);
             return;
         }
 

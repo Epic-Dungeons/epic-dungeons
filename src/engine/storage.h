@@ -16,39 +16,44 @@ struct compareSetItems {
 
 class Storage {
 public:
-    using iterator = std::multiset<std::shared_ptr<Item>>::iterator;
-    using const_iterator = std::multiset<std::shared_ptr<Item>>::const_iterator;
+    using ItemMap = std::map<uint32_t, size_t>;
+    using ItemSet = std::set<std::shared_ptr<Item>, compareSetItems>;
+    using iterator = ItemSet::iterator;
+    using const_iterator = ItemSet::const_iterator;
 
     iterator begin() {
-        return m_items.begin();
-    }
-
-    const_iterator begin() const {
-        return m_items.begin();
-    }
-
-    const_iterator cbegin() const {
-        return m_items.cbegin();
+        return iterator(m_set_items.begin());
     }
 
     iterator end() {
-        return m_items.end();
+        return iterator(m_set_items.end());
+    }
+
+    const_iterator begin() const {
+        return const_iterator(m_set_items.cbegin());
+    }
+
+    const_iterator cbegin() const {
+        return const_iterator(m_set_items.cbegin());
     }
 
     const_iterator end() const {
-        return m_items.end();
+        return const_iterator(m_set_items.end());
     }
 
     const_iterator cend() const {
-        return m_items.cend();
+        return const_iterator(m_set_items.cend());
     }
 
-    bool addItem(const std::shared_ptr<Item> &item);
+    bool addItem(const std::shared_ptr<Item> &item, const size_t &count = 1);
     std::shared_ptr<Item> getItem(const std::string &id) const;
     std::vector<std::shared_ptr<Item>> getItems() const;
     std::vector<std::shared_ptr<Item>> getItems(const std::string &id) const;
     std::shared_ptr<Item> getItem(const size_t &index) const;
     bool containsItem(const std::shared_ptr<Item> &item) const;
+
+    const size_t countItem(const std::string &id) const;
+    const size_t countItem(const std::shared_ptr<Item> &item) const;
     const size_t size() const;
 
     bool removeItem(const std::shared_ptr<Item> &item);
@@ -77,7 +82,8 @@ public:
     }
 
 protected:
-    std::multiset<std::shared_ptr<Item>, compareSetItems> m_items;   // <id, item>
+    ItemMap m_items;   // <id, item>
+    ItemSet m_set_items;
     size_t m_max_items = 0;
 };
 

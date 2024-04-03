@@ -1,7 +1,17 @@
 #include "entity.h"
+#include "items/consumables/heal.h"
+#include "items/golden_coin.h"
+#include "logging/logger.h"
 
 namespace engine {
 namespace entities {
+
+Party::Party() : GameObject() {
+    m_members.reserve(4);   // 4 is the max party size
+    m_inventory = std::make_shared<items::Storage>();
+    m_inventory->addItem(std::make_shared<items::GoldenCoin>(), 10);
+    m_inventory->addItem(std::make_shared<items::Heal>(), 2);
+}
 
 void Party::addMember(const std::shared_ptr<Entity> &member) {
     if (m_members.size() == 4) {
@@ -115,6 +125,14 @@ void Party::memberDied(const std::shared_ptr<Entity> &member) {
 
 bool Party::hasMember(const std::shared_ptr<const Entity> &member) const {
     return std::find(m_members.begin(), m_members.end(), member) != m_members.end();
+}
+
+std::shared_ptr<items::Storage> Party::getInventory() const {
+    return m_inventory;
+}
+
+std::vector<std::shared_ptr<skills::Skill>> Party::getSkills() const {
+    std::vector<std::shared_ptr<skills::Skill>> skills;
 }
 
 }   // namespace entities

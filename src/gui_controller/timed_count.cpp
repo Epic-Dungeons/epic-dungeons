@@ -22,6 +22,10 @@ void TimedCount::init(float from, float to, uint64_t time, std::function<float(f
     m_f = std::move(f);
 }
 
+void TimedCount::setFunction(std::function<float(float)> f) {
+    m_f = std::move(f);
+}
+
 void TimedCount::start() {
     m_cur_time = 0;
     m_last_time = getCurTime();

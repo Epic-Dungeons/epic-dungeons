@@ -21,11 +21,14 @@ public:
     Storage &setSelectedItem(const size_t &selected_item);
     Storage &setName(const std::string &name);
     Storage &updateSelected();
+    Storage &takeSelectedItem(const std::shared_ptr<engine::items::Storage> &storage);
+    Storage &takeOneSelectedItem(const std::shared_ptr<engine::items::Storage> &storage);
 
     Storage &nextItem();
     Storage &previousItem();
 
     std::shared_ptr<engine::items::Item> getSelectedItem() const;
+    std::shared_ptr<engine::items::Storage> getStorage() const;
 
 protected:
     void draw(const graphics::Renderer &renderer) const override;

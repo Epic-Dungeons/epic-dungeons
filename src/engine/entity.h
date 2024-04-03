@@ -99,9 +99,7 @@ class Party : public GameObject, public std::enable_shared_from_this<Party> {
     friend class Entity;
 
 public:
-    Party() : m_members() {
-        m_members.reserve(4);   // 4 is the max party size
-    }
+    Party();
 
     void addMember(const std::shared_ptr<Entity> &member);
     void removeMember(const std::shared_ptr<Entity> &member);
@@ -113,12 +111,15 @@ public:
     void swapMembers(const uint8_t &index1, const uint8_t &index2);
     void swapMembers(const std::shared_ptr<Entity> &member1, const std::shared_ptr<Entity> &member2);
     bool hasMember(const std::shared_ptr<const Entity> &member) const;
+    std::vector<std::shared_ptr<skills::Skill>> getSkills() const;
     void arrangeMembers();
     void clear();
     void memberDied(const std::shared_ptr<Entity> &member);
+    std::shared_ptr<items::Storage> getInventory() const;
 
 protected:
     std::vector<std::shared_ptr<Entity>> m_members;
+    std::shared_ptr<items::Storage> m_inventory;
 };
 
 }   // namespace entities

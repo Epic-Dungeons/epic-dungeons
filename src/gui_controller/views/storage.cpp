@@ -85,7 +85,7 @@ void Storage::draw(const graphics::Renderer &renderer) const {
     const auto &storage = *m_storage.lock();
     std::vector<std::string> items;
     for (const auto &item : storage) {
-        items.push_back("[" + std::to_string(item->stackSize) + "] " + item->name);
+        items.push_back("[" + std::to_string(storage.countItem(item)) + "] " + item->name);
     }
     renderer.draw(graphics::Text(m_name).setFont("story").setFontSize(50).setPosition(m_position));
 
@@ -116,6 +116,46 @@ void Storage::draw(const graphics::Renderer &renderer) const {
         text.setFillColor(color);
         renderer.draw(text);
     }
+}
+
+Storage &Storage::takeSelectedItem(const std::shared_ptr<engine::items::Storage> &storage) {
+    if (m_storage.expired()) {
+        logging::error("Storage is expired");
+        return *this;
+    }
+    if (m_storage.lock()->size() == 0)
+        return *this;
+    if (m_selected_item >= m_storage.lock()->size()) {
+        logging::error("Selected item is out of range");
+        return *this;
+    }
+    auto item = m_storage.lock()->getItems()[m_selected_item];
+    storage->addItem(item, m_storage.lock()->countItem(item));
+    m_storage.lock()->removeItem(item);
+    updateSelected();
+    return *this;
+}
+
+Storage &Storage::takeOneSelectedItem(const std::shared_ptr<engine::items::Storage> &storage) {
+    if (m_storage.expired()) {
+        logging::error("Storage is expired");
+        return *this;
+    }
+    if (m_storage.lock()->size() == 0)
+        return *this;
+    if (m_selected_item >= m_storage.lock()->size()) {
+        logging::error("Selected item is out of range");
+        return *this;
+    }
+    auto item = m_storage.lock()->getItems()[m_selected_item];
+    storage->addItem(item);
+    m_storage.lock()->removeOneItem(item);
+    updateSelected();
+    return *this;
+}
+
+std::shared_ptr<engine::items::Storage> Storage::getStorage() const {
+    return m_storage.lock();
 }
 
 }   // namespace views
