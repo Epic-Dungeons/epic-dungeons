@@ -1,8 +1,8 @@
 #pragma once
 #include "dungeon/dungeon.h"
-#include "engine/consumables/heal.h"
-#include "engine/consumables/poison.h"
 #include "engine/entities.h"
+#include "engine/items/consumables/heal.h"
+#include "engine/items/consumables/poison.h"
 #include "gui_controller/game/game_machine.h"
 #include "gui_controller/keyboard_manager/keyboard_manager.h"
 #include "gui_controller/utils.h"

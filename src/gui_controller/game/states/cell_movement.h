@@ -15,7 +15,7 @@ namespace gui {
 namespace game {
 class CellMovement : public GameState {
 public:
-    CellMovement() {
+    CellMovement() : GameState() {
         m_gradient = std::make_shared<graphics::Sprite>("utils/gradient.png");
         m_gradient->setPosition({-(int32_t) (cfg::WINDOW_WIDTH / 2), 0})
             .setRotation(-90)
@@ -28,7 +28,7 @@ public:
         m_prev_anim.init(255, 0, 500, sigm);
     }
 
-    virtual void enter(GameMachine *gm) {
+    virtual void enter(GameMachine *gm) override {
         m_keyboard_manager.reset();
         std::shared_ptr<dungeon::Dungeon> d = gm->m_engine.lock().get()->getDungeon();
         std::shared_ptr<dungeon::Cell> current = d->getCurrentCell().lock();
@@ -45,7 +45,7 @@ public:
         std::shared_ptr<graphics::Renderer> r = gm->m_renderer.lock();
     }
 
-    virtual void update(GameMachine *gm) {
+    virtual void update(GameMachine *gm) override {
         std::shared_ptr<graphics::Renderer> r = gm->m_renderer.lock();
         std::shared_ptr<dungeon::Dungeon> d = gm->m_engine.lock().get()->getDungeon();
         m_prev_anim.update(gm->getDeltaTime());
@@ -55,7 +55,7 @@ public:
         }
 
         if (m_keyboard_manager.isClicked(keyboard::KEY_F)) {
-            gm->changeState(GUIGameState::kBattle);
+            gm->changeState(GUIGameState::kTreasure);
             return;
         }
 
@@ -131,7 +131,7 @@ public:
         r->display();
     }
 
-    void exit(GameMachine *gm) {
+    void exit(GameMachine *gm) override {
         if (is_in_room) {
             m_prev_anim.start();
         }
