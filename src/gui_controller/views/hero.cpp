@@ -21,6 +21,12 @@ static std::shared_ptr<graphics::Sprite> getSprite(const std::string &path) {
     }
     return sprites[path];
 }
+
+static std::string toSignedString(const int &value) {
+    if (value >= 0)
+        return "+" + std::to_string(value);
+    return std::to_string(value);
+}
 }   // namespace
 
 void Entity::bind(const std::shared_ptr<engine::entities::Entity> &entity) {
@@ -36,6 +42,7 @@ void Entity::bind(const std::shared_ptr<engine::entities::Entity> &entity) {
         m_animations[State::kIdle] = getAnimation("heroes/" + entity->getId() + "/idle.gif");
         m_animations[State::kCombat] = getAnimation("heroes/" + entity->getId() + "/combat.gif");
         m_animations[State::kWalking] = getAnimation("heroes/" + entity->getId() + "/walk.gif");
+        m_prev_hp = entity->getHealth();
     }
 }
 
@@ -45,6 +52,11 @@ void Entity::draw(const graphics::Renderer &renderer) const {
         throw std::runtime_error("Entity is not bound");
         return;
     }
+    if (m_prev_hp != entity->getHealth()) {
+        applyDamage(m_prev_hp - entity->getHealth());
+        m_prev_hp = entity->getHealth();
+    }
+
     if (m_draw_stats)
         drawStats(renderer, {0, 0});
 
@@ -57,17 +69,23 @@ void Entity::draw(const graphics::Renderer &renderer) const {
 
     const graphics::Color &selection_color = selection_colors.find(m_selection)->second;
 
+    graphics::SpritePtr sprite;
     if (!entity->isAlive()) {
-        renderer.draw(m_grave->setPosition(m_position).setColor(selection_color));
-        return;
+        sprite = m_grave;
+    } else {
+        sprite = m_animations.find(m_state)->second;
     }
-    graphics::AnimationPtr animation = m_animations.find(m_state)->second;
-    if (animation) {
-        animation->setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER).setColor(selection_color);
-        renderer.draw(animation->setPosition(m_position));
+    if (sprite) {
+        sprite->setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER).setColor(selection_color);
+        renderer.draw(sprite->setPosition(m_position));
     } else {
         logging::error("No animation found for state " + std::to_string(static_cast<uint8_t>(m_state)));
         renderer.draw(graphics::Sprite("missing.png").setPosition(m_position));
+    }
+
+    if (m_damage_anim.isRunning()) {
+        m_damage_anim.update();
+        renderer.draw(m_damage_anim.setPosition(m_position));
     }
 }
 
@@ -131,6 +149,58 @@ const std::shared_ptr<Entity> Entity::getView(const std::shared_ptr<engine::enti
     std::shared_ptr<Entity> new_view = std::make_shared<Entity>(entity);
     ViewManager::bind(*entity, new_view);
     return new_view;
+}
+
+void Entity::applyDamage(const int &damage) const {
+    m_damage_anim.setDamage(damage).setDuration(500).start();
+}
+
+DamageAnimation::DamageAnimation() : View() {}
+
+DamageAnimation &DamageAnimation::setDuration(uint64_t duration) {
+    m_timer.init(0, 1, duration);   // 0 to 1 in duration seconds
+    return *this;
+}
+
+DamageAnimation &DamageAnimation::start() {
+    m_timer.start();
+    logging::info("Damage animation started: " + std::to_string(isRunning()));
+    return *this;
+}
+
+DamageAnimation &DamageAnimation::setPosition(const Vector2d &position) {
+    m_position = position;
+    return *this;
+}
+
+DamageAnimation &DamageAnimation::setDamage(const int &damage) {
+    m_damage = damage;
+    return *this;
+}
+
+const bool DamageAnimation::isRunning() const {
+    return !m_timer.isEnded();
+}
+
+void DamageAnimation::draw(const graphics::Renderer &renderer) const {
+    if (m_timer.isEnded())
+        return;
+    float progress = m_timer.get();
+    graphics::Text text(toSignedString(-m_damage));
+    if (m_damage < 0)                                           // negative damage = healing
+        text.setFillColor({0, 255, 0, 255 * (1 - progress)});   // green color
+    if (m_damage > 0)                                           // positive damage = damage
+        text.setFillColor({255, 0, 0, 255 * (1 - progress)});   // red color
+
+    text.setOrigin(graphics::Text::Origin::BOTTOM_CENTER)
+        .setPosition(m_position + Vector2d(0, -50 * progress))
+        .setScale(1 + 2 * progress, 1 + 2 * progress);
+    renderer.draw(text);
+}
+
+DamageAnimation &DamageAnimation::update() {
+    m_timer.update();
+    return *this;
 }
 
 }   // namespace views

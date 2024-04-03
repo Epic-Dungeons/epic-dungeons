@@ -1,6 +1,7 @@
 #pragma once
 #include "engine/entity.h"
 #include "graphics/graphics.h"
+#include "gui_controller/timed_count.h"
 #include "gui_controller/view.h"
 #include "vector2d/vector2d.h"
 #include <memory>
@@ -8,6 +9,26 @@
 
 namespace gui {
 namespace views {
+
+class DamageAnimation : public View {
+public:
+    DamageAnimation();
+    DamageAnimation &setDuration(uint64_t duration);
+    DamageAnimation &start();
+    DamageAnimation &setPosition(const Vector2d &position);
+    DamageAnimation &setDamage(const int &damage);
+    DamageAnimation &update();
+
+    const bool isRunning() const;
+
+protected:
+    void draw(const graphics::Renderer &renderer) const override;
+
+private:
+    TimedCount m_timer;
+    int32_t m_damage = 0;
+    Vector2d m_position = {0, 0};
+};
 
 class Entity : public View {
 public:
@@ -41,6 +62,7 @@ public:
     Entity &setPosition(const Vector2d &position);
     Entity &setSelection(const Selection &selection);
     Entity &setDrawStats(bool draw_stats);
+    void applyDamage(const int &damage) const;
 
     const graphics::SpritePtr &getPortrait() const;
 
@@ -59,6 +81,8 @@ protected:
 
 private:
     bool m_draw_stats = false;
+    mutable DamageAnimation m_damage_anim;
+    mutable int32_t m_prev_hp = 0;
 };
 
 }   // namespace views

@@ -13,7 +13,13 @@
 
 namespace gui {
 namespace game {
-class Battle : public GameState {};
+class Battle : public GameState {
+    void freeze(GameMachine *gm) override {}
+
+    void unfreeze(GameMachine *gm) override {}
+
+    void enter(GameMachine *gm) override {}
+};
 
 }   // namespace game
 }   // namespace gui
