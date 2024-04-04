@@ -1,9 +1,10 @@
 #pragma once
+#include "engine/game_object.h"
 
 namespace graphics {
 class Renderer;
 
-class Drawable {
+class Drawable : public engine::GameObject {
 public:
     friend class Renderer;
 

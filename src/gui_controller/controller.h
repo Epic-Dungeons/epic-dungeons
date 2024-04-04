@@ -1,4 +1,5 @@
 #pragma once
+#include "dialog_manager.h"
 #include "engine/engine.h"
 #include "graphics/graphics.h"
 
@@ -66,6 +67,10 @@ public:
     }
 
     virtual void update() {
+        bool has_dialogs = DialogManager::update();
+        DialogManager::render(*m_renderer);
+        if (has_dialogs)
+            return;
         if (m_next_state) {
             m_current_state = m_next_state;
             m_next_state = nullptr;

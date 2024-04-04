@@ -102,6 +102,7 @@ int main(int argc, char *argv[]) {
         } else {
             window.setTitle(cfg::WINDOW_NAME);
         }
+        renderer->trueDisplay();
     }
     return 0;
 }

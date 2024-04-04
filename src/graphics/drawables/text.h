@@ -49,9 +49,7 @@ public:
 
 protected:
     virtual void draw(const Renderer &renderer) const override;
-
-private:
-    Origin m_origin = Origin::TOP_LEFT;
     mutable sf::Text m_text;
+    Origin m_origin = Origin::TOP_LEFT;
 };
 }   // namespace graphics

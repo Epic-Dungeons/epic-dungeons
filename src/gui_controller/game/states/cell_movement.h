@@ -4,6 +4,7 @@
 #include "gui_controller/keyboard_manager/keyboard_manager.h"
 #include "gui_controller/timed_count.h"
 #include "gui_controller/utils.h"
+#include "gui_controller/views/dialog.h"
 #include "gui_controller/views/gradient.h"
 #include "gui_controller/views/map.h"
 #include "logging/logger.h"
@@ -38,6 +39,7 @@ public:
     }
 
     virtual void update(GameMachine *gm) override {
+        m_keyboard_manager.update();
         std::shared_ptr<graphics::Renderer> r = gm->m_renderer.lock();
         std::shared_ptr<dungeon::Dungeon> d = gm->m_engine.lock().get()->getDungeon();
         m_prev_anim.update(gm->getDeltaTime());
@@ -58,12 +60,15 @@ public:
             return;
         }
 
+        if (m_keyboard_manager.isClicked(keyboard::KEY_G)) {
+            views::Dialog::create()->setTitle("Game Over").setMessage("You have lost!").show();
+            return;
+        }
         if (m_keyboard_manager.isClicked(keyboard::KEY_TAB)) {
             gm->changeState(GUIGameState::kPartyMenu);
             return;
         }
 
-        m_keyboard_manager.update();
         bool clicked_up = m_keyboard_manager.isClicked(keyboard::Hotkey::MOVE_UP);
         bool clicked_down = m_keyboard_manager.isClicked(keyboard::Hotkey::MOVE_DOWN);
         bool clicked_right = m_keyboard_manager.isClicked(keyboard::MOVE_RIGHT);

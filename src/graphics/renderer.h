@@ -18,8 +18,10 @@ public:
     Renderer(sf::RenderWindow &window);
     friend class Drawable;
 
-    void display();
+    void display() const;
+    void trueDisplay();
     void clear();
+    void clearUntil(const Drawable &drawable);
 
     sf::RenderWindow &getWindow() const;
     void draw(const Drawable &drawable) const;
@@ -31,7 +33,8 @@ public:
 
 private:
     sf::RenderWindow &window;
-    bool active;
+    bool active = true;
+    mutable bool displayFlag = false;
 };
 
 }   // namespace graphics
