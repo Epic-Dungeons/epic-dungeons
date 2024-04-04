@@ -248,5 +248,9 @@ DamageAnimation &DamageAnimation::update() {
     return *this;
 }
 
+Vector2d Entity::getPosition() const {
+    return m_position;
+}
+
 }   // namespace views
 }   // namespace gui

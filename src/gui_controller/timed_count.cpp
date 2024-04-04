@@ -20,6 +20,7 @@ void TimedCount::init(float from, float to, uint64_t time, std::function<float(f
     m_time = time;
     m_cur_time = m_time;   // set to end
     m_f = std::move(f);
+    is_started = false;
 }
 
 void TimedCount::setFunction(std::function<float(float)> f) {
@@ -29,6 +30,7 @@ void TimedCount::setFunction(std::function<float(float)> f) {
 void TimedCount::start() {
     m_cur_time = 0;
     m_last_time = getCurTime();
+    is_started = true;
 }
 
 const uint64_t TimedCount::getCurTime() {
@@ -49,6 +51,11 @@ void TimedCount::update(uint64_t delta_time) {
     }
 }
 
+void TimedCount::reset() {
+    m_cur_time = m_time;
+    is_started = false;
+}
+
 float TimedCount::get() const {
     return m_from + m_f(static_cast<float>(m_cur_time) / static_cast<float>(m_time)) * (m_to - m_from);
 }
@@ -56,4 +63,9 @@ float TimedCount::get() const {
 bool TimedCount::isEnded() const {
     return m_cur_time == m_time;
 }
+
+bool TimedCount::isStarted() const {
+    return is_started;
+}
+
 }   // namespace gui

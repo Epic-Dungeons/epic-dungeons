@@ -241,35 +241,69 @@ class Battle : public GameState {
         // m_state = State::kAttack;
     }
 
+    bool attack_started = false;
+    bool attack_ended = false;
+    TimedCount attack_timer;
+    Vector2d attacker_position = {0, 0};
+    Vector2d target_position = {0, 0};
+
     void attack(GameMachine *gm) {
         auto attacker = m_queue[m_current_entity];
         auto skill = m_current_skill;
-        auto combat_skill = std::dynamic_pointer_cast<engine::skills::CombatSkill>(skill);
-        auto consume_skill = std::dynamic_pointer_cast<engine::skills::ConsumeItemSkill>(skill);
+        if (!attack_started) {
+            attack_timer.init(0, 1, 250, [](float x) {
+                return sin(x * M_PI);
+            });
+            attacker_position = views::Entity::getView(attacker)->getPosition();
+            target_position = views::Entity::getView(m_targets[0])->getPosition();
+            attack_started = true;
+            attack_ended = false;
+            attack_timer.start();
+            return;
+        }
+        if (!attack_ended) {
+            attack_timer.update();
+            if (!attack_timer.isEnded()) {
+                float progress = attack_timer.get();
+                Vector2d direction = target_position - attacker_position;
+                Vector2d position = attacker_position + direction * progress;
+                views::Entity::getView(attacker)->setPosition(position);
+                return;
+            }
+            views::Entity::getView(attacker)->setPosition(attacker_position);
+            attack_ended = true;
+        } else {
+            auto combat_skill = std::dynamic_pointer_cast<engine::skills::CombatSkill>(skill);
+            auto consume_skill = std::dynamic_pointer_cast<engine::skills::ConsumeItemSkill>(skill);
 
-        if (combat_skill != nullptr) {
-            for (const auto &target : m_targets)
-                target->takeAttack(attacker, combat_skill);
+            if (combat_skill != nullptr) {
+                for (const auto &target : m_targets)
+                    target->takeAttack(attacker, combat_skill);
+            }
+            if (consume_skill != nullptr) {
+                consume_skill->consumable->use(attacker);
+                consume_skill->storage->removeOneItem(consume_skill->consumable);
+            }
+            m_current_skill = nullptr;
+            m_targets.clear();
+            m_state = State::kNextEntity;
+            attack_started = false;
+            attack_ended = false;
         }
-        if (consume_skill != nullptr) {
-            consume_skill->consumable->use(attacker);
-            consume_skill->storage->removeOneItem(consume_skill->consumable);
-        }
-        m_current_skill = nullptr;
-        m_targets.clear();
-        m_state = State::kNextEntity;
     }
 
     void check_enemeies_dead() {
-        std::vector<std::shared_ptr<engine::entities::Entity>> dead_enemies;
+        std::vector<std::shared_ptr<engine::entities::Entity>> result;
+
         for (const auto &enemy : m_enemies) {
-            if (!enemy->isAlive())
-                dead_enemies.push_back(enemy);
+            if (enemy->isAlive())
+                result.push_back(enemy);
         }
-        for (const auto &enemy : dead_enemies) {
-            m_enemies.erase(std::find(m_enemies.begin(), m_enemies.end(), enemy));
-            m_queue.erase(std::find(m_queue.begin(), m_queue.end(), enemy));
+        for (const auto &entity : m_enemies) {
+            if (!entity->isAlive())
+                result.push_back(entity);
         }
+        m_enemies = result;
         for (const auto &enemy : m_enemies) {
             views::Entity::getView(enemy)->setPosition(utils::getEntityPosition(
                 4 + std::distance(m_enemies.begin(), std::find(m_enemies.begin(), m_enemies.end(), enemy))));
@@ -306,17 +340,37 @@ class Battle : public GameState {
         logging::info("Binding selector: done");
     }
 
+    TimedCount m_post_gradient_timer;
+    int32_t skip_count = 0;
+
     void update(GameMachine *gm) override {
         km.update();
         render(gm->m_renderer.lock(), gm->m_engine.lock());
+        if (skip_count > 8) {
+            skip_count = 0;
+            m_state = State::kEnd;
+        }
 
         if (m_state == State::kEnd) {
-            logging::info("End");
-            gm->changeState(GUIGameState::kCellMovement);
+            if (m_post_gradient_timer.isStarted() && m_post_gradient_timer.isEnded()) {
+                gm->changeState(GUIGameState::kCellMovement);
+                m_post_gradient_timer.reset();
+                return;
+            }
+            if (!m_post_gradient_timer.isStarted()) {
+                m_post_gradient_timer.init(0, 1, 1000, [](float x) {
+                    // sigmoid function
+                    return 1 / (1 + std::exp(-10 * (x - 0.5)));
+                });
+                m_post_gradient_timer.start();
+            }
+            m_post_gradient_timer.update();
             return;
         }
+
         if (m_state == State::kStart) {
             logging::info("Start");
+            skip_count = 0;
             if (check_teams_dead(gm))
                 return;
             views::Entity::getView(m_queue[m_current_entity])->setSelection(views::Entity::Selection::kSelectable);
@@ -330,7 +384,6 @@ class Battle : public GameState {
                     ->setSelection(views::Entity::Selection::kSelected)
                     .getDirection()
                 == views::Entity::Direction::kRight) {
-                logging::info("Player turn");
                 m_state = State::kPlayerTurn;
             } else
                 m_state = State::kEnemyTurn;
@@ -343,17 +396,14 @@ class Battle : public GameState {
             return;
         }
         if (m_state == State::kEnemyTurn) {
-            logging::info("Enemy turn");
             enemyTurn(gm);
             return;
         }
         if (m_state == State::kAttack) {
-            logging::info("Attack");
             attack(gm);
             return;
         }
         if (m_state == State::kNextEntity) {
-            logging::info("Next entity");
             check_enemeies_dead();
             for (const auto &entity : m_queue)
                 views::Entity::getView(entity)
@@ -376,11 +426,14 @@ class Battle : public GameState {
                     .getDirection()
                 == views::Entity::Direction::kRight) {
                 m_state = State::kPlayerTurn;
-                logging::info("Player turn");
             } else
                 m_state = State::kEnemyTurn;
-            if (!m_skill_selection.fixSelection())
+            if (!m_skill_selection.fixSelection()) {
                 m_state = State::kNextEntity;
+                skip_count++;
+            } else {
+                skip_count = 0;
+            }
             return;
         }
     }
@@ -392,10 +445,15 @@ class Battle : public GameState {
         std::shared_ptr<engine::entities::Party> party = e->getParty();
         utils::cellView(r, d);
         for (const auto &entity : m_queue) {
-            r->draw(views::Entity::getView(entity));
+            if (entity != m_queue[m_current_entity])
+                r->draw(views::Entity::getView(entity));
         }
+        r->draw(views::Entity::getView(m_queue[m_current_entity]));
         if (m_state == State::kPlayerTurn)
             r->draw(m_skill_selection);
+        if (m_post_gradient_timer.isStarted())
+            r->draw(graphics::Rectangle(0, 0, cfg::WINDOW_WIDTH, cfg::WINDOW_HEIGHT,
+                                        {0, 0, 0, 255 * m_post_gradient_timer.get()}));
 
         r->display();
     }

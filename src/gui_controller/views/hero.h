@@ -72,6 +72,7 @@ public:
     Entity &setDrawChance(const bool &draw_chance);
 
     Direction getDirection() const;
+    Vector2d getPosition() const;
     void applyDamage(const int &damage) const;
 
     const graphics::SpritePtr &getPortrait() const;

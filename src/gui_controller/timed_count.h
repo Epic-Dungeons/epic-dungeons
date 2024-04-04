@@ -13,6 +13,7 @@ public:
 
     void start();
     void update();
+    void reset();
     void update(uint64_t delta_time);
     void setFunction(std::function<float(float)> f);
 
@@ -22,11 +23,14 @@ public:
 
     bool isEnded() const;
 
+    bool isStarted() const;
+
 private:
     float m_from, m_to;
     uint64_t m_time;
     uint64_t m_cur_time;
     uint64_t m_last_time;
+    bool is_started = false;
     std::function<float(float)> m_f;
 };
 }   // namespace gui
