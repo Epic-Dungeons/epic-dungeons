@@ -7,10 +7,10 @@
 namespace engine {
 namespace items {
 
-struct Heal : public Consumable {
-    Heal() : Consumable() {
-        id = "heal";
-        name = "Heal";
+struct Bandage : public Consumable {
+    Bandage() : Consumable() {
+        id = "bandage";
+        name = "Bandage";
         description = "Heals 10 HP.";
         healthMod = 10;
     }

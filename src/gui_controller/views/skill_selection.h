@@ -26,6 +26,10 @@ public:
     SkillSelection &setState(const State &state);
     SkillSelection &selectSkill(size_t index);
     SkillSelection &setTitle(const std::string &title);
+    bool fixSelection();
+
+    std::shared_ptr<Skill> getSkill(size_t index) const;
+    const std::vector<std::shared_ptr<Skill>> &getSkills() const;
 
     const std::shared_ptr<engine::skills::Skill> getSelectedSkill() const;
 

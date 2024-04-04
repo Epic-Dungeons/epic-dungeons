@@ -19,21 +19,42 @@ SkillSelection &SkillSelection::setPosition(const Vector2d &position) {
 
 SkillSelection &SkillSelection::bind(const std::vector<std::shared_ptr<engine::skills::Skill>> &skills) {
     m_skills.clear();
-    for (const auto &skill : skills)
+    for (const auto &skill : skills) {
         m_skills.push_back(Skill::getView(skill));
+    }
     m_selected = 0;
     return *this;
 }
 
 SkillSelection &SkillSelection::nextSkill() {
-    if (m_selected + 1 < m_skills.size())
-        m_selected++;
+    if (m_selected + 1 < m_skills.size()) {
+        size_t new_selected = m_selected + 1;
+        while (new_selected < m_skills.size()
+               && m_skills[new_selected]->getSelection() == Skill::Selection::kNotSelectable) {
+            new_selected++;
+        }
+        if (m_skills[new_selected]->getSelection() != Skill::Selection::kNotSelectable)
+            m_selected = new_selected;
+        else {
+            logging::debug("SkillSelection::nextSkill: No more selectable skills");
+        }
+    }
+
     return *this;
 }
 
 SkillSelection &SkillSelection::previousSkill() {
-    if (m_selected > 0)
-        m_selected--;
+    if (m_selected > 0) {
+        size_t new_selected = m_selected - 1;
+        while (new_selected > 0 && m_skills[new_selected]->getSelection() == Skill::Selection::kNotSelectable) {
+            new_selected--;
+        }
+        if (m_skills[new_selected]->getSelection() != Skill::Selection::kNotSelectable)
+            m_selected = new_selected;
+        else {
+            logging::debug("SkillSelection::previousSkill: No more selectable skills");
+        }
+    }
     return *this;
 }
 
@@ -69,9 +90,9 @@ void SkillSelection::draw(const graphics::Renderer &renderer) const {
 
     for (size_t i = 0; i < m_skills.size(); i++) {
         m_skills[i]->setPosition(position + getGridPosition(i, grid_cols, cell_size * 1.2) + Vector2d {0, 70});
-        if (m_state == State::kSelection)
+        if (m_state == State::kSelection && m_skills[i]->getSelection() != Skill::Selection::kNotSelectable)
             m_skills[i]->setSelection(i == m_selected ? Skill::Selection::kSelected : Skill::Selection::kSelectable);
-        else
+        else if (m_state == State::kNone)
             m_skills[i]->setSelection(Skill::Selection::kNone);
         renderer.draw(m_skills[i]);
     }
@@ -95,6 +116,38 @@ SkillSelection &SkillSelection::setState(const State &state) {
 SkillSelection &SkillSelection::setTitle(const std::string &title) {
     m_title = title;
     return *this;
+}
+
+std::shared_ptr<Skill> SkillSelection::getSkill(size_t index) const {
+    if (index < m_skills.size())
+        return m_skills[index];
+    return nullptr;
+}
+
+const std::vector<std::shared_ptr<Skill>> &SkillSelection::getSkills() const {
+    return m_skills;
+}
+
+bool SkillSelection::fixSelection() {
+    if (m_selected >= m_skills.size())
+        m_selected = 0;
+    if (m_skills.empty())
+        return false;
+    int32_t new_selected = m_selected;
+    while (new_selected < m_skills.size()
+           && m_skills[new_selected]->getSelection() == Skill::Selection::kNotSelectable) {
+        new_selected++;
+    }
+    if (new_selected < m_skills.size())
+        m_selected = new_selected;
+    new_selected = m_selected;
+    while (new_selected >= 0 && m_skills[new_selected]->getSelection() == Skill::Selection::kNotSelectable) {
+        new_selected--;
+    }
+    if (new_selected >= 0)
+        m_selected = new_selected;
+
+    return m_skills[m_selected]->getSelection() != Skill::Selection::kNotSelectable;
 }
 
 }   // namespace views

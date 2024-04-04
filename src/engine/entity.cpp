@@ -22,14 +22,21 @@ const int32_t Entity::calculateDamage(const std::shared_ptr<skills::CombatSkill>
 }
 
 const int32_t Entity::calculateHitChance(const std::shared_ptr<entities::Entity> &target,
-                                         const std::shared_ptr<skills::CombatSkill> &skill) const {
+                                         const std::shared_ptr<skills::Skill> &skill) const {
     int32_t hit_chance = 0;
-    if (m_weapon)
-        hit_chance += m_weapon->attackMod;
-    if (skill)
-        hit_chance += skill->attackMod;
-    if (target->m_armor)
-        hit_chance -= target->m_armor->defenseMod;
+    auto combat_skill = std::dynamic_pointer_cast<skills::CombatSkill>(skill);
+    if (combat_skill) {
+        if (m_weapon)
+            hit_chance += m_weapon->attackMod;
+        if (skill)
+            hit_chance += combat_skill->attackMod;
+        if (target->m_armor)
+            hit_chance -= target->m_armor->defenseMod;
+    }
+    auto consume_skill = std::dynamic_pointer_cast<skills::ConsumeItemSkill>(skill);
+    if (consume_skill) {
+        hit_chance = 100;
+    }
 
     return hit_chance;
 }
@@ -71,7 +78,8 @@ const skills::AttackResult Entity::takeAttack(const std::shared_ptr<Entity> &att
 
         result.damage = result.damage * (100 - m_armor->protectionMod) / 100;
 
-        logging::debug(attacker->getName() + " attacks " + getName() + " with " + skill->name);
+        logging::debug(attacker->getName() + "(" + std::to_string(attacker->objectId) + ") attacks " + getName() + "("
+                       + std::to_string(objectId) + ") for " + std::to_string(result.damage) + " with " + skill->name);
         updateHealth(-result.damage);
     }
     return result;
@@ -127,8 +135,16 @@ void Entity::setWeapon(const std::shared_ptr<items::Weapon> &weapon) {
     m_weapon = weapon;
 }
 
-const std::vector<std::shared_ptr<skills::Skill>> &Entity::getSkills() const {
-    return m_skills;
+std::vector<std::shared_ptr<skills::Skill>> Entity::getSkills() const {
+    if (m_party.expired()) {
+        return m_skills;
+    }
+    std::vector<std::shared_ptr<skills::Skill>> skills;
+    for (const auto &skill : m_skills)
+        skills.push_back(skill);
+    for (const auto &skill : m_party.lock()->getSkills())
+        skills.push_back(skill);
+    return skills;
 }
 
 const Resistances &Entity::getResistances() const {
@@ -145,6 +161,10 @@ const std::string &Entity::getId() const {
 
 const std::string &Entity::getName() const {
     return m_name;
+}
+
+const std::string Entity::getNameWithId() const {
+    return m_name + " (" + std::to_string(objectId) + ")";
 }
 
 const int32_t Entity::getHealth() const {

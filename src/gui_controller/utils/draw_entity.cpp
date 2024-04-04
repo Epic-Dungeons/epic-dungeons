@@ -39,6 +39,10 @@ void drawEntity(const std::shared_ptr<graphics::Renderer> &renderer,
     auto view = views::Entity::getView(entity);
     Vector2d m_position = getEntityPosition(position);
     view->setPosition(m_position);
+    if (position >= 4)
+        view->setDirection(views::Entity::Direction::kLeft);
+    else if (position < 4)
+        view->setDirection(views::Entity::Direction::kRight);
     view->setSelection(is_selected ? views::Entity::Selection::kSelected : views::Entity::Selection::kNone);
     renderer->draw(view);
 }

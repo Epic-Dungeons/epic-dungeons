@@ -52,13 +52,13 @@ public:
         m_skills.push_back(std::make_shared<skill>());
     }
 
-    const std::vector<std::shared_ptr<skills::Skill>> &getSkills() const;
+    std::vector<std::shared_ptr<skills::Skill>> getSkills() const;
 
     virtual const skills::AttackResult takeAttack(const std::shared_ptr<Entity> &attacker,
                                                   const std::shared_ptr<skills::CombatSkill> &skill);
 
     virtual const int32_t calculateHitChance(const std::shared_ptr<Entity> &target,
-                                             const std::shared_ptr<skills::CombatSkill> &skill) const;
+                                             const std::shared_ptr<skills::Skill> &skill) const;
 
     virtual const int32_t calculateCritChance(const std::shared_ptr<skills::CombatSkill> &skill) const;
 
@@ -78,6 +78,7 @@ public:
     const std::string &getId() const;
     const std::string &getName() const;
     const Resistances &getResistances() const;
+    const std::string getNameWithId() const;
     const std::shared_ptr<Party> getParty() const;
     const std::shared_ptr<items::Storage> &getInventory() const;
 
@@ -121,6 +122,8 @@ protected:
     std::vector<std::shared_ptr<Entity>> m_members;
     std::shared_ptr<items::Storage> m_inventory;
 };
+
+typedef std::shared_ptr<Entity> EntityPtr;
 
 }   // namespace entities
 }   // namespace engine

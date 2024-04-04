@@ -52,6 +52,15 @@ std::vector<std::shared_ptr<Item>> Storage::getItems(const std::string &id) cons
     return items;
 }
 
+bool Storage::containsItem(const std::string &id) const {
+    for (const auto &item : *this) {
+        if (item->id == id) {
+            return true;
+        }
+    }
+    return false;
+}
+
 bool Storage::containsItem(const std::shared_ptr<Item> &item) const {
     return m_set_items.find(item) != m_set_items.end();
 }

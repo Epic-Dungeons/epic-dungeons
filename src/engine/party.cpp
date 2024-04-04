@@ -1,7 +1,8 @@
 #include "entity.h"
-#include "items/consumables/heal.h"
+#include "items/consumables/bandage.h"
 #include "items/golden_coin.h"
 #include "logging/logger.h"
+#include "skills/bandage.h"
 
 namespace engine {
 namespace entities {
@@ -10,7 +11,7 @@ Party::Party() : GameObject() {
     m_members.reserve(4);   // 4 is the max party size
     m_inventory = std::make_shared<items::Storage>();
     m_inventory->addItem(std::make_shared<items::GoldenCoin>(), 10);
-    m_inventory->addItem(std::make_shared<items::Heal>(), 2);
+    m_inventory->addItem(std::make_shared<items::Bandage>(), 2);
 }
 
 void Party::addMember(const std::shared_ptr<Entity> &member) {
@@ -133,6 +134,10 @@ std::shared_ptr<items::Storage> Party::getInventory() const {
 
 std::vector<std::shared_ptr<skills::Skill>> Party::getSkills() const {
     std::vector<std::shared_ptr<skills::Skill>> skills;
+    if (m_inventory->containsItem<items::Bandage>()) {
+        skills.push_back(std::make_shared<skills::Bandage>(m_inventory->getItem<items::Bandage>(), m_inventory));
+    }
+    return skills;
 }
 
 }   // namespace entities

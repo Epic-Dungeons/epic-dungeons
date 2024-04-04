@@ -52,6 +52,12 @@ public:
             return;
         }
 
+        if (m_keyboard_manager.isClicked(keyboard::KEY_B)) {
+            gm->m_engine.lock()->getDungeon()->getCurrentCell().lock()->setType(dungeon::CellType::FIGHT);
+            gm->changeState(GUIGameState::kBattle);
+            return;
+        }
+
         if (m_keyboard_manager.isClicked(keyboard::KEY_TAB)) {
             gm->changeState(GUIGameState::kPartyMenu);
             return;

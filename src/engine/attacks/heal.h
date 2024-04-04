@@ -6,7 +6,7 @@ namespace skills {
 struct Pick : public CombatSkill {
     Pick() : CombatSkill() {
         id = "heal";
-        name = "Heal";
+        name = "Bandage";
         level = 0;
         type = Type::kMelee;
         targetType = TargetType::kParty;

@@ -1,4 +1,5 @@
 #include "skill_info.h"
+#include "item_info.h"
 #include "logging/logger.h"
 #include <stdexcept>
 
@@ -34,7 +35,6 @@ void SkillInfo::draw(const graphics::Renderer &renderer) const {
         logging::error("SkillInfo::draw: Skill is nullptr");
         return;
     }
-    renderer.draw(graphics::Text(skill->name).setFont("story").setFontSize(50).setPosition(m_position));
     std::string description = "";
     auto combat = std::dynamic_pointer_cast<engine::skills::CombatSkill>(skill);
     if (combat != nullptr) {
@@ -64,6 +64,12 @@ void SkillInfo::draw(const graphics::Renderer &renderer) const {
         description += "Launch: " + launchable_positions + "\n";
         description += "Target: " + targetable_positions + "\n";
     }
+    auto consumable = std::dynamic_pointer_cast<engine::skills::ConsumeItemSkill>(skill);
+    if (consumable != nullptr) {
+        renderer.draw(ItemInfo().bind(consumable->consumable).setPosition(m_position));
+        return;
+    }
+    renderer.draw(graphics::Text(skill->name).setFont("story").setFontSize(50).setPosition(m_position));
     renderer.draw(graphics::Text(description).setFontSize(20).setPosition(m_position + Vector2d {0, 70}));
 }
 

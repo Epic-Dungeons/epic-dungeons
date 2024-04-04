@@ -50,6 +50,11 @@ public:
         kNotSelectable,
     };
 
+    enum class Direction {
+        kLeft,
+        kRight,
+    };
+
     const std::shared_ptr<engine::entities::Entity> getEntity() const {
         return m_entity.lock();
     }
@@ -62,6 +67,11 @@ public:
     Entity &setPosition(const Vector2d &position);
     Entity &setSelection(const Selection &selection);
     Entity &setDrawStats(bool draw_stats);
+    Entity &setDirection(const Direction &direction);
+    Entity &setChance(const float &chance);
+    Entity &setDrawChance(const bool &draw_chance);
+
+    Direction getDirection() const;
     void applyDamage(const int &damage) const;
 
     const graphics::SpritePtr &getPortrait() const;
@@ -83,6 +93,9 @@ private:
     bool m_draw_stats = false;
     mutable DamageAnimation m_damage_anim;
     mutable int32_t m_prev_hp = 0;
+    Direction m_direction = Direction::kRight;
+    float m_chance = 0.0f;
+    bool m_draw_chance = false;
 };
 
 }   // namespace views

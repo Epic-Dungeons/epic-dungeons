@@ -20,11 +20,12 @@ Skill::Skill(const std::shared_ptr<engine::skills::Skill> &skill) : m_skill(skil
 }
 
 void Skill::draw(const graphics::Renderer &renderer) const {
-    auto skill = m_skill.lock();
-    if (!skill) {
-        throw std::runtime_error("Entity is not bound");
+    if (!m_skill) {
+        logging::error("Skill::draw: Skill is not bound");
+        throw std::runtime_error("Skill::draw: Skill is not bound");
         return;
     }
+    auto skill = m_skill;
     static std::map<Selection, graphics::Color> selection_colors = {
         {Selection::kNone, 0xffffff},
         {Selection::kSelected, 0xffffff},
@@ -64,6 +65,10 @@ Skill &Skill::setSize(const Vector2d &size) {
 
 Vector2d Skill::getSize() const {
     return m_sprite->getSize();
+}
+
+Skill::Selection Skill::getSelection() const {
+    return m_selection;
 }
 
 }   // namespace views

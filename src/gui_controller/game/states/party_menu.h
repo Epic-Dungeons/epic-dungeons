@@ -1,7 +1,7 @@
 #pragma once
 #include "dungeon/dungeon.h"
 #include "engine/entities.h"
-#include "engine/items/consumables/heal.h"
+#include "engine/items/consumables/bandage.h"
 #include "engine/items/consumables/poison.h"
 #include "gui_controller/game/game_machine.h"
 #include "gui_controller/keyboard_manager/keyboard_manager.h"
@@ -105,7 +105,7 @@ class PartyMenu : public GameState {
         }
 
         if (km.isClicked(keyboard::KEY_H)) {
-            inventory->addItem(std::make_shared<engine::items::Heal>());
+            inventory->addItem(std::make_shared<engine::items::Bandage>());
             logging::info("Adding heal to inventory");
         }
         if (km.isClicked(keyboard::KEY_P)) {
@@ -120,6 +120,7 @@ class PartyMenu : public GameState {
         if (km.isClicked(keyboard::KEY_I)) {
             m_state = PartyMenuState::kMain;
             v_storage.setState(views::Storage::State::kNone);
+            v_skill_selection.bind(getParty()->getMember(m_selected_hero)->getSkills());   // update skills
         }
     }
 

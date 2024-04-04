@@ -11,6 +11,7 @@ public:
     Color(const uint32_t &hex, const uint8_t &a);
 
     static Color fromHex(const std::string &hex);
+    static Color fromHSV(const float &h, const float &s, const float &v);
 
     Color &operator=(const Color &color);
 

@@ -1,5 +1,7 @@
 #pragma once
 #include "game_object.h"
+#include "item.h"
+#include "storage.h"
 #include <cstdint>
 #include <memory>
 #include <string>
@@ -16,6 +18,7 @@ enum class Type {
 };
 
 enum class TargetType {
+    kSelf,
     kIndividual,
     kParty,
     kOtherParty,
@@ -63,8 +66,19 @@ struct AttackResult {
     int32_t damage = 0;
 };
 
-struct ApplyItemSkill : public Skill {
-    uint8_t uses = 0;
+struct ConsumeItemSkill : public Skill {
+    ConsumeItemSkill(std::shared_ptr<items::Consumable> consumable, std::shared_ptr<items::Storage> storage) :
+        consumable(consumable), storage(storage) {
+        id = consumable->id;
+        name = consumable->name;
+        level = 0;
+        targetType = TargetType::kSelf;
+        launchablePositions = {1, 2, 3, 4};
+        targetablePositions = {1, 2, 3, 4};
+    }
+
+    std::shared_ptr<items::Consumable> consumable;
+    std::shared_ptr<items::Storage> storage;
 };
 
 }   // namespace skills

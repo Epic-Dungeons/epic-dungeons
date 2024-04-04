@@ -21,7 +21,7 @@ public:
     };
 
     const std::shared_ptr<engine::skills::Skill> getSkill() const {
-        return m_skill.lock();
+        return m_skill;
     }
 
     static const std::shared_ptr<Skill> getView(const std::shared_ptr<engine::skills::Skill> &skill);
@@ -31,12 +31,15 @@ public:
     Skill &setPosition(const Vector2d &position);
     Skill &setSelection(const Selection &selection);
     Skill &setSize(const Vector2d &size);
+
+    Selection getSelection() const;
+
     Vector2d getSize() const;
 
 protected:
     void draw(const graphics::Renderer &renderer) const override;
 
-    std::weak_ptr<engine::skills::Skill> m_skill;
+    std::shared_ptr<engine::skills::Skill> m_skill;
     std::shared_ptr<graphics::Sprite> m_sprite;
     Selection m_selection;
     Vector2d m_position = {0, 0};

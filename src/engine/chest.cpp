@@ -1,5 +1,5 @@
 #include "chest.h"
-#include "engine/items/consumables/heal.h"
+#include "engine/items/consumables/bandage.h"
 #include "engine/items/golden_coin.h"
 
 namespace engine {
@@ -21,7 +21,7 @@ std::shared_ptr<Chest> createChest() {
     // health potion
     static const float health_potion_chance = 0.5;
     if (rand() % 100 < health_potion_chance * 100)
-        chest->getStorage()->addItem(std::make_shared<items::Heal>());
+        chest->getStorage()->addItem(std::make_shared<items::Bandage>());
     return chest;
 }
 

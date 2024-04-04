@@ -49,7 +49,8 @@ void Entity::bind(const std::shared_ptr<engine::entities::Entity> &entity) {
 void Entity::draw(const graphics::Renderer &renderer) const {
     auto entity = m_entity.lock();
     if (!entity) {
-        throw std::runtime_error("Entity is not bound");
+        logging::error("Entity::draw: Entity is not bound");
+        throw std::runtime_error("Entity::draw: Entity is not bound");
         return;
     }
     if (m_prev_hp != entity->getHealth()) {
@@ -57,7 +58,7 @@ void Entity::draw(const graphics::Renderer &renderer) const {
         m_prev_hp = entity->getHealth();
     }
 
-    if (m_draw_stats)
+    if (m_draw_stats || m_selection == Selection::kSelected && m_state == State::kCombat)
         drawStats(renderer, {0, 0});
 
     static std::map<Selection, graphics::Color> selection_colors = {
@@ -67,7 +68,19 @@ void Entity::draw(const graphics::Renderer &renderer) const {
         {Selection::kNotSelectable, 0x222222},
     };
 
-    const graphics::Color &selection_color = selection_colors.find(m_selection)->second;
+    static std::map<Selection, graphics::Color> battle_selection_colors = {
+        {Selection::kNone, 0xffffff},
+        {Selection::kSelected, 0xffffff},
+        {Selection::kSelectable, 0xaaaaaa},
+        {Selection::kNotSelectable, 0x222222},
+    };
+
+    graphics::Color selection_color = 0xffffff;
+    if (m_state == State::kIdle || m_state == State::kWalking)
+        selection_color = selection_colors.find(m_selection)->second;
+    else if (m_state == State::kCombat) {
+        selection_color = battle_selection_colors.find(m_selection)->second;
+    }
 
     graphics::SpritePtr sprite;
     if (!entity->isAlive()) {
@@ -77,6 +90,10 @@ void Entity::draw(const graphics::Renderer &renderer) const {
     }
     if (sprite) {
         sprite->setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER).setColor(selection_color);
+        if (m_direction == Direction::kLeft)
+            sprite->setFlip(true, false);
+        else if (m_direction == Direction::kRight)
+            sprite->setFlip(false, false);
         renderer.draw(sprite->setPosition(m_position));
     } else {
         logging::error("No animation found for state " + std::to_string(static_cast<uint8_t>(m_state)));
@@ -87,12 +104,21 @@ void Entity::draw(const graphics::Renderer &renderer) const {
         m_damage_anim.update();
         renderer.draw(m_damage_anim.setPosition(m_position));
     }
+    if (m_draw_chance && m_state == State::kCombat && m_selection == Selection::kSelected) {
+        graphics::Text text(std::to_string(static_cast<int>(m_chance)) + "%");
+        graphics::Color color =
+            graphics::Color::fromHSV(m_chance * 120 / 100, 1, 1);   // 0-120 green, 120-240 yellow, 240-360 red
+        text.setFillColor(color);
+        text.setOrigin(graphics::Text::Origin::BOTTOM_CENTER).setPosition(m_position + Vector2d(0, -300));
+        renderer.draw(text);
+    }
 }
 
 void Entity::drawStats(const graphics::Renderer &renderer, const Vector2d &position) const {
     auto entity = m_entity.lock();
     if (!entity) {
-        throw std::runtime_error("Entity is not bound");
+        logging::error("Entity::drawStats: Entity is not bound");
+        throw std::runtime_error("Entity::drawStats: Entity is not bound");
         return;
     }
 
@@ -131,6 +157,21 @@ Entity &Entity::setDrawStats(bool draw_stats) {
     return *this;
 }
 
+Entity &Entity::setDirection(const Direction &direction) {
+    m_direction = direction;
+    return *this;
+}
+
+Entity &Entity::setChance(const float &chance) {
+    m_chance = chance;
+    return *this;
+}
+
+Entity &Entity::setDrawChance(const bool &draw_chance) {
+    m_draw_chance = draw_chance;
+    return *this;
+}
+
 const graphics::SpritePtr &Entity::getPortrait() const {
     return m_portrait;
 }
@@ -153,6 +194,10 @@ const std::shared_ptr<Entity> Entity::getView(const std::shared_ptr<engine::enti
 
 void Entity::applyDamage(const int &damage) const {
     m_damage_anim.setDamage(damage).setDuration(500).start();
+}
+
+Entity::Direction Entity::getDirection() const {
+    return m_direction;
 }
 
 DamageAnimation::DamageAnimation() : View() {}

@@ -46,10 +46,45 @@ public:
     }
 
     bool addItem(const std::shared_ptr<Item> &item, const size_t &count = 1);
+
+    template<typename T>
+    std::shared_ptr<T> getItem() const {
+        for (auto &item : m_set_items) {
+            if (std::dynamic_pointer_cast<T>(item) != nullptr) {
+                return std::dynamic_pointer_cast<T>(item);
+            }
+        }
+        return nullptr;
+    }
+
     std::shared_ptr<Item> getItem(const std::string &id) const;
     std::vector<std::shared_ptr<Item>> getItems() const;
+
+    template<typename T>
+    std::vector<std::shared_ptr<T>> getItems() const {
+        std::vector<std::shared_ptr<T>> items;
+        for (auto &item : m_set_items) {
+            auto casted = std::dynamic_pointer_cast<T>(item);
+            if (casted != nullptr) {
+                items.push_back(casted);
+            }
+        }
+        return items;
+    }
+
     std::vector<std::shared_ptr<Item>> getItems(const std::string &id) const;
-    std::shared_ptr<Item> getItem(const size_t &index) const;
+
+    template<typename T>
+    bool containsItem() const {
+        for (const auto &item : m_set_items) {
+            if (std::dynamic_pointer_cast<T>(item) != nullptr) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool containsItem(const std::string &id) const;
     bool containsItem(const std::shared_ptr<Item> &item) const;
 
     const size_t countItem(const std::string &id) const;
@@ -58,28 +93,6 @@ public:
 
     bool removeItem(const std::shared_ptr<Item> &item);
     bool removeOneItem(const std::shared_ptr<Item> &item);
-
-    template<typename T>
-    std::shared_ptr<T> getItem() const {
-        for (auto &item : m_items) {
-            if (std::dynamic_pointer_cast<T>(item) != nullptr) {
-                return std::dynamic_pointer_cast<T>(item);
-            }
-        }
-        return nullptr;
-    }
-
-    template<typename T>
-    std::vector<std::shared_ptr<T>> getItems() const {
-        std::vector<std::shared_ptr<T>> items;
-        for (auto &item : m_items) {
-            auto casted = std::dynamic_pointer_cast<T>(item);
-            if (casted != nullptr) {
-                items.push_back(casted);
-            }
-        }
-        return items;
-    }
 
 protected:
     ItemMap m_items;   // <id, item>
