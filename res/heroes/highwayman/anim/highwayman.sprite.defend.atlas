@@ -1,0 +1,20 @@
+
+highwayman.sprite.defend.png
+size: 404,563
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+defend
+  rotate: false
+  xy: 2, 2
+  size: 335, 559
+  orig: 335, 559
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 339, 204
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

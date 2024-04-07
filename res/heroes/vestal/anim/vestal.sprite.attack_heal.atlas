@@ -1,0 +1,20 @@
+
+vestal.sprite.attack_heal.png
+size: 682,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_heal
+  rotate: true
+  xy: 2, 31
+  size: 328, 613
+  orig: 328, 613
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 617, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

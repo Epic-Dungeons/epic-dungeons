@@ -1,0 +1,34 @@
+
+vestal.sprite.dazzling_light.png
+size: 777,647
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: true
+  xy: 2, 381
+  size: 264, 534
+  orig: 264, 534
+  offset: 0, 0
+  index: -1
+mace_glow
+  rotate: true
+  xy: 375, 2
+  size: 241, 242
+  orig: 241, 242
+  offset: 0, 0
+  index: -1
+ray_glow
+  rotate: true
+  xy: 2, 11
+  size: 368, 371
+  orig: 368, 371
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 538, 245
+  size: 237, 400
+  orig: 237, 400
+  offset: 0, 0
+  index: -1

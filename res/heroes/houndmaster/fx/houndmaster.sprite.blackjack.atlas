@@ -1,0 +1,13 @@
+
+houndmaster.sprite.blackjack.png
+size: 401,437
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+club_trail
+  rotate: false
+  xy: 2, 2
+  size: 397, 433
+  orig: 397, 433
+  offset: 0, 0
+  index: -1

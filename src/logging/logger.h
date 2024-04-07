@@ -5,6 +5,11 @@
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/spdlog.h>
 
+#define LOG_DEBUG(...) logging::debug(__VA_ARGS__)
+#define LOG_INFO(...) logging::info(__VA_ARGS__)
+#define LOG_WARN(...) logging::warn(__VA_ARGS__)
+#define LOG_ERROR(...) logging::error(__VA_ARGS__)
+
 namespace logging {
 
 class Logger {

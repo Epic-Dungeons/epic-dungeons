@@ -1,0 +1,41 @@
+
+man_at_arms.sprite.command.png
+size: 1131,519
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+crown
+  rotate: true
+  xy: 998, 47
+  size: 198, 115
+  orig: 198, 115
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 2, 2
+  size: 525, 515
+  orig: 525, 515
+  offset: 0, 0
+  index: -1
+halo
+  rotate: true
+  xy: 871, 247
+  size: 270, 258
+  orig: 270, 258
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 529, 136
+  size: 340, 381
+  orig: 340, 381
+  offset: 0, 0
+  index: -1
+wings
+  rotate: false
+  xy: 529, 17
+  size: 467, 117
+  orig: 467, 117
+  offset: 0, 0
+  index: -1

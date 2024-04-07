@@ -1,0 +1,20 @@
+
+houndmaster.sprite.whistle.png
+size: 587,226
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+notes
+  rotate: false
+  xy: 456, 73
+  size: 129, 151
+  orig: 129, 151
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 2, 2
+  size: 452, 222
+  orig: 452, 222
+  offset: 0, 0
+  index: -1

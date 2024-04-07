@@ -1,0 +1,20 @@
+
+antiquarian.sprite.attack_censer.png
+size: 621,564
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_censer
+  rotate: false
+  xy: 2, 2
+  size: 552, 560
+  orig: 552, 560
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 556, 205
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

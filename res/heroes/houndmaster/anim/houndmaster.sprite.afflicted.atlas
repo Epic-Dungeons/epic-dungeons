@@ -1,0 +1,27 @@
+
+houndmaster.sprite.afflicted.png
+size: 2222,1179
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: false
+  xy: 1345, 297
+  size: 875, 880
+  orig: 875, 880
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 50
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 1345, 2
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

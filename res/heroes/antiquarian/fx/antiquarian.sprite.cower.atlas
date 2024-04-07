@@ -1,0 +1,83 @@
+
+antiquarian.sprite.cower.png
+size: 969,536
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow
+  rotate: false
+  xy: 2, 13
+  size: 504, 521
+  orig: 504, 521
+  offset: 0, 0
+  index: -1
+halo
+  rotate: false
+  xy: 508, 73
+  size: 270, 258
+  orig: 270, 258
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 508, 333
+  size: 382, 201
+  orig: 382, 201
+  offset: 0, 0
+  index: -1
+shard01
+  rotate: true
+  xy: 670, 2
+  size: 69, 77
+  orig: 69, 77
+  offset: 0, 0
+  index: -1
+shard02
+  rotate: true
+  xy: 780, 67
+  size: 84, 104
+  orig: 84, 104
+  offset: 0, 0
+  index: -1
+shard03
+  rotate: false
+  xy: 780, 153
+  size: 96, 178
+  orig: 96, 178
+  offset: 0, 0
+  index: -1
+shard04
+  rotate: true
+  xy: 508, 2
+  size: 69, 160
+  orig: 69, 160
+  offset: 0, 0
+  index: -1
+shard05
+  rotate: false
+  xy: 886, 59
+  size: 51, 114
+  orig: 51, 114
+  offset: 0, 0
+  index: -1
+shard06
+  rotate: false
+  xy: 892, 366
+  size: 70, 168
+  orig: 70, 168
+  offset: 0, 0
+  index: -1
+shard07
+  rotate: false
+  xy: 878, 175
+  size: 89, 156
+  orig: 89, 156
+  offset: 0, 0
+  index: -1
+shard08
+  rotate: false
+  xy: 749, 2
+  size: 46, 63
+  orig: 46, 63
+  offset: 0, 0
+  index: -1

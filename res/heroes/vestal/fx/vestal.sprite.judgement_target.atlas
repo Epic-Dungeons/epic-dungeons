@@ -1,0 +1,27 @@
+
+vestal.sprite.judgement_target.png
+size: 487,737
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lightning01
+  rotate: false
+  xy: 351, 2
+  size: 134, 733
+  orig: 134, 733
+  offset: 0, 0
+  index: -1
+lightning02
+  rotate: false
+  xy: 180, 12
+  size: 169, 723
+  orig: 169, 723
+  offset: 0, 0
+  index: -1
+lightning03
+  rotate: false
+  xy: 2, 11
+  size: 176, 724
+  orig: 176, 724
+  offset: 0, 0
+  index: -1

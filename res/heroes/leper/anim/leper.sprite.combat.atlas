@@ -1,0 +1,139 @@
+
+leper.sprite.combat.png
+size: 2044,219
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: false
+  xy: 550, 11
+  size: 118, 63
+  orig: 118, 63
+  offset: 0, 0
+  index: -1
+breastplate
+  rotate: false
+  xy: 1868, 3
+  size: 174, 214
+  orig: 174, 214
+  offset: 0, 0
+  index: -1
+cape
+  rotate: false
+  xy: 1213, 131
+  size: 111, 86
+  orig: 111, 86
+  offset: 0, 0
+  index: -1
+cowl
+  rotate: true
+  xy: 1399, 15
+  size: 202, 222
+  orig: 202, 222
+  offset: 0, 0
+  index: -1
+hips
+  rotate: false
+  xy: 918, 114
+  size: 162, 103
+  orig: 162, 103
+  offset: 0, 0
+  index: -1
+jaw
+  rotate: false
+  xy: 1192, 6
+  size: 35, 28
+  orig: 35, 28
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 1082, 119
+  size: 129, 98
+  orig: 129, 98
+  offset: 0, 0
+  index: -1
+left_cowl
+  rotate: true
+  xy: 663, 97
+  size: 120, 253
+  orig: 120, 253
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: true
+  xy: 670, 11
+  size: 84, 149
+  orig: 84, 149
+  offset: 0, 0
+  index: -1
+left_leg
+  rotate: true
+  xy: 425, 76
+  size: 141, 236
+  orig: 141, 236
+  offset: 0, 0
+  index: -1
+left_tasset
+  rotate: true
+  xy: 821, 2
+  size: 93, 125
+  orig: 93, 125
+  offset: 0, 0
+  index: -1
+mask
+  rotate: false
+  xy: 1313, 26
+  size: 84, 103
+  orig: 84, 103
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 1192, 36
+  size: 119, 81
+  orig: 119, 81
+  offset: 0, 0
+  index: -1
+right_cowl
+  rotate: true
+  xy: 361, 4
+  size: 61, 187
+  orig: 61, 187
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: false
+  xy: 1097, 11
+  size: 93, 106
+  orig: 93, 106
+  offset: 0, 0
+  index: -1
+right_leg
+  rotate: true
+  xy: 1623, 63
+  size: 154, 243
+  orig: 154, 243
+  offset: 0, 0
+  index: -1
+right_tasset
+  rotate: true
+  xy: 948, 9
+  size: 103, 147
+  orig: 103, 147
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+sword
+  rotate: false
+  xy: 2, 67
+  size: 421, 150
+  orig: 421, 150
+  offset: 0, 0
+  index: -1

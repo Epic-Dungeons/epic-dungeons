@@ -1,0 +1,20 @@
+
+grave_robber.sprite.attack_dagger.png
+size: 675,469
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_dagger
+  rotate: true
+  xy: 2, 2
+  size: 465, 606
+  orig: 465, 606
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 610, 110
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

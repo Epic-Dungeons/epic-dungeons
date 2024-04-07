@@ -1,0 +1,83 @@
+
+vestal.sprite.gods_hand.png
+size: 605,1029
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: true
+  xy: 2, 763
+  size: 264, 403
+  orig: 264, 403
+  offset: 0, 0
+  index: -1
+book_glow
+  rotate: true
+  xy: 2, 2
+  size: 184, 175
+  orig: 184, 175
+  offset: 0, 0
+  index: -1
+fist
+  rotate: false
+  xy: 354, 16
+  size: 138, 142
+  orig: 138, 142
+  offset: 0, 0
+  index: -1
+mace_glow
+  rotate: true
+  xy: 347, 403
+  size: 242, 244
+  orig: 242, 244
+  offset: 0, 0
+  index: -1
+particle_glow
+  rotate: false
+  xy: 407, 647
+  size: 191, 182
+  orig: 191, 182
+  offset: 0, 0
+  index: -1
+particles
+  rotate: false
+  xy: 347, 719
+  size: 52, 42
+  orig: 52, 42
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: true
+  xy: 2, 500
+  size: 261, 343
+  orig: 261, 343
+  offset: 0, 0
+  index: -1
+ring
+  rotate: false
+  xy: 407, 831
+  size: 196, 196
+  orig: 196, 196
+  offset: 0, 0
+  index: -1
+spikes
+  rotate: false
+  xy: 2, 188
+  size: 310, 310
+  orig: 310, 310
+  offset: 0, 0
+  index: -1
+sunburst
+  rotate: true
+  xy: 179, 11
+  size: 175, 173
+  orig: 175, 173
+  offset: 0, 0
+  index: -1
+sunburst_glow
+  rotate: true
+  xy: 354, 160
+  size: 241, 242
+  orig: 241, 242
+  offset: 0, 0
+  index: -1

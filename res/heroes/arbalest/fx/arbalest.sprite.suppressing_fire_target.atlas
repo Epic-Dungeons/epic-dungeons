@@ -1,0 +1,55 @@
+
+arbalest.sprite.suppressing_fire_target.png
+size: 214,545
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bolt01
+  rotate: false
+  xy: 144, 7
+  size: 61, 153
+  orig: 61, 153
+  offset: 0, 0
+  index: -1
+bolt02
+  rotate: true
+  xy: 2, 482
+  size: 61, 198
+  orig: 61, 198
+  offset: 0, 0
+  index: -1
+bolt03
+  rotate: true
+  xy: 2, 420
+  size: 60, 198
+  orig: 60, 198
+  offset: 0, 0
+  index: -1
+bolt04
+  rotate: false
+  xy: 144, 162
+  size: 68, 181
+  orig: 68, 181
+  offset: 0, 0
+  index: -1
+dirt
+  rotate: true
+  xy: 102, 345
+  size: 73, 75
+  orig: 73, 75
+  offset: 0, 0
+  index: -1
+ground
+  rotate: true
+  xy: 102, 4
+  size: 339, 40
+  orig: 339, 40
+  offset: 0, 0
+  index: -1
+trail
+  rotate: false
+  xy: 2, 2
+  size: 98, 416
+  orig: 98, 416
+  offset: 0, 0
+  index: -1

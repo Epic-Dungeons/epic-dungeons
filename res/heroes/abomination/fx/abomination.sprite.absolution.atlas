@@ -1,0 +1,41 @@
+
+abomination.sprite.absolution.png
+size: 1671,847
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+god_rays01
+  rotate: true
+  xy: 2, 561
+  size: 284, 1349
+  orig: 284, 1349
+  offset: 0, 0
+  index: -1
+god_rays02
+  rotate: true
+  xy: 2, 275
+  size: 284, 1348
+  orig: 284, 1348
+  offset: 0, 0
+  index: -1
+motes
+  rotate: true
+  xy: 2, 80
+  size: 193, 976
+  orig: 193, 976
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: true
+  xy: 980, 2
+  size: 271, 396
+  orig: 271, 396
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 1353, 381
+  size: 316, 464
+  orig: 316, 464
+  offset: 0, 0
+  index: -1

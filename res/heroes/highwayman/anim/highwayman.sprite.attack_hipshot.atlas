@@ -1,0 +1,20 @@
+
+highwayman.sprite.attack_hipshot.png
+size: 611,401
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_hipshot
+  rotate: true
+  xy: 2, 2
+  size: 397, 542
+  orig: 397, 542
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 546, 42
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

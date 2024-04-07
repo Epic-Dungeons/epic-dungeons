@@ -1,0 +1,48 @@
+
+man_at_arms.sprite.defender.png
+size: 850,1242
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow
+  rotate: false
+  xy: 456, 402
+  size: 368, 371
+  orig: 368, 371
+  offset: 0, 0
+  index: -1
+long_rays
+  rotate: true
+  xy: 2, 263
+  size: 453, 452
+  orig: 453, 452
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 434, 775
+  size: 414, 465
+  orig: 414, 465
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 718
+  size: 430, 522
+  orig: 430, 522
+  offset: 0, 0
+  index: -1
+shield
+  rotate: true
+  xy: 2, 2
+  size: 259, 295
+  orig: 259, 295
+  offset: 0, 0
+  index: -1
+short_rays
+  rotate: true
+  xy: 456, 52
+  size: 348, 349
+  orig: 348, 349
+  offset: 0, 0
+  index: -1

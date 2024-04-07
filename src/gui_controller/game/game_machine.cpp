@@ -9,6 +9,7 @@
 #include "states/move_transition.h"
 #include "states/party_menu.h"
 #include "states/post_event.h"
+#include "states/recruit.h"
 #include "states/treasure.h"
 
 namespace gui {
@@ -25,6 +26,7 @@ GameMachine::GameMachine() {
     addState<DialogueDemo>(GUIGameState::kDialogueDemo);
     addState<PartyMenu>(GUIGameState::kPartyMenu);
     addState<Treasure>(GUIGameState::kTreasure);
+    addState<Recruit>(GUIGameState::kRecruit);
     changeState(GUIGameState::kMain);
 }
 

@@ -1,0 +1,20 @@
+
+antiquarian.sprite.investigate.png
+size: 608,413
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+investigate
+  rotate: true
+  xy: 2, 2
+  size: 409, 539
+  orig: 409, 539
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 543, 54
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

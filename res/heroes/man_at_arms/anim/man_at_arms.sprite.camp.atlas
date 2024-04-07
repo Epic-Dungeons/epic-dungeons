@@ -1,0 +1,20 @@
+
+man_at_arms.sprite.camp.png
+size: 457,441
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+camp
+  rotate: false
+  xy: 2, 2
+  size: 388, 437
+  orig: 388, 437
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 392, 82
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

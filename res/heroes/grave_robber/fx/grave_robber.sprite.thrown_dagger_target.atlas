@@ -1,0 +1,41 @@
+
+grave_robber.sprite.thrown_dagger_target.png
+size: 931,211
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dagger
+  rotate: true
+  xy: 838, 48
+  size: 161, 91
+  orig: 161, 91
+  offset: 0, 0
+  index: -1
+dagger_glow
+  rotate: false
+  xy: 606, 45
+  size: 230, 164
+  orig: 230, 164
+  offset: 0, 0
+  index: -1
+dagger_trail01
+  rotate: true
+  xy: 2, 2
+  size: 207, 206
+  orig: 207, 206
+  offset: 0, 0
+  index: -1
+dagger_trail02
+  rotate: false
+  xy: 410, 2
+  size: 194, 207
+  orig: 194, 207
+  offset: 0, 0
+  index: -1
+dagger_trail03
+  rotate: true
+  xy: 210, 3
+  size: 206, 198
+  orig: 206, 198
+  offset: 0, 0
+  index: -1

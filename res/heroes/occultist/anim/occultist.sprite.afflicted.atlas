@@ -1,0 +1,27 @@
+
+occultist.sprite.afflicted.png
+size: 1920,1189
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: false
+  xy: 1345, 297
+  size: 573, 890
+  orig: 573, 890
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 60
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 1345, 2
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

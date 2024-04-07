@@ -1,0 +1,20 @@
+
+leper.sprite.attack_intimidate.png
+size: 738,542
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_intimidate
+  rotate: true
+  xy: 2, 2
+  size: 538, 669
+  orig: 538, 669
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 673, 183
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+houndmaster.sprite.attack_rush.png
+size: 1261,363
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hound
+  rotate: false
+  xy: 2, 26
+  size: 610, 335
+  orig: 610, 335
+  offset: 0, 0
+  index: -1
+master
+  rotate: true
+  xy: 614, 2
+  size: 359, 580
+  orig: 359, 580
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 1196, 4
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

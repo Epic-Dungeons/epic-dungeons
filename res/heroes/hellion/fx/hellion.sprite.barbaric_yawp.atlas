@@ -1,0 +1,76 @@
+
+hellion.sprite.barbaric_yawp.png
+size: 750,507
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: false
+  xy: 2, 23
+  size: 506, 482
+  orig: 506, 482
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 510, 234
+  size: 134, 271
+  orig: 134, 271
+  offset: 0, 0
+  index: -1
+shard01
+  rotate: false
+  xy: 510, 2
+  size: 86, 45
+  orig: 86, 45
+  offset: 0, 0
+  index: -1
+shard02
+  rotate: false
+  xy: 510, 179
+  size: 123, 53
+  orig: 123, 53
+  offset: 0, 0
+  index: -1
+shard03
+  rotate: false
+  xy: 510, 81
+  size: 232, 57
+  orig: 232, 57
+  offset: 0, 0
+  index: -1
+shard04
+  rotate: false
+  xy: 510, 49
+  size: 195, 30
+  orig: 195, 30
+  offset: 0, 0
+  index: -1
+shard05
+  rotate: false
+  xy: 510, 144
+  size: 131, 33
+  orig: 131, 33
+  offset: 0, 0
+  index: -1
+shard06
+  rotate: true
+  xy: 646, 310
+  size: 195, 102
+  orig: 195, 102
+  offset: 0, 0
+  index: -1
+shard07
+  rotate: true
+  xy: 646, 140
+  size: 168, 99
+  orig: 168, 99
+  offset: 0, 0
+  index: -1
+shard08
+  rotate: true
+  xy: 707, 24
+  size: 55, 33
+  orig: 55, 33
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+vestal.sprite.attack_miracle.png
+size: 816,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_miracle
+  rotate: true
+  xy: 2, 21
+  size: 338, 747
+  orig: 338, 747
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 751, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

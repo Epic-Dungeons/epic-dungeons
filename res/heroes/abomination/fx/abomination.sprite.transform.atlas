@@ -1,0 +1,13 @@
+
+abomination.sprite.transform.png
+size: 926,517
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dust_front
+  rotate: false
+  xy: 2, 2
+  size: 922, 513
+  orig: 922, 513
+  offset: 0, 0
+  index: -1

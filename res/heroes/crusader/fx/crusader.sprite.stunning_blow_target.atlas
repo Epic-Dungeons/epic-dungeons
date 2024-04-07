@@ -1,0 +1,76 @@
+
+crusader.sprite.stunning_blow_target.png
+size: 565,514
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+inner_glow
+  rotate: false
+  xy: 2, 2
+  size: 198, 199
+  orig: 198, 199
+  offset: 0, 0
+  index: -1
+inner_rays
+  rotate: false
+  xy: 312, 260
+  size: 251, 252
+  orig: 251, 252
+  offset: 0, 0
+  index: -1
+outer_glow
+  rotate: true
+  xy: 312, 11
+  size: 247, 250
+  orig: 247, 250
+  offset: 0, 0
+  index: -1
+outer_rays
+  rotate: false
+  xy: 2, 203
+  size: 308, 309
+  orig: 308, 309
+  offset: 0, 0
+  index: -1
+stars01
+  rotate: false
+  xy: 266, 158
+  size: 44, 43
+  orig: 44, 43
+  offset: 0, 0
+  index: -1
+stars02
+  rotate: false
+  xy: 202, 144
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1
+stars06
+  rotate: false
+  xy: 202, 144
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1
+stars04
+  rotate: false
+  xy: 202, 144
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1
+stars03
+  rotate: false
+  xy: 202, 144
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1
+stars05
+  rotate: false
+  xy: 202, 112
+  size: 33, 30
+  orig: 33, 30
+  offset: 0, 0
+  index: -1

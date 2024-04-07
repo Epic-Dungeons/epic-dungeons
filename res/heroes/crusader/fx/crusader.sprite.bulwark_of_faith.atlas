@@ -1,0 +1,34 @@
+
+crusader.sprite.bulwark_of_faith.png
+size: 1122,462
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+scroll_glow
+  rotate: false
+  xy: 2, 2
+  size: 251, 458
+  orig: 251, 458
+  offset: 0, 0
+  index: -1
+scroll_wash
+  rotate: false
+  xy: 751, 36
+  size: 108, 424
+  orig: 108, 424
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 861, 165
+  size: 259, 295
+  orig: 259, 295
+  offset: 0, 0
+  index: -1
+starburst
+  rotate: true
+  xy: 255, 21
+  size: 439, 494
+  orig: 439, 494
+  offset: 0, 0
+  index: -1

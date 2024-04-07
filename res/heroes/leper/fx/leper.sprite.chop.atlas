@@ -1,0 +1,13 @@
+
+leper.sprite.chop.png
+size: 362,574
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sword_trail
+  rotate: false
+  xy: 2, 2
+  size: 358, 570
+  orig: 358, 570
+  offset: 0, 0
+  index: -1

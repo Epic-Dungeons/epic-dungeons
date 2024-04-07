@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.incision.png
+size: 124,602
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blood
+  rotate: false
+  xy: 2, 2
+  size: 107, 144
+  orig: 107, 144
+  offset: 0, 0
+  index: -1
+dagger_trail
+  rotate: false
+  xy: 2, 148
+  size: 120, 452
+  orig: 120, 452
+  offset: 0, 0
+  index: -1

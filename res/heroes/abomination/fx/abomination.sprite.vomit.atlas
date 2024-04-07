@@ -1,0 +1,48 @@
+
+abomination.sprite.vomit.png
+size: 224,519
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+barf01
+  rotate: false
+  xy: 2, 39
+  size: 201, 143
+  orig: 201, 143
+  offset: 0, 0
+  index: -1
+barf03
+  rotate: true
+  xy: 205, 130
+  size: 27, 13
+  orig: 27, 13
+  offset: 0, 0
+  index: -1
+barf04
+  rotate: true
+  xy: 205, 159
+  size: 23, 17
+  orig: 23, 17
+  offset: 0, 0
+  index: -1
+barf05
+  rotate: false
+  xy: 2, 2
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+barf06
+  rotate: false
+  xy: 2, 18
+  size: 23, 19
+  orig: 23, 19
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 2, 184
+  size: 220, 333
+  orig: 220, 333
+  offset: 0, 0
+  index: -1

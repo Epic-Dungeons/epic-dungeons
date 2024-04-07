@@ -1,0 +1,20 @@
+
+hellion.sprite.attack_leap.png
+size: 932,599
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_leap
+  rotate: true
+  xy: 2, 2
+  size: 595, 863
+  orig: 595, 863
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 867, 240
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

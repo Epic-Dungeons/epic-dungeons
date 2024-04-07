@@ -1,0 +1,20 @@
+
+grave_robber.sprite.attack_potion.png
+size: 662,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_potion
+  rotate: true
+  xy: 2, 5
+  size: 354, 593
+  orig: 354, 593
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 597, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

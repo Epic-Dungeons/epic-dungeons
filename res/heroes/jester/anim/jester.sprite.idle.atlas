@@ -1,0 +1,76 @@
+
+jester.sprite.idle.png
+size: 798,533
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: false
+  xy: 275, 2
+  size: 128, 61
+  orig: 128, 61
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 578, 45
+  size: 216, 180
+  orig: 216, 180
+  offset: 0, 0
+  index: -1
+legs
+  rotate: false
+  xy: 2, 209
+  size: 286, 322
+  orig: 286, 322
+  offset: 0, 0
+  index: -1
+lute
+  rotate: true
+  xy: 290, 292
+  size: 239, 330
+  orig: 239, 330
+  offset: 0, 0
+  index: -1
+mask
+  rotate: true
+  xy: 290, 65
+  size: 160, 286
+  orig: 160, 286
+  offset: 0, 0
+  index: -1
+pants_top
+  rotate: false
+  xy: 405, 28
+  size: 125, 35
+  orig: 125, 35
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 649, 241
+  size: 114, 89
+  orig: 114, 89
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: false
+  xy: 622, 332
+  size: 174, 199
+  orig: 174, 199
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 290, 227
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 2, 3
+  size: 271, 204
+  orig: 271, 204
+  offset: 0, 0
+  index: -1

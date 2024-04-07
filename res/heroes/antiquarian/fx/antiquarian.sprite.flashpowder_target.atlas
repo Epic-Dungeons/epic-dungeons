@@ -1,0 +1,132 @@
+
+antiquarian.sprite.flashpowder_target.png
+size: 637,1049
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blast
+  rotate: false
+  xy: 2, 389
+  size: 243, 658
+  orig: 243, 658
+  offset: 0, 0
+  index: -1
+glow
+  rotate: true
+  xy: 247, 602
+  size: 445, 383
+  orig: 445, 383
+  offset: 0, 0
+  index: -1
+smoke01
+  rotate: true
+  xy: 2, 2
+  size: 385, 219
+  orig: 385, 219
+  offset: 0, 0
+  index: -1
+smoke02
+  rotate: false
+  xy: 412, 184
+  size: 206, 206
+  orig: 206, 206
+  offset: 0, 0
+  index: -1
+smoke03
+  rotate: false
+  xy: 454, 455
+  size: 144, 145
+  orig: 144, 145
+  offset: 0, 0
+  index: -1
+smoke04
+  rotate: false
+  xy: 247, 392
+  size: 205, 208
+  orig: 205, 208
+  offset: 0, 0
+  index: -1
+smoke05
+  rotate: true
+  xy: 223, 177
+  size: 210, 187
+  orig: 210, 187
+  offset: 0, 0
+  index: -1
+spark01
+  rotate: false
+  xy: 493, 407
+  size: 36, 46
+  orig: 36, 46
+  offset: 0, 0
+  index: -1
+spark02
+  rotate: false
+  xy: 349, 134
+  size: 34, 41
+  orig: 34, 41
+  offset: 0, 0
+  index: -1
+spark03
+  rotate: false
+  xy: 454, 406
+  size: 37, 47
+  orig: 37, 47
+  offset: 0, 0
+  index: -1
+spark04
+  rotate: false
+  xy: 600, 515
+  size: 34, 44
+  orig: 34, 44
+  offset: 0, 0
+  index: -1
+spark05
+  rotate: false
+  xy: 223, 130
+  size: 40, 45
+  orig: 40, 45
+  offset: 0, 0
+  index: -1
+spark06
+  rotate: false
+  xy: 531, 414
+  size: 39, 39
+  orig: 39, 39
+  offset: 0, 0
+  index: -1
+spark07
+  rotate: false
+  xy: 223, 37
+  size: 36, 44
+  orig: 36, 44
+  offset: 0, 0
+  index: -1
+spark08
+  rotate: false
+  xy: 223, 83
+  size: 39, 45
+  orig: 39, 45
+  offset: 0, 0
+  index: -1
+spark09
+  rotate: true
+  xy: 600, 561
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+spark10
+  rotate: false
+  xy: 265, 133
+  size: 41, 42
+  orig: 41, 42
+  offset: 0, 0
+  index: -1
+spark11
+  rotate: false
+  xy: 308, 134
+  size: 39, 41
+  orig: 39, 41
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+highwayman.sprite.opened_vein.png
+size: 730,192
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dagger_trail
+  rotate: false
+  xy: 2, 2
+  size: 726, 188
+  orig: 726, 188
+  offset: 0, 0
+  index: -1

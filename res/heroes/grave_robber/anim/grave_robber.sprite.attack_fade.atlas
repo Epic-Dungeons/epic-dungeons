@@ -1,0 +1,20 @@
+
+grave_robber.sprite.attack_fade.png
+size: 593,480
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_fade
+  rotate: true
+  xy: 2, 2
+  size: 476, 524
+  orig: 476, 524
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 528, 121
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

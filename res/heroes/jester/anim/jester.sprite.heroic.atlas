@@ -1,0 +1,27 @@
+
+jester.sprite.heroic.png
+size: 2247,1209
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 80
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+halo
+  rotate: false
+  xy: 1345, 2
+  size: 309, 298
+  orig: 309, 298
+  offset: 0, 0
+  index: -1
+heroic
+  rotate: false
+  xy: 1345, 302
+  size: 900, 905
+  orig: 900, 905
+  offset: 0, 0
+  index: -1

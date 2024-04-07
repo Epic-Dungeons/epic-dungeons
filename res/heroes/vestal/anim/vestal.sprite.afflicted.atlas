@@ -1,0 +1,27 @@
+
+vestal.sprite.afflicted.png
+size: 1926,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: false
+  xy: 1345, 342
+  size: 579, 787
+  orig: 579, 787
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 1345, 47
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

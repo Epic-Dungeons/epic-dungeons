@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.attack_buff.png
+size: 631,398
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_buff
+  rotate: true
+  xy: 2, 2
+  size: 394, 562
+  orig: 394, 562
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 566, 39
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

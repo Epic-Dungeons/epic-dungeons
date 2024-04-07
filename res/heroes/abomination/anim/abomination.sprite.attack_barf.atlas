@@ -1,0 +1,20 @@
+
+abomination.sprite.attack_barf.png
+size: 605,507
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_barf
+  rotate: true
+  xy: 2, 2
+  size: 503, 536
+  orig: 503, 536
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 540, 148
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

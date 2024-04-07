@@ -1,0 +1,20 @@
+
+occultist.sprite.bloodlet.png
+size: 391,570
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blood
+  rotate: false
+  xy: 2, 2
+  size: 67, 68
+  orig: 67, 68
+  offset: 0, 0
+  index: -1
+dagger_trail
+  rotate: false
+  xy: 2, 72
+  size: 387, 496
+  orig: 387, 496
+  offset: 0, 0
+  index: -1

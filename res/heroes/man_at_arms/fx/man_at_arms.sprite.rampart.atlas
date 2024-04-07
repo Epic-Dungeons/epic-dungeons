@@ -1,0 +1,27 @@
+
+man_at_arms.sprite.rampart.png
+size: 681,662
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow
+  rotate: false
+  xy: 2, 178
+  size: 489, 482
+  orig: 489, 482
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: true
+  xy: 493, 255
+  size: 405, 186
+  orig: 405, 186
+  offset: 0, 0
+  index: -1
+shield_trail
+  rotate: false
+  xy: 2, 2
+  size: 639, 174
+  orig: 639, 174
+  offset: 0, 0
+  index: -1

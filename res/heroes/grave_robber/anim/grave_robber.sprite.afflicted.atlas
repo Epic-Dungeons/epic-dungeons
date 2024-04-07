@@ -1,0 +1,27 @@
+
+grave_robber.sprite.afflicted.png
+size: 2322,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: true
+  xy: 1345, 423
+  size: 706, 975
+  orig: 706, 975
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: true
+  xy: 1345, 52
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

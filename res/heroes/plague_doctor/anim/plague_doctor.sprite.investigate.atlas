@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.investigate.png
+size: 615,419
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+investigate
+  rotate: true
+  xy: 2, 2
+  size: 415, 546
+  orig: 415, 546
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 550, 60
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

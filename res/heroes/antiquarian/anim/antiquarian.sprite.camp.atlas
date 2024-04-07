@@ -1,0 +1,20 @@
+
+antiquarian.sprite.camp.png
+size: 502,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+camp
+  rotate: true
+  xy: 2, 5
+  size: 354, 433
+  orig: 354, 433
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 437, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

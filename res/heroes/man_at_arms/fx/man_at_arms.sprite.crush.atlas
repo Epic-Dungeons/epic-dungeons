@@ -1,0 +1,13 @@
+
+man_at_arms.sprite.crush.png
+size: 576,352
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mace_trail
+  rotate: false
+  xy: 2, 2
+  size: 572, 348
+  orig: 572, 348
+  offset: 0, 0
+  index: -1

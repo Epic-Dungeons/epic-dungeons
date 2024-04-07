@@ -1,0 +1,41 @@
+
+occultist.sprite.hands_from_abyss_target.png
+size: 1462,761
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+flames
+  rotate: false
+  xy: 726, 382
+  size: 501, 377
+  orig: 501, 377
+  offset: 0, 0
+  index: -1
+portal
+  rotate: false
+  xy: 726, 2
+  size: 554, 73
+  orig: 554, 73
+  offset: 0, 0
+  index: -1
+portal_glow
+  rotate: true
+  xy: 1264, 125
+  size: 634, 196
+  orig: 634, 196
+  offset: 0, 0
+  index: -1
+tentacles
+  rotate: true
+  xy: 726, 77
+  size: 303, 536
+  orig: 303, 536
+  offset: 0, 0
+  index: -1
+tentacles_glow
+  rotate: false
+  xy: 2, 35
+  size: 722, 724
+  orig: 722, 724
+  offset: 0, 0
+  index: -1

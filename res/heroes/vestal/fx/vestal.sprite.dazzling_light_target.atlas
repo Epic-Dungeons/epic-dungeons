@@ -1,0 +1,27 @@
+
+vestal.sprite.dazzling_light_target.png
+size: 958,235
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: true
+  xy: 2, 2
+  size: 231, 890
+  orig: 231, 890
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 894, 131
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 894, 176
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1

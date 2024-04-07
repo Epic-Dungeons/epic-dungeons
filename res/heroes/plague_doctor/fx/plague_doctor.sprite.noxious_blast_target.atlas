@@ -1,0 +1,83 @@
+
+plague_doctor.sprite.noxious_blast_target.png
+size: 1479,449
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blast
+  rotate: true
+  xy: 395, 204
+  size: 243, 667
+  orig: 243, 667
+  offset: 0, 0
+  index: -1
+dust01
+  rotate: true
+  xy: 828, 30
+  size: 77, 76
+  orig: 77, 76
+  offset: 0, 0
+  index: -1
+dust02
+  rotate: true
+  xy: 753, 19
+  size: 88, 73
+  orig: 88, 73
+  offset: 0, 0
+  index: -1
+dust03
+  rotate: false
+  xy: 835, 116
+  size: 60, 86
+  orig: 60, 86
+  offset: 0, 0
+  index: -1
+dust04
+  rotate: true
+  xy: 753, 109
+  size: 93, 80
+  orig: 93, 80
+  offset: 0, 0
+  index: -1
+glow
+  rotate: true
+  xy: 2, 2
+  size: 445, 391
+  orig: 445, 391
+  offset: 0, 0
+  index: -1
+smoke01
+  rotate: false
+  xy: 1064, 228
+  size: 385, 219
+  orig: 385, 219
+  offset: 0, 0
+  index: -1
+smoke02
+  rotate: false
+  xy: 607, 57
+  size: 144, 145
+  orig: 144, 145
+  offset: 0, 0
+  index: -1
+smoke03
+  rotate: true
+  xy: 1064, 18
+  size: 208, 206
+  orig: 208, 206
+  offset: 0, 0
+  index: -1
+smoke04
+  rotate: false
+  xy: 395, 15
+  size: 210, 187
+  orig: 210, 187
+  offset: 0, 0
+  index: -1
+smoke05
+  rotate: false
+  xy: 1272, 18
+  size: 205, 208
+  orig: 205, 208
+  offset: 0, 0
+  index: -1

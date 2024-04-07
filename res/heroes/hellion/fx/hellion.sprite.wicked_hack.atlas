@@ -1,0 +1,13 @@
+
+hellion.sprite.wicked_hack.png
+size: 689,260
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+polearm_trail
+  rotate: false
+  xy: 2, 2
+  size: 685, 256
+  orig: 685, 256
+  offset: 0, 0
+  index: -1

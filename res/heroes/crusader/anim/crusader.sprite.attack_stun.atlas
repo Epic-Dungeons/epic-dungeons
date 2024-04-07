@@ -1,0 +1,20 @@
+
+crusader.sprite.attack_stun.png
+size: 767,533
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_stun
+  rotate: true
+  xy: 2, 2
+  size: 529, 698
+  orig: 529, 698
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 702, 174
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

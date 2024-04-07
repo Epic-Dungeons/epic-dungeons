@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.attack_grenade.png
+size: 662,574
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_grenade
+  rotate: false
+  xy: 2, 2
+  size: 593, 570
+  orig: 593, 570
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 597, 215
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,160 @@
+
+abomination.sprite.idle.png
+size: 350,1035
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cape_back
+  rotate: true
+  xy: 2, 870
+  size: 163, 338
+  orig: 163, 338
+  offset: 0, 0
+  index: -1
+cape_front
+  rotate: true
+  xy: 2, 523
+  size: 152, 227
+  orig: 152, 227
+  offset: 0, 0
+  index: -1
+chain_lower_back
+  rotate: false
+  xy: 248, 791
+  size: 100, 77
+  orig: 100, 77
+  offset: 0, 0
+  index: -1
+chain_lower_front
+  rotate: true
+  xy: 203, 487
+  size: 34, 16
+  orig: 34, 16
+  offset: 0, 0
+  index: -1
+chain_middle
+  rotate: false
+  xy: 239, 97
+  size: 46, 34
+  orig: 46, 34
+  offset: 0, 0
+  index: -1
+chain_upper
+  rotate: false
+  xy: 203, 361
+  size: 141, 121
+  orig: 141, 121
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 201, 191
+  size: 126, 168
+  orig: 126, 168
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: true
+  xy: 231, 590
+  size: 58, 116
+  orig: 58, 116
+  offset: 0, 0
+  index: -1
+left_forearm
+  rotate: false
+  xy: 231, 484
+  size: 107, 104
+  orig: 107, 104
+  offset: 0, 0
+  index: -1
+left_hand
+  rotate: false
+  xy: 125, 132
+  size: 73, 78
+  orig: 73, 78
+  offset: 0, 0
+  index: -1
+left_leg
+  rotate: true
+  xy: 67, 280
+  size: 85, 132
+  orig: 85, 132
+  offset: 0, 0
+  index: -1
+left_manacle
+  rotate: false
+  xy: 239, 23
+  size: 66, 72
+  orig: 66, 72
+  offset: 0, 0
+  index: -1
+lock_round
+  rotate: true
+  xy: 200, 133
+  size: 56, 88
+  orig: 56, 88
+  offset: 0, 0
+  index: -1
+lock_square
+  rotate: false
+  xy: 125, 24
+  size: 45, 106
+  orig: 45, 106
+  offset: 0, 0
+  index: -1
+pants
+  rotate: true
+  xy: 2, 677
+  size: 191, 244
+  orig: 191, 244
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 67, 13
+  size: 56, 176
+  orig: 56, 176
+  offset: 0, 0
+  index: -1
+right_hand
+  rotate: false
+  xy: 172, 26
+  size: 65, 104
+  orig: 65, 104
+  offset: 0, 0
+  index: -1
+right_leg
+  rotate: true
+  xy: 67, 212
+  size: 66, 126
+  orig: 66, 126
+  offset: 0, 0
+  index: -1
+right_manacle
+  rotate: true
+  xy: 290, 124
+  size: 65, 47
+  orig: 65, 47
+  offset: 0, 0
+  index: -1
+rope_belt
+  rotate: true
+  xy: 248, 650
+  size: 139, 92
+  orig: 139, 92
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+torso
+  rotate: true
+  xy: 2, 367
+  size: 154, 199
+  orig: 154, 199
+  offset: 0, 0
+  index: -1

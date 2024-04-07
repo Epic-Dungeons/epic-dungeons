@@ -1,0 +1,13 @@
+
+bounty_hunter.sprite.uppercut.png
+size: 144,430
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+punch_trail
+  rotate: false
+  xy: 2, 2
+  size: 140, 426
+  orig: 140, 426
+  offset: 0, 0
+  index: -1

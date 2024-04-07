@@ -1,0 +1,20 @@
+
+hellion.sprite.attack_low.png
+size: 748,555
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_low
+  rotate: false
+  xy: 2, 2
+  size: 679, 551
+  orig: 679, 551
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 683, 196
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

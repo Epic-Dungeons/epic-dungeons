@@ -1,0 +1,20 @@
+
+arbalest.sprite.battlefield_bandage.png
+size: 750,358
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rim_light
+  rotate: true
+  xy: 2, 147
+  size: 209, 486
+  orig: 209, 486
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 490, 2
+  size: 258, 354
+  orig: 258, 354
+  offset: 0, 0
+  index: -1

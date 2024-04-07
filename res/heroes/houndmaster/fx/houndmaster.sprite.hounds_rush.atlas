@@ -1,0 +1,97 @@
+
+houndmaster.sprite.hounds_rush.png
+size: 985,525
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dust
+  rotate: false
+  xy: 2, 64
+  size: 900, 459
+  orig: 900, 459
+  offset: 0, 0
+  index: -1
+ray01
+  rotate: true
+  xy: 904, 76
+  size: 178, 35
+  orig: 178, 35
+  offset: 0, 0
+  index: -1
+ray02
+  rotate: false
+  xy: 2, 15
+  size: 430, 47
+  orig: 430, 47
+  offset: 0, 0
+  index: -1
+ray03
+  rotate: true
+  xy: 904, 256
+  size: 267, 57
+  orig: 267, 57
+  offset: 0, 0
+  index: -1
+ray04
+  rotate: false
+  xy: 434, 19
+  size: 196, 43
+  orig: 196, 43
+  offset: 0, 0
+  index: -1
+ray05
+  rotate: true
+  xy: 941, 128
+  size: 126, 41
+  orig: 126, 41
+  offset: 0, 0
+  index: -1
+ray06
+  rotate: false
+  xy: 632, 27
+  size: 191, 35
+  orig: 191, 35
+  offset: 0, 0
+  index: -1
+rubble01
+  rotate: false
+  xy: 941, 79
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+rubble02
+  rotate: false
+  xy: 963, 497
+  size: 20, 26
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+rubble03
+  rotate: false
+  xy: 867, 41
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+rubble04
+  rotate: false
+  xy: 941, 93
+  size: 32, 33
+  orig: 32, 33
+  offset: 0, 0
+  index: -1
+rubble05
+  rotate: false
+  xy: 825, 29
+  size: 40, 33
+  orig: 40, 33
+  offset: 0, 0
+  index: -1
+rubble06
+  rotate: false
+  xy: 825, 2
+  size: 27, 25
+  orig: 27, 25
+  offset: 0, 0
+  index: -1

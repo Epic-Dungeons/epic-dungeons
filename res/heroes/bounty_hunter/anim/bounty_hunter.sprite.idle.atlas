@@ -1,0 +1,181 @@
+
+bounty_hunter.sprite.idle.png
+size: 571,534
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+axe_handle
+  rotate: false
+  xy: 503, 414
+  size: 63, 118
+  orig: 63, 118
+  offset: 0, 0
+  index: -1
+belt
+  rotate: false
+  xy: 2, 88
+  size: 189, 104
+  orig: 189, 104
+  offset: 0, 0
+  index: -1
+bomb01
+  rotate: false
+  xy: 352, 2
+  size: 61, 54
+  orig: 61, 54
+  offset: 0, 0
+  index: -1
+bomb02
+  rotate: true
+  xy: 445, 6
+  size: 50, 57
+  orig: 50, 57
+  offset: 0, 0
+  index: -1
+gambeson_bottom
+  rotate: false
+  xy: 207, 237
+  size: 129, 104
+  orig: 129, 104
+  offset: 0, 0
+  index: -1
+gambeson_top
+  rotate: false
+  xy: 2, 194
+  size: 195, 136
+  orig: 195, 136
+  offset: 0, 0
+  index: -1
+hauberk_bottom
+  rotate: false
+  xy: 2, 332
+  size: 203, 135
+  orig: 203, 135
+  offset: 0, 0
+  index: -1
+helmet
+  rotate: true
+  xy: 207, 343
+  size: 124, 154
+  orig: 124, 154
+  offset: 0, 0
+  index: -1
+left_arm_hauberk
+  rotate: false
+  xy: 118, 3
+  size: 83, 83
+  orig: 83, 83
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: true
+  xy: 193, 92
+  size: 88, 109
+  orig: 88, 109
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: false
+  xy: 338, 183
+  size: 123, 100
+  orig: 123, 100
+  offset: 0, 0
+  index: -1
+left_leg
+  rotate: false
+  xy: 500, 293
+  size: 67, 24
+  orig: 67, 24
+  offset: 0, 0
+  index: -1
+left_pauldron
+  rotate: false
+  xy: 304, 86
+  size: 63, 94
+  orig: 63, 94
+  offset: 0, 0
+  index: -1
+left_sleeve
+  rotate: false
+  xy: 299, 11
+  size: 51, 73
+  orig: 51, 73
+  offset: 0, 0
+  index: -1
+mask
+  rotate: false
+  xy: 363, 401
+  size: 138, 131
+  orig: 138, 131
+  offset: 0, 0
+  index: -1
+right_arm_hauberk
+  rotate: false
+  xy: 203, 3
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: true
+  xy: 2, 3
+  size: 83, 114
+  orig: 83, 114
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: true
+  xy: 363, 285
+  size: 114, 135
+  orig: 114, 135
+  offset: 0, 0
+  index: -1
+right_leg
+  rotate: true
+  xy: 415, 10
+  size: 75, 28
+  orig: 75, 28
+  offset: 0, 0
+  index: -1
+right_pauldron
+  rotate: false
+  xy: 463, 180
+  size: 106, 103
+  orig: 106, 103
+  offset: 0, 0
+  index: -1
+right_sleeve
+  rotate: false
+  xy: 500, 319
+  size: 69, 80
+  orig: 69, 80
+  offset: 0, 0
+  index: -1
+rope
+  rotate: true
+  xy: 199, 182
+  size: 53, 125
+  orig: 53, 125
+  offset: 0, 0
+  index: -1
+scroll
+  rotate: true
+  xy: 369, 87
+  size: 94, 83
+  orig: 94, 83
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 469
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+strap
+  rotate: false
+  xy: 454, 58
+  size: 111, 120
+  orig: 111, 120
+  offset: 0, 0
+  index: -1

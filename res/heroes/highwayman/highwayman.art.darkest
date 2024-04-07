@@ -1,0 +1,26 @@
+commonfx: .deathfx death_medium
+
+weapon: .name "highwayman_weapon_0"	.icon "eqp_weapon_0.png"
+weapon: .name "highwayman_weapon_1"	.icon "eqp_weapon_1.png"
+weapon: .name "highwayman_weapon_2"	.icon "eqp_weapon_2.png"
+weapon: .name "highwayman_weapon_3"	.icon "eqp_weapon_3.png"
+weapon: .name "highwayman_weapon_4"	.icon "eqp_weapon_4.png"
+
+armour: .name "highwayman_armour_0"	.icon "eqp_armour_0.png"
+armour: .name "highwayman_armour_1"	.icon "eqp_armour_1.png"
+armour: .name "highwayman_armour_2"	.icon "eqp_armour_2.png"
+armour: .name "highwayman_armour_3"	.icon "eqp_armour_3.png"
+armour: .name "highwayman_armour_4"	.icon "eqp_armour_4.png"
+
+combat_skill: .id "wicked_slice" .icon "one" .anim "attack_slice" .fx "wicked_slice" .targchestfx "blood_splatter"
+combat_skill: .id "pistol_shot" .icon "two" .anim "attack_pistol" .fx "pistol_shot" .targchestfx "pistol_shot_target"
+combat_skill: .id "point_blank_shot" .icon "three" .anim "attack_hipshot" .fx "point_blank_shot" .targchestfx "point_blank_shot_target"
+combat_skill: .id "grape_shot_blast" .icon "four" .anim "attack_pistol" .fx "grape_shot_blast" .targchestfx "grape_shot_blast_target" .area_pos_offset 75 0 .target_area_pos_offset -75 0
+combat_skill: .id "take_aim" .icon "five" .anim "attack_pistol" .fx "tracking_shot" .targchestfx "tracking_shot_target" .condensed_tooltip_stats true .condensed_tooltip_effects true
+combat_skill: .id "duelist_advance" .icon "six" .anim "attack_lunge" .fx "duelist_advance" .targchestfx "blood_splatter" .condensed_tooltip_stats true .condensed_tooltip_effects true
+combat_skill: .id "opened_vein" .icon "seven" .anim "attack_slice" .fx "opened_vein" .targchestfx "blood_splatter" .condensed_tooltip_stats true .condensed_tooltip_effects false
+
+combat_move_skill: .id "move" .icon "generic_move" .anim "idle"
+riposte_skill: .id "riposte1" .anim "attack_slice" .fx "opened_vein" .targchestfx "blood_splatter"
+
+act_out_display: .attack_friendly_anim "attack_slice" .attack_friendly_fx "wicked_slice" .attack_friendly_targchestfx "blood_splatter" .attack_friendly_sfx "/char/ally/highwayman_wicked_slice"

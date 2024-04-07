@@ -1,0 +1,20 @@
+
+grave_robber.sprite.camp.png
+size: 493,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+camp
+  rotate: true
+  xy: 2, 9
+  size: 350, 424
+  orig: 350, 424
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 428, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

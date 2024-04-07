@@ -1,0 +1,27 @@
+
+houndmaster.sprite.attack_howl.png
+size: 1076,445
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hound
+  rotate: false
+  xy: 584, 2
+  size: 490, 441
+  orig: 490, 441
+  offset: 0, 0
+  index: -1
+master
+  rotate: true
+  xy: 2, 84
+  size: 359, 580
+  orig: 359, 580
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 19
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

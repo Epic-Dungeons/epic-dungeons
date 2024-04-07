@@ -1,0 +1,62 @@
+
+vestal.sprite.gods_illumination_target.png
+size: 998,583
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+long_ray01
+  rotate: true
+  xy: 2, 3
+  size: 34, 560
+  orig: 34, 560
+  offset: 0, 0
+  index: -1
+long_ray03
+  rotate: true
+  xy: 2, 3
+  size: 34, 560
+  orig: 34, 560
+  offset: 0, 0
+  index: -1
+long_ray02
+  rotate: true
+  xy: 2, 3
+  size: 34, 560
+  orig: 34, 560
+  offset: 0, 0
+  index: -1
+long_ray04
+  rotate: true
+  xy: 2, 3
+  size: 34, 560
+  orig: 34, 560
+  offset: 0, 0
+  index: -1
+primary_rays
+  rotate: false
+  xy: 2, 125
+  size: 456, 456
+  orig: 456, 456
+  offset: 0, 0
+  index: -1
+secondary_rays
+  rotate: true
+  xy: 460, 39
+  size: 348, 349
+  orig: 348, 349
+  offset: 0, 0
+  index: -1
+sword
+  rotate: false
+  xy: 811, 2
+  size: 145, 385
+  orig: 145, 385
+  offset: 0, 0
+  index: -1
+sword_glow
+  rotate: true
+  xy: 460, 389
+  size: 192, 536
+  orig: 192, 536
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+jester.sprite.attack_dirk.png
+size: 716,687
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_dirk
+  rotate: true
+  xy: 2, 2
+  size: 683, 647
+  orig: 683, 647
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 651, 328
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

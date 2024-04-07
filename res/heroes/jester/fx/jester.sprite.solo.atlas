@@ -1,0 +1,55 @@
+
+jester.sprite.solo.png
+size: 1678,483
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: false
+  xy: 2, 2
+  size: 468, 479
+  orig: 468, 479
+  offset: 0, 0
+  index: -1
+glow
+  rotate: true
+  xy: 1357, 165
+  size: 316, 319
+  orig: 316, 319
+  offset: 0, 0
+  index: -1
+note01
+  rotate: false
+  xy: 1492, 31
+  size: 90, 132
+  orig: 90, 132
+  offset: 0, 0
+  index: -1
+note02
+  rotate: false
+  xy: 1584, 53
+  size: 83, 110
+  orig: 83, 110
+  offset: 0, 0
+  index: -1
+note03
+  rotate: false
+  xy: 1357, 12
+  size: 133, 151
+  orig: 133, 151
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: true
+  xy: 1008, 71
+  size: 410, 347
+  orig: 410, 347
+  offset: 0, 0
+  index: -1
+staff
+  rotate: false
+  xy: 472, 200
+  size: 534, 281
+  orig: 534, 281
+  offset: 0, 0
+  index: -1

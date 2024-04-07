@@ -27,6 +27,7 @@ public:
     void draw(const Drawable &drawable) const;
     void draw(const sf::Drawable &drawable) const;
     void draw(const std::shared_ptr<Drawable> &drawable) const;
+    void draw(const sf::VertexArray &vertexArray, const sf::RenderStates &states) const;
     void close();
     bool isActive() const;
     void open();

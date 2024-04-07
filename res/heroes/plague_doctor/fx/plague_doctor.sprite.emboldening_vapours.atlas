@@ -1,0 +1,41 @@
+
+plague_doctor.sprite.emboldening_vapours.png
+size: 732,592
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+liquid_glow
+  rotate: false
+  xy: 597, 458
+  size: 133, 132
+  orig: 133, 132
+  offset: 0, 0
+  index: -1
+potion_glow
+  rotate: false
+  xy: 253, 2
+  size: 234, 317
+  orig: 234, 317
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 489, 27
+  size: 199, 292
+  orig: 199, 292
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 28
+  size: 249, 562
+  orig: 249, 562
+  offset: 0, 0
+  index: -1
+vapors
+  rotate: false
+  xy: 253, 321
+  size: 342, 269
+  orig: 342, 269
+  offset: 0, 0
+  index: -1

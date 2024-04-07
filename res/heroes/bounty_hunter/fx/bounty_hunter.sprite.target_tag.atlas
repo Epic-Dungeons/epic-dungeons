@@ -1,0 +1,20 @@
+
+bounty_hunter.sprite.target_tag.png
+size: 615,345
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rim_light
+  rotate: true
+  xy: 375, 45
+  size: 298, 238
+  orig: 298, 238
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 371, 341
+  orig: 371, 341
+  offset: 0, 0
+  index: -1

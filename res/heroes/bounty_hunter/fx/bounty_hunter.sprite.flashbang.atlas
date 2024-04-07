@@ -1,0 +1,13 @@
+
+bounty_hunter.sprite.flashbang.png
+size: 562,150
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+throw_trail
+  rotate: false
+  xy: 2, 2
+  size: 558, 146
+  orig: 558, 146
+  offset: 0, 0
+  index: -1

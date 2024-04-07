@@ -1,0 +1,20 @@
+
+bounty_hunter.sprite.attack_point.png
+size: 663,480
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_point
+  rotate: true
+  xy: 2, 2
+  size: 476, 594
+  orig: 476, 594
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 598, 121
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

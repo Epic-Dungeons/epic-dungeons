@@ -1,0 +1,13 @@
+
+hellion.sprite.if_it_bleeds.png
+size: 717,294
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+polearm_trail
+  rotate: false
+  xy: 2, 2
+  size: 713, 290
+  orig: 713, 290
+  offset: 0, 0
+  index: -1

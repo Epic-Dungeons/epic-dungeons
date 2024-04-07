@@ -1,0 +1,48 @@
+
+leper.sprite.withstand.png
+size: 1416,723
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+inner_glow
+  rotate: false
+  xy: 800, 21
+  size: 241, 242
+  orig: 241, 242
+  offset: 0, 0
+  index: -1
+long_rays
+  rotate: false
+  xy: 503, 265
+  size: 452, 456
+  orig: 452, 456
+  offset: 0, 0
+  index: -1
+outer_glow
+  rotate: true
+  xy: 1043, 353
+  size: 368, 371
+  orig: 368, 371
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 91
+  size: 499, 630
+  orig: 499, 630
+  offset: 0, 0
+  index: -1
+shield
+  rotate: true
+  xy: 503, 4
+  size: 259, 295
+  orig: 259, 295
+  offset: 0, 0
+  index: -1
+short_rays
+  rotate: false
+  xy: 1043, 2
+  size: 348, 349
+  orig: 348, 349
+  offset: 0, 0
+  index: -1

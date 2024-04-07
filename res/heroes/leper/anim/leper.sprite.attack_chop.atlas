@@ -1,0 +1,20 @@
+
+leper.sprite.attack_chop.png
+size: 707,545
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_chop
+  rotate: false
+  xy: 2, 2
+  size: 638, 541
+  orig: 638, 541
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 642, 186
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+leper.sprite.camp.png
+size: 505,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+camp
+  rotate: true
+  xy: 2, 4
+  size: 355, 436
+  orig: 355, 436
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 440, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,237 @@
+
+houndmaster.sprite.walk.png
+size: 1618,325
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hound_body
+  rotate: false
+  xy: 2, 22
+  size: 417, 301
+  orig: 417, 301
+  offset: 0, 0
+  index: -1
+hound_collar
+  rotate: false
+  xy: 634, 11
+  size: 107, 79
+  orig: 107, 79
+  offset: 0, 0
+  index: -1
+hound_head
+  rotate: true
+  xy: 864, 75
+  size: 183, 139
+  orig: 183, 139
+  offset: 0, 0
+  index: -1
+hound_left_front_leg
+  rotate: true
+  xy: 986, 261
+  size: 62, 196
+  orig: 62, 196
+  offset: 0, 0
+  index: -1
+hound_left_rear_leg
+  rotate: true
+  xy: 1184, 236
+  size: 87, 194
+  orig: 87, 194
+  offset: 0, 0
+  index: -1
+hound_tag
+  rotate: false
+  xy: 1276, 2
+  size: 39, 41
+  orig: 39, 41
+  offset: 0, 0
+  index: -1
+master_belt
+  rotate: false
+  xy: 421, 7
+  size: 131, 67
+  orig: 131, 67
+  offset: 0, 0
+  index: -1
+master_hair
+  rotate: false
+  xy: 1377, 19
+  size: 153, 108
+  orig: 153, 108
+  offset: 0, 0
+  index: -1
+master_head
+  rotate: false
+  xy: 1005, 101
+  size: 136, 158
+  orig: 136, 158
+  offset: 0, 0
+  index: -1
+master_jaw
+  rotate: true
+  xy: 1565, 237
+  size: 86, 42
+  orig: 86, 42
+  offset: 0, 0
+  index: -1
+master_left_arm
+  rotate: true
+  xy: 1005, 6
+  size: 93, 105
+  orig: 93, 105
+  offset: 0, 0
+  index: -1
+master_left_boot
+  rotate: false
+  xy: 1192, 4
+  size: 82, 98
+  orig: 82, 98
+  offset: 0, 0
+  index: -1
+master_left_bracer
+  rotate: true
+  xy: 1380, 129
+  size: 87, 157
+  orig: 87, 157
+  offset: 0, 0
+  index: -1
+master_left_hand
+  rotate: true
+  xy: 1112, 4
+  size: 95, 78
+  orig: 95, 78
+  offset: 0, 0
+  index: -1
+master_left_pouch
+  rotate: true
+  xy: 554, 8
+  size: 66, 78
+  orig: 66, 78
+  offset: 0, 0
+  index: -1
+master_left_shoulder
+  rotate: false
+  xy: 1532, 62
+  size: 38, 65
+  orig: 38, 65
+  offset: 0, 0
+  index: -1
+master_left_tasset01
+  rotate: true
+  xy: 1317, 3
+  size: 40, 47
+  orig: 40, 47
+  offset: 0, 0
+  index: -1
+master_left_tasset02
+  rotate: false
+  xy: 1532, 12
+  size: 43, 48
+  orig: 43, 48
+  offset: 0, 0
+  index: -1
+master_pants
+  rotate: false
+  xy: 627, 92
+  size: 235, 166
+  orig: 235, 166
+  offset: 0, 0
+  index: -1
+master_right_arm
+  rotate: true
+  xy: 1380, 218
+  size: 105, 183
+  orig: 105, 183
+  offset: 0, 0
+  index: -1
+master_right_bracer
+  rotate: false
+  xy: 851, 9
+  size: 69, 64
+  orig: 69, 64
+  offset: 0, 0
+  index: -1
+master_right_hand
+  rotate: false
+  xy: 922, 29
+  size: 81, 44
+  orig: 81, 44
+  offset: 0, 0
+  index: -1
+master_right_pouch
+  rotate: true
+  xy: 1295, 45
+  size: 84, 80
+  orig: 84, 80
+  offset: 0, 0
+  index: -1
+master_right_shoulder
+  rotate: false
+  xy: 1295, 131
+  size: 83, 103
+  orig: 83, 103
+  offset: 0, 0
+  index: -1
+master_right_shoulder_guard01
+  rotate: false
+  xy: 1571, 172
+  size: 45, 63
+  orig: 45, 63
+  offset: 0, 0
+  index: -1
+master_right_shoulder_guard02
+  rotate: false
+  xy: 1539, 146
+  size: 30, 70
+  orig: 30, 70
+  offset: 0, 0
+  index: -1
+master_right_tasset01
+  rotate: false
+  xy: 1577, 38
+  size: 30, 40
+  orig: 30, 40
+  offset: 0, 0
+  index: -1
+master_right_tasset02
+  rotate: false
+  xy: 1572, 80
+  size: 37, 46
+  orig: 37, 46
+  offset: 0, 0
+  index: -1
+master_right_tasset03
+  rotate: false
+  xy: 1577, 128
+  size: 39, 42
+  orig: 39, 42
+  offset: 0, 0
+  index: -1
+master_right_tunic
+  rotate: false
+  xy: 743, 10
+  size: 106, 80
+  orig: 106, 80
+  offset: 0, 0
+  index: -1
+master_scarf
+  rotate: false
+  xy: 1143, 104
+  size: 150, 130
+  orig: 150, 130
+  offset: 0, 0
+  index: -1
+master_tunic
+  rotate: false
+  xy: 421, 76
+  size: 204, 247
+  orig: 204, 247
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 627, 260
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

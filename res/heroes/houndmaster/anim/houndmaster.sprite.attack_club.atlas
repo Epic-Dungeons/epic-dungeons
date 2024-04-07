@@ -1,0 +1,27 @@
+
+houndmaster.sprite.attack_club.png
+size: 1239,489
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hound
+  rotate: false
+  xy: 633, 189
+  size: 604, 298
+  orig: 604, 298
+  offset: 0, 0
+  index: -1
+master
+  rotate: false
+  xy: 2, 2
+  size: 629, 485
+  orig: 629, 485
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 633, 124
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

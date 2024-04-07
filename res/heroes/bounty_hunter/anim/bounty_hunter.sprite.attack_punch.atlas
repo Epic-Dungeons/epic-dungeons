@@ -1,0 +1,20 @@
+
+bounty_hunter.sprite.attack_punch.png
+size: 696,385
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_punch
+  rotate: true
+  xy: 2, 2
+  size: 381, 627
+  orig: 381, 627
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 631, 26
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

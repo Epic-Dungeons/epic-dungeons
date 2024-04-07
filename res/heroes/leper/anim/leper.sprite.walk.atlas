@@ -1,0 +1,125 @@
+
+leper.sprite.walk.png
+size: 698,567
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: false
+  xy: 234, 16
+  size: 112, 76
+  orig: 112, 76
+  offset: 0, 0
+  index: -1
+breastplate
+  rotate: false
+  xy: 457, 395
+  size: 174, 170
+  orig: 174, 170
+  offset: 0, 0
+  index: -1
+cape
+  rotate: true
+  xy: 552, 214
+  size: 68, 67
+  orig: 68, 67
+  offset: 0, 0
+  index: -1
+cloak
+  rotate: true
+  xy: 2, 2
+  size: 51, 107
+  orig: 51, 107
+  offset: 0, 0
+  index: -1
+cowl
+  rotate: false
+  xy: 199, 319
+  size: 256, 246
+  orig: 256, 246
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 348, 6
+  size: 86, 97
+  orig: 86, 97
+  offset: 0, 0
+  index: -1
+hips
+  rotate: false
+  xy: 234, 94
+  size: 175, 105
+  orig: 175, 105
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: true
+  xy: 411, 100
+  size: 99, 92
+  orig: 99, 92
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: true
+  xy: 505, 95
+  size: 110, 75
+  orig: 110, 75
+  offset: 0, 0
+  index: -1
+left_leg
+  rotate: true
+  xy: 199, 201
+  size: 116, 229
+  orig: 116, 229
+  offset: 0, 0
+  index: -1
+left_tasset
+  rotate: true
+  xy: 430, 207
+  size: 75, 120
+  orig: 75, 120
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: true
+  xy: 447, 23
+  size: 70, 107
+  orig: 70, 107
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: false
+  xy: 582, 98
+  size: 107, 108
+  orig: 107, 108
+  offset: 0, 0
+  index: -1
+right_leg
+  rotate: true
+  xy: 2, 55
+  size: 109, 230
+  orig: 109, 230
+  offset: 0, 0
+  index: -1
+right_tasset
+  rotate: true
+  xy: 457, 284
+  size: 109, 132
+  orig: 109, 132
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 633, 208
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+sword
+  rotate: false
+  xy: 2, 166
+  size: 195, 399
+  orig: 195, 399
+  offset: 0, 0
+  index: -1

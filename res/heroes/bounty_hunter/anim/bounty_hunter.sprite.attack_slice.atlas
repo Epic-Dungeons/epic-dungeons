@@ -1,0 +1,20 @@
+
+bounty_hunter.sprite.attack_slice.png
+size: 1081,525
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_slice
+  rotate: false
+  xy: 2, 2
+  size: 1012, 521
+  orig: 1012, 521
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 1016, 166
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

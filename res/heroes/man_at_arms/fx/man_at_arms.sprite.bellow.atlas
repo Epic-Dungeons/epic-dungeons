@@ -1,0 +1,83 @@
+
+man_at_arms.sprite.bellow.png
+size: 1542,464
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: true
+  xy: 574, 2
+  size: 460, 469
+  orig: 460, 469
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 1045, 81
+  size: 340, 381
+  orig: 340, 381
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 7
+  size: 455, 570
+  orig: 455, 570
+  offset: 0, 0
+  index: -1
+shard01
+  rotate: false
+  xy: 1410, 12
+  size: 89, 53
+  orig: 89, 53
+  offset: 0, 0
+  index: -1
+shard02
+  rotate: false
+  xy: 1282, 19
+  size: 126, 60
+  orig: 126, 60
+  offset: 0, 0
+  index: -1
+shard03
+  rotate: false
+  xy: 1045, 16
+  size: 235, 63
+  orig: 235, 63
+  offset: 0, 0
+  index: -1
+shard04
+  rotate: true
+  xy: 1494, 67
+  size: 194, 39
+  orig: 194, 39
+  offset: 0, 0
+  index: -1
+shard05
+  rotate: true
+  xy: 1498, 327
+  size: 135, 42
+  orig: 135, 42
+  offset: 0, 0
+  index: -1
+shard06
+  rotate: true
+  xy: 1387, 263
+  size: 199, 109
+  orig: 199, 109
+  offset: 0, 0
+  index: -1
+shard07
+  rotate: true
+  xy: 1387, 88
+  size: 173, 105
+  orig: 173, 105
+  offset: 0, 0
+  index: -1
+shard08
+  rotate: true
+  xy: 1498, 264
+  size: 61, 42
+  orig: 61, 42
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+highwayman.sprite.attack_pistol.png
+size: 698,600
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_pistol
+  rotate: false
+  xy: 2, 2
+  size: 629, 596
+  orig: 629, 596
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 633, 241
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

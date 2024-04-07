@@ -1,0 +1,41 @@
+
+arbalest.sprite.bola_target.png
+size: 720,212
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ropes
+  rotate: false
+  xy: 375, 98
+  size: 256, 112
+  orig: 256, 112
+  offset: 0, 0
+  index: -1
+spike01
+  rotate: true
+  xy: 514, 3
+  size: 93, 135
+  orig: 93, 135
+  offset: 0, 0
+  index: -1
+spike02
+  rotate: false
+  xy: 375, 2
+  size: 137, 94
+  orig: 137, 94
+  offset: 0, 0
+  index: -1
+spike03
+  rotate: false
+  xy: 633, 112
+  size: 85, 98
+  orig: 85, 98
+  offset: 0, 0
+  index: -1
+splat
+  rotate: false
+  xy: 2, 32
+  size: 371, 178
+  orig: 371, 178
+  offset: 0, 0
+  index: -1

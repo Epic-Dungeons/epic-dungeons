@@ -1,0 +1,13 @@
+
+jester.sprite.slice_off.png
+size: 451,521
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sickle_trail
+  rotate: false
+  xy: 2, 2
+  size: 447, 517
+  orig: 447, 517
+  offset: 0, 0
+  index: -1

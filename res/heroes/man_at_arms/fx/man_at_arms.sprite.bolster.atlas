@@ -1,0 +1,41 @@
+
+man_at_arms.sprite.bolster.png
+size: 1773,527
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow
+  rotate: true
+  xy: 1016, 93
+  size: 432, 423
+  orig: 432, 423
+  offset: 0, 0
+  index: -1
+lightning
+  rotate: true
+  xy: 1441, 184
+  size: 341, 330
+  orig: 341, 330
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 600, 60
+  size: 414, 465
+  orig: 414, 465
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 168, 3
+  size: 430, 522
+  orig: 430, 522
+  offset: 0, 0
+  index: -1
+strike
+  rotate: false
+  xy: 2, 2
+  size: 164, 523
+  orig: 164, 523
+  offset: 0, 0
+  index: -1

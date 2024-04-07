@@ -1,0 +1,20 @@
+
+jester.sprite.battle_ballad_target.png
+size: 785,570
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cherub
+  rotate: false
+  xy: 487, 2
+  size: 296, 566
+  orig: 296, 566
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 81
+  size: 487, 483
+  orig: 487, 483
+  offset: 0, 0
+  index: -1

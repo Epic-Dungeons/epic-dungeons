@@ -1,0 +1,286 @@
+
+highwayman.sprite.combat.png
+size: 670,537
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: true
+  xy: 467, 118
+  size: 73, 84
+  orig: 73, 84
+  offset: 0, 0
+  index: -1
+coat_back
+  rotate: false
+  xy: 597, 381
+  size: 71, 68
+  orig: 71, 68
+  offset: 0, 0
+  index: -1
+dagger
+  rotate: false
+  xy: 107, 388
+  size: 244, 82
+  orig: 244, 82
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 120, 110
+  size: 128, 138
+  orig: 128, 138
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 331, 4
+  size: 78, 110
+  orig: 78, 110
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: true
+  xy: 481, 42
+  size: 74, 65
+  orig: 74, 65
+  offset: 0, 0
+  index: -1
+left_coat01
+  rotate: true
+  xy: 107, 250
+  size: 61, 208
+  orig: 61, 208
+  offset: 0, 0
+  index: -1
+left_coat02
+  rotate: false
+  xy: 133, 2
+  size: 70, 106
+  orig: 70, 106
+  offset: 0, 0
+  index: -1
+left_cuff
+  rotate: true
+  xy: 353, 382
+  size: 88, 108
+  orig: 88, 108
+  offset: 0, 0
+  index: -1
+left_foot
+  rotate: false
+  xy: 317, 250
+  size: 77, 62
+  orig: 77, 62
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: false
+  xy: 609, 481
+  size: 36, 54
+  orig: 36, 54
+  offset: 0, 0
+  index: -1
+left_index
+  rotate: true
+  xy: 376, 119
+  size: 32, 42
+  orig: 32, 42
+  offset: 0, 0
+  index: -1
+left_middle
+  rotate: true
+  xy: 537, 2
+  size: 38, 49
+  orig: 38, 49
+  offset: 0, 0
+  index: -1
+left_pants01
+  rotate: false
+  xy: 250, 116
+  size: 124, 132
+  orig: 124, 132
+  offset: 0, 0
+  index: -1
+left_pants02
+  rotate: true
+  xy: 402, 291
+  size: 89, 57
+  orig: 89, 57
+  offset: 0, 0
+  index: -1
+left_pinky
+  rotate: false
+  xy: 637, 92
+  size: 31, 42
+  orig: 31, 42
+  offset: 0, 0
+  index: -1
+left_thumb
+  rotate: false
+  xy: 637, 136
+  size: 31, 52
+  orig: 31, 52
+  offset: 0, 0
+  index: -1
+pistol
+  rotate: true
+  xy: 107, 313
+  size: 73, 207
+  orig: 73, 207
+  offset: 0, 0
+  index: -1
+pistol_loop
+  rotate: false
+  xy: 643, 234
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: true
+  xy: 597, 264
+  size: 115, 68
+  orig: 115, 68
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: false
+  xy: 557, 190
+  size: 84, 72
+  orig: 84, 72
+  offset: 0, 0
+  index: -1
+right_coat01
+  rotate: false
+  xy: 2, 191
+  size: 103, 344
+  orig: 103, 344
+  offset: 0, 0
+  index: -1
+right_coat02
+  rotate: true
+  xy: 205, 12
+  size: 96, 124
+  orig: 96, 124
+  offset: 0, 0
+  index: -1
+right_cuff
+  rotate: true
+  xy: 376, 153
+  size: 95, 89
+  orig: 95, 89
+  offset: 0, 0
+  index: -1
+right_foot
+  rotate: false
+  xy: 411, 34
+  size: 68, 82
+  orig: 68, 82
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: false
+  xy: 548, 47
+  size: 65, 62
+  orig: 65, 62
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: true
+  xy: 553, 111
+  size: 77, 82
+  orig: 77, 82
+  offset: 0, 0
+  index: -1
+right_index
+  rotate: true
+  xy: 481, 2
+  size: 38, 54
+  orig: 38, 54
+  offset: 0, 0
+  index: -1
+right_pants01
+  rotate: true
+  xy: 463, 328
+  size: 121, 132
+  orig: 121, 132
+  offset: 0, 0
+  index: -1
+right_pants02
+  rotate: false
+  xy: 316, 314
+  size: 84, 66
+  orig: 84, 66
+  offset: 0, 0
+  index: -1
+right_shoulder
+  rotate: true
+  xy: 467, 193
+  size: 95, 88
+  orig: 95, 88
+  offset: 0, 0
+  index: -1
+right_thumb
+  rotate: false
+  xy: 420, 119
+  size: 37, 32
+  orig: 37, 32
+  offset: 0, 0
+  index: -1
+scarf01
+  rotate: true
+  xy: 2, 49
+  size: 140, 116
+  orig: 140, 116
+  offset: 0, 0
+  index: -1
+scarf02
+  rotate: true
+  xy: 461, 290
+  size: 36, 98
+  orig: 36, 98
+  offset: 0, 0
+  index: -1
+scarf03
+  rotate: true
+  xy: 2, 2
+  size: 45, 129
+  orig: 45, 129
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 107, 472
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+shirt
+  rotate: true
+  xy: 466, 451
+  size: 84, 141
+  orig: 84, 141
+  offset: 0, 0
+  index: -1
+tatters01
+  rotate: false
+  xy: 561, 295
+  size: 17, 31
+  orig: 17, 31
+  offset: 0, 0
+  index: -1
+tatters02
+  rotate: false
+  xy: 442, 2
+  size: 23, 30
+  orig: 23, 30
+  offset: 0, 0
+  index: -1
+tatters03
+  rotate: false
+  xy: 411, 2
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1

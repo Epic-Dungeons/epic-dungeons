@@ -1,0 +1,146 @@
+
+man_at_arms.sprite.idle.png
+size: 1701,237
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+breastplate
+  rotate: true
+  xy: 2, 4
+  size: 231, 291
+  orig: 231, 291
+  offset: 0, 0
+  index: -1
+codpiece
+  rotate: true
+  xy: 904, 5
+  size: 68, 79
+  orig: 68, 79
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 654, 69
+  size: 121, 166
+  orig: 121, 166
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 1071, 2
+  size: 115, 92
+  orig: 115, 92
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: true
+  xy: 1188, 4
+  size: 90, 115
+  orig: 90, 115
+  offset: 0, 0
+  index: -1
+left_pants
+  rotate: false
+  xy: 777, 75
+  size: 142, 160
+  orig: 142, 160
+  offset: 0, 0
+  index: -1
+left_pauldron01
+  rotate: false
+  xy: 1463, 125
+  size: 79, 110
+  orig: 79, 110
+  offset: 0, 0
+  index: -1
+left_pauldron02
+  rotate: true
+  xy: 985, 3
+  size: 73, 84
+  orig: 73, 84
+  offset: 0, 0
+  index: -1
+medal
+  rotate: true
+  xy: 1305, 4
+  size: 90, 86
+  orig: 90, 86
+  offset: 0, 0
+  index: -1
+morningstar
+  rotate: true
+  xy: 1046, 96
+  size: 139, 327
+  orig: 139, 327
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: false
+  xy: 1644, 157
+  size: 39, 78
+  orig: 39, 78
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 545, 68
+  size: 107, 167
+  orig: 107, 167
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: false
+  xy: 1375, 104
+  size: 86, 131
+  orig: 86, 131
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: false
+  xy: 1544, 130
+  size: 98, 105
+  orig: 98, 105
+  offset: 0, 0
+  index: -1
+right_pants
+  rotate: false
+  xy: 921, 78
+  size: 123, 157
+  orig: 123, 157
+  offset: 0, 0
+  index: -1
+right_pauldron01
+  rotate: false
+  xy: 1393, 3
+  size: 111, 99
+  orig: 111, 99
+  offset: 0, 0
+  index: -1
+right_pauldron02
+  rotate: false
+  xy: 1604, 42
+  size: 95, 86
+  orig: 95, 86
+  offset: 0, 0
+  index: -1
+right_tasset
+  rotate: false
+  xy: 1506, 14
+  size: 96, 109
+  orig: 96, 109
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 545, 3
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+shield
+  rotate: true
+  xy: 295, 40
+  size: 195, 248
+  orig: 195, 248
+  offset: 0, 0
+  index: -1

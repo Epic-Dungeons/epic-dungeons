@@ -1,0 +1,20 @@
+
+highwayman.sprite.camp.png
+size: 361,505
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+camp
+  rotate: false
+  xy: 2, 67
+  size: 304, 436
+  orig: 304, 436
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

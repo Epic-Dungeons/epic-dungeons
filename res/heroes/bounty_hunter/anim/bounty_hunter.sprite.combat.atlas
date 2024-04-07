@@ -1,0 +1,188 @@
+
+bounty_hunter.sprite.combat.png
+size: 634,541
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+axe_handle
+  rotate: true
+  xy: 313, 228
+  size: 79, 117
+  orig: 79, 117
+  offset: 0, 0
+  index: -1
+belt
+  rotate: true
+  xy: 116, 43
+  size: 174, 103
+  orig: 174, 103
+  offset: 0, 0
+  index: -1
+bomb01
+  rotate: false
+  xy: 316, 13
+  size: 61, 54
+  orig: 61, 54
+  offset: 0, 0
+  index: -1
+bomb02
+  rotate: false
+  xy: 379, 10
+  size: 50, 57
+  orig: 50, 57
+  offset: 0, 0
+  index: -1
+gambeson_bottom
+  rotate: false
+  xy: 362, 309
+  size: 129, 99
+  orig: 129, 99
+  offset: 0, 0
+  index: -1
+gambeson_top
+  rotate: false
+  xy: 2, 219
+  size: 191, 125
+  orig: 191, 125
+  offset: 0, 0
+  index: -1
+hauberk_bottom
+  rotate: false
+  xy: 2, 346
+  size: 231, 128
+  orig: 231, 128
+  offset: 0, 0
+  index: -1
+helmet
+  rotate: false
+  xy: 235, 319
+  size: 125, 155
+  orig: 125, 155
+  offset: 0, 0
+  index: -1
+hook
+  rotate: false
+  xy: 432, 183
+  size: 58, 124
+  orig: 58, 124
+  offset: 0, 0
+  index: -1
+left_arm_hauberk
+  rotate: true
+  xy: 576, 243
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: true
+  xy: 195, 219
+  size: 98, 116
+  orig: 98, 116
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: false
+  xy: 492, 188
+  size: 82, 113
+  orig: 82, 113
+  offset: 0, 0
+  index: -1
+left_leg
+  rotate: false
+  xy: 431, 57
+  size: 63, 37
+  orig: 63, 37
+  offset: 0, 0
+  index: -1
+left_pauldron
+  rotate: true
+  xy: 317, 69
+  size: 53, 104
+  orig: 53, 104
+  offset: 0, 0
+  index: -1
+left_sleeve
+  rotate: false
+  xy: 426, 96
+  size: 71, 85
+  orig: 71, 85
+  offset: 0, 0
+  index: -1
+mask
+  rotate: false
+  xy: 362, 410
+  size: 142, 129
+  orig: 142, 129
+  offset: 0, 0
+  index: -1
+right_arm_hauberk
+  rotate: false
+  xy: 499, 89
+  size: 93, 97
+  orig: 93, 97
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: true
+  xy: 493, 303
+  size: 100, 121
+  orig: 100, 121
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: false
+  xy: 221, 96
+  size: 94, 121
+  orig: 94, 121
+  offset: 0, 0
+  index: -1
+right_leg
+  rotate: false
+  xy: 2, 4
+  size: 77, 33
+  orig: 77, 33
+  offset: 0, 0
+  index: -1
+right_pauldron
+  rotate: false
+  xy: 317, 124
+  size: 107, 102
+  orig: 107, 102
+  offset: 0, 0
+  index: -1
+right_sleeve
+  rotate: true
+  xy: 496, 18
+  size: 69, 81
+  orig: 69, 81
+  offset: 0, 0
+  index: -1
+rope
+  rotate: false
+  xy: 2, 39
+  size: 112, 178
+  orig: 112, 178
+  offset: 0, 0
+  index: -1
+scroll
+  rotate: false
+  xy: 221, 2
+  size: 93, 92
+  orig: 93, 92
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 476
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+strap
+  rotate: true
+  xy: 506, 405
+  size: 134, 124
+  orig: 134, 124
+  offset: 0, 0
+  index: -1

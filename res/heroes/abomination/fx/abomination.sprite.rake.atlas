@@ -1,0 +1,13 @@
+
+abomination.sprite.rake.png
+size: 696,569
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+claw_trail
+  rotate: false
+  xy: 2, 2
+  size: 692, 565
+  orig: 692, 565
+  offset: 0, 0
+  index: -1

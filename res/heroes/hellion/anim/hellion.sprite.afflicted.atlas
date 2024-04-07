@@ -1,0 +1,27 @@
+
+hellion.sprite.afflicted.png
+size: 2311,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: false
+  xy: 1345, 155
+  size: 669, 974
+  orig: 669, 974
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: true
+  xy: 2016, 760
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

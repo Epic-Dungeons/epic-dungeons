@@ -1,0 +1,20 @@
+
+arbalest.sprite.suppressing_fire.png
+size: 383,306
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow
+  rotate: false
+  xy: 2, 2
+  size: 225, 224
+  orig: 225, 224
+  offset: 0, 0
+  index: -1
+shot
+  rotate: false
+  xy: 2, 228
+  size: 379, 76
+  orig: 379, 76
+  offset: 0, 0
+  index: -1

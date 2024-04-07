@@ -1,0 +1,55 @@
+
+antiquarian.sprite.festering_vapours.png
+size: 1742,492
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cloud
+  rotate: false
+  xy: 2, 137
+  size: 855, 353
+  orig: 855, 353
+  offset: 0, 0
+  index: -1
+motes01
+  rotate: false
+  xy: 93, 58
+  size: 75, 77
+  orig: 75, 77
+  offset: 0, 0
+  index: -1
+motes02
+  rotate: false
+  xy: 1511, 20
+  size: 89, 62
+  orig: 89, 62
+  offset: 0, 0
+  index: -1
+motes03
+  rotate: true
+  xy: 1421, 12
+  size: 70, 88
+  orig: 70, 88
+  offset: 0, 0
+  index: -1
+motes04
+  rotate: false
+  xy: 2, 47
+  size: 89, 88
+  orig: 89, 88
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 1421, 84
+  size: 319, 406
+  orig: 319, 406
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 859, 2
+  size: 488, 560
+  orig: 488, 560
+  offset: 0, 0
+  index: -1

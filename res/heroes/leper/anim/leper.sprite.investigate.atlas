@@ -1,0 +1,20 @@
+
+leper.sprite.investigate.png
+size: 654,391
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+investigate
+  rotate: true
+  xy: 2, 2
+  size: 387, 585
+  orig: 387, 585
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 589, 32
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

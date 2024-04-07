@@ -1,0 +1,118 @@
+
+highwayman.sprite.grape_shot_blast_target.png
+size: 442,281
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hole_bottom
+  rotate: false
+  xy: 301, 42
+  size: 66, 120
+  orig: 66, 120
+  offset: 0, 0
+  index: -1
+hole_top
+  rotate: false
+  xy: 301, 42
+  size: 66, 120
+  orig: 66, 120
+  offset: 0, 0
+  index: -1
+hole_middle
+  rotate: false
+  xy: 301, 42
+  size: 66, 120
+  orig: 66, 120
+  offset: 0, 0
+  index: -1
+impact_inner_bottom
+  rotate: false
+  xy: 344, 13
+  size: 57, 27
+  orig: 57, 27
+  offset: 0, 0
+  index: -1
+impact_inner_middle
+  rotate: false
+  xy: 220, 22
+  size: 60, 33
+  orig: 60, 33
+  offset: 0, 0
+  index: -1
+impact_inner_top
+  rotate: true
+  xy: 403, 2
+  size: 38, 26
+  orig: 38, 26
+  offset: 0, 0
+  index: -1
+impact_outer_bottom
+  rotate: true
+  xy: 372, 158
+  size: 121, 68
+  orig: 121, 68
+  offset: 0, 0
+  index: -1
+impact_outer_middle
+  rotate: false
+  xy: 139, 57
+  size: 160, 105
+  orig: 160, 105
+  offset: 0, 0
+  index: -1
+impact_outer_top
+  rotate: true
+  xy: 369, 42
+  size: 114, 65
+  orig: 114, 65
+  offset: 0, 0
+  index: -1
+shadow_bottom
+  rotate: false
+  xy: 139, 164
+  size: 231, 115
+  orig: 231, 115
+  offset: 0, 0
+  index: -1
+shadow_middle
+  rotate: false
+  xy: 139, 164
+  size: 231, 115
+  orig: 231, 115
+  offset: 0, 0
+  index: -1
+shadow_top
+  rotate: true
+  xy: 2, 54
+  size: 225, 135
+  orig: 225, 135
+  offset: 0, 0
+  index: -1
+shard01
+  rotate: false
+  xy: 164, 17
+  size: 54, 38
+  orig: 54, 38
+  offset: 0, 0
+  index: -1
+shard02
+  rotate: false
+  xy: 2, 10
+  size: 89, 42
+  orig: 89, 42
+  offset: 0, 0
+  index: -1
+shard03
+  rotate: false
+  xy: 93, 19
+  size: 69, 33
+  orig: 69, 33
+  offset: 0, 0
+  index: -1
+shard04
+  rotate: false
+  xy: 282, 8
+  size: 60, 32
+  orig: 60, 32
+  offset: 0, 0
+  index: -1

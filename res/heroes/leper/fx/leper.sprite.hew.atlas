@@ -1,0 +1,13 @@
+
+leper.sprite.hew.png
+size: 433,617
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sword_trail
+  rotate: false
+  xy: 2, 2
+  size: 429, 613
+  orig: 429, 613
+  offset: 0, 0
+  index: -1

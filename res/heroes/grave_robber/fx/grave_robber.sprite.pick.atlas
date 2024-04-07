@@ -1,0 +1,13 @@
+
+grave_robber.sprite.pick.png
+size: 506,345
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pick_trail
+  rotate: false
+  xy: 2, 2
+  size: 502, 341
+  orig: 502, 341
+  offset: 0, 0
+  index: -1

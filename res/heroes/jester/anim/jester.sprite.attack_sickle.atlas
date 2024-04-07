@@ -1,0 +1,20 @@
+
+jester.sprite.attack_sickle.png
+size: 642,514
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_sickle
+  rotate: true
+  xy: 2, 2
+  size: 510, 573
+  orig: 510, 573
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 577, 155
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

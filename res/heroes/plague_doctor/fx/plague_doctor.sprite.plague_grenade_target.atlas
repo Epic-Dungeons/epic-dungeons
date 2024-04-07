@@ -1,0 +1,48 @@
+
+plague_doctor.sprite.plague_grenade_target.png
+size: 392,604
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skull
+  rotate: true
+  xy: 194, 2
+  size: 73, 196
+  orig: 73, 196
+  offset: 0, 0
+  index: -1
+smoke01
+  rotate: false
+  xy: 2, 383
+  size: 385, 219
+  orig: 385, 219
+  offset: 0, 0
+  index: -1
+smoke02
+  rotate: false
+  xy: 2, 175
+  size: 208, 206
+  orig: 208, 206
+  offset: 0, 0
+  index: -1
+smoke03
+  rotate: false
+  xy: 2, 14
+  size: 190, 159
+  orig: 190, 159
+  offset: 0, 0
+  index: -1
+smoke04
+  rotate: false
+  xy: 212, 217
+  size: 158, 164
+  orig: 158, 164
+  offset: 0, 0
+  index: -1
+smoke05
+  rotate: true
+  xy: 212, 77
+  size: 138, 140
+  orig: 138, 140
+  offset: 0, 0
+  index: -1

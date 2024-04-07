@@ -1,0 +1,20 @@
+
+arbalest.sprite.attack_point.png
+size: 684,497
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_point
+  rotate: true
+  xy: 2, 2
+  size: 493, 615
+  orig: 493, 615
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 619, 138
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

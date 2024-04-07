@@ -1,0 +1,13 @@
+
+leper.sprite.purge.png
+size: 735,727
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sword_trail
+  rotate: false
+  xy: 2, 2
+  size: 731, 723
+  orig: 731, 723
+  offset: 0, 0
+  index: -1

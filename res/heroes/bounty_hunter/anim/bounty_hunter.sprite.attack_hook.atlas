@@ -1,0 +1,20 @@
+
+bounty_hunter.sprite.attack_hook.png
+size: 1085,525
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_hook
+  rotate: false
+  xy: 2, 2
+  size: 1016, 521
+  orig: 1016, 521
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 1020, 166
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

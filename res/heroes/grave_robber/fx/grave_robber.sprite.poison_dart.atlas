@@ -1,0 +1,13 @@
+
+grave_robber.sprite.poison_dart.png
+size: 564,114
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+throw_trail
+  rotate: false
+  xy: 2, 2
+  size: 560, 110
+  orig: 560, 110
+  offset: 0, 0
+  index: -1

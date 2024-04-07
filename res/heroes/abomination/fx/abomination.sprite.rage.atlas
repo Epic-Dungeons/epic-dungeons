@@ -1,0 +1,167 @@
+
+abomination.sprite.rage.png
+size: 1092,477
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dust
+  rotate: false
+  xy: 2, 16
+  size: 898, 459
+  orig: 898, 459
+  offset: 0, 0
+  index: -1
+ray01
+  rotate: true
+  xy: 1050, 7
+  size: 178, 35
+  orig: 178, 35
+  offset: 0, 0
+  index: -1
+ray02
+  rotate: true
+  xy: 902, 45
+  size: 430, 47
+  orig: 430, 47
+  offset: 0, 0
+  index: -1
+ray03
+  rotate: true
+  xy: 951, 116
+  size: 267, 57
+  orig: 267, 57
+  offset: 0, 0
+  index: -1
+ray04
+  rotate: true
+  xy: 1010, 187
+  size: 196, 43
+  orig: 196, 43
+  offset: 0, 0
+  index: -1
+ray05
+  rotate: false
+  xy: 902, 2
+  size: 126, 41
+  orig: 126, 41
+  offset: 0, 0
+  index: -1
+ray06
+  rotate: true
+  xy: 1055, 284
+  size: 191, 35
+  orig: 191, 35
+  offset: 0, 0
+  index: -1
+rubble01
+  rotate: false
+  xy: 974, 67
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+rubble02
+  rotate: true
+  xy: 1022, 60
+  size: 20, 26
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+rubble03
+  rotate: false
+  xy: 951, 58
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+rubble04
+  rotate: true
+  xy: 993, 82
+  size: 32, 33
+  orig: 32, 33
+  offset: 0, 0
+  index: -1
+rubble05
+  rotate: false
+  xy: 951, 81
+  size: 40, 33
+  orig: 40, 33
+  offset: 0, 0
+  index: -1
+rubble06
+  rotate: false
+  xy: 993, 55
+  size: 27, 25
+  orig: 27, 25
+  offset: 0, 0
+  index: -1
+slobber01
+  rotate: true
+  xy: 951, 385
+  size: 90, 77
+  orig: 90, 77
+  offset: 0, 0
+  index: -1
+slobber02
+  rotate: false
+  xy: 1003, 47
+  size: 9, 6
+  orig: 9, 6
+  offset: 0, 0
+  index: -1
+slobber03
+  rotate: false
+  xy: 1022, 50
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+slobber04
+  rotate: false
+  xy: 984, 45
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+slobber05
+  rotate: true
+  xy: 951, 47
+  size: 9, 10
+  orig: 9, 10
+  offset: 0, 0
+  index: -1
+slobber06
+  rotate: true
+  xy: 963, 45
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+slobber07
+  rotate: false
+  xy: 1014, 47
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+slobber08
+  rotate: false
+  xy: 974, 45
+  size: 8, 20
+  orig: 8, 20
+  offset: 0, 0
+  index: -1
+slobber09
+  rotate: false
+  xy: 984, 54
+  size: 7, 11
+  orig: 7, 11
+  offset: 0, 0
+  index: -1
+slobber10
+  rotate: false
+  xy: 993, 46
+  size: 8, 7
+  orig: 8, 7
+  offset: 0, 0
+  index: -1

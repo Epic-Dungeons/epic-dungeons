@@ -1,0 +1,244 @@
+
+highwayman.sprite.idle.png
+size: 1110,288
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: false
+  xy: 582, 217
+  size: 52, 69
+  orig: 52, 69
+  offset: 0, 0
+  index: -1
+dagger
+  rotate: true
+  xy: 2, 79
+  size: 207, 88
+  orig: 207, 88
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 291, 155
+  size: 128, 131
+  orig: 128, 131
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 884, 8
+  size: 54, 92
+  orig: 54, 92
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: true
+  xy: 636, 219
+  size: 67, 66
+  orig: 67, 66
+  offset: 0, 0
+  index: -1
+left_coat
+  rotate: true
+  xy: 303, 6
+  size: 81, 326
+  orig: 81, 326
+  offset: 0, 0
+  index: -1
+left_cuff01
+  rotate: false
+  xy: 940, 3
+  size: 91, 100
+  orig: 91, 100
+  offset: 0, 0
+  index: -1
+left_cuff02
+  rotate: false
+  xy: 617, 160
+  size: 51, 55
+  orig: 51, 55
+  offset: 0, 0
+  index: -1
+left_foot
+  rotate: true
+  xy: 832, 102
+  size: 76, 69
+  orig: 76, 69
+  offset: 0, 0
+  index: -1
+left_forearm
+  rotate: true
+  xy: 310, 89
+  size: 64, 90
+  orig: 64, 90
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: false
+  xy: 704, 237
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: -1
+left_index
+  rotate: true
+  xy: 251, 89
+  size: 44, 57
+  orig: 44, 57
+  offset: 0, 0
+  index: -1
+left_middle
+  rotate: false
+  xy: 582, 159
+  size: 33, 56
+  orig: 33, 56
+  offset: 0, 0
+  index: -1
+left_pants01
+  rotate: false
+  xy: 177, 135
+  size: 112, 151
+  orig: 112, 151
+  offset: 0, 0
+  index: -1
+left_pants02
+  rotate: true
+  xy: 631, 11
+  size: 77, 47
+  orig: 77, 47
+  offset: 0, 0
+  index: -1
+left_pinky
+  rotate: false
+  xy: 217, 88
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+left_thumb
+  rotate: false
+  xy: 177, 88
+  size: 38, 45
+  orig: 38, 45
+  offset: 0, 0
+  index: -1
+pistol
+  rotate: false
+  xy: 92, 88
+  size: 83, 198
+  orig: 83, 198
+  offset: 0, 0
+  index: -1
+pistol_loop
+  rotate: false
+  xy: 704, 201
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: true
+  xy: 810, 13
+  size: 76, 72
+  orig: 76, 72
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: true
+  xy: 971, 106
+  size: 72, 62
+  orig: 72, 62
+  offset: 0, 0
+  index: -1
+right_coat
+  rotate: true
+  xy: 761, 180
+  size: 106, 347
+  orig: 106, 347
+  offset: 0, 0
+  index: -1
+right_cuff01
+  rotate: true
+  xy: 2, 2
+  size: 75, 70
+  orig: 75, 70
+  offset: 0, 0
+  index: -1
+right_cuff02
+  rotate: true
+  xy: 680, 11
+  size: 77, 37
+  orig: 77, 37
+  offset: 0, 0
+  index: -1
+right_foot
+  rotate: false
+  xy: 903, 105
+  size: 66, 73
+  orig: 66, 73
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: true
+  xy: 74, 3
+  size: 74, 62
+  orig: 74, 62
+  offset: 0, 0
+  index: -1
+right_pants01
+  rotate: true
+  xy: 761, 91
+  size: 87, 69
+  orig: 87, 69
+  offset: 0, 0
+  index: -1
+right_pants02
+  rotate: false
+  xy: 1035, 117
+  size: 71, 61
+  orig: 71, 61
+  offset: 0, 0
+  index: -1
+right_shoulder
+  rotate: false
+  xy: 719, 12
+  size: 89, 76
+  orig: 89, 76
+  offset: 0, 0
+  index: -1
+scarf01
+  rotate: true
+  xy: 421, 156
+  size: 130, 126
+  orig: 130, 126
+  offset: 0, 0
+  index: -1
+scarf02
+  rotate: false
+  xy: 1035, 4
+  size: 43, 111
+  orig: 43, 111
+  offset: 0, 0
+  index: -1
+scarf03
+  rotate: false
+  xy: 549, 176
+  size: 31, 110
+  orig: 31, 110
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 402, 90
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+shirt
+  rotate: true
+  xy: 138, 3
+  size: 83, 163
+  orig: 83, 163
+  offset: 0, 0
+  index: -1

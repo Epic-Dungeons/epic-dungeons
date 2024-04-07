@@ -1,0 +1,146 @@
+
+abomination.sprite.attack_transform.png
+size: 1510,1030
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_transform_beast
+  rotate: false
+  xy: 2, 313
+  size: 517, 715
+  orig: 517, 715
+  offset: 0, 0
+  index: -1
+attack_transform_human
+  rotate: false
+  xy: 1040, 462
+  size: 339, 566
+  orig: 339, 566
+  offset: 0, 0
+  index: -1
+beast_chains
+  rotate: false
+  xy: 570, 26
+  size: 360, 285
+  orig: 360, 285
+  offset: 0, 0
+  index: -1
+beast_shadow
+  rotate: false
+  xy: 521, 313
+  size: 517, 715
+  orig: 517, 715
+  offset: 0, 0
+  index: -1
+blight_beast
+  rotate: false
+  xy: 1040, 201
+  size: 359, 259
+  orig: 359, 259
+  offset: 0, 0
+  index: -1
+blight_human
+  rotate: false
+  xy: 1401, 356
+  size: 107, 149
+  orig: 107, 149
+  offset: 0, 0
+  index: -1
+chain_break01
+  rotate: false
+  xy: 1106, 11
+  size: 66, 48
+  orig: 66, 48
+  offset: 0, 0
+  index: -1
+chain_break02
+  rotate: true
+  xy: 1401, 231
+  size: 123, 70
+  orig: 123, 70
+  offset: 0, 0
+  index: -1
+chain_break03
+  rotate: false
+  xy: 1401, 208
+  size: 37, 21
+  orig: 37, 21
+  offset: 0, 0
+  index: -1
+chain_break04
+  rotate: true
+  xy: 1446, 795
+  size: 93, 55
+  orig: 93, 55
+  offset: 0, 0
+  index: -1
+chain_break05
+  rotate: true
+  xy: 1381, 507
+  size: 162, 75
+  orig: 162, 75
+  offset: 0, 0
+  index: -1
+human_background
+  rotate: true
+  xy: 2, 2
+  size: 309, 566
+  orig: 309, 566
+  offset: 0, 0
+  index: -1
+human_chain
+  rotate: true
+  xy: 1031, 61
+  size: 138, 181
+  orig: 138, 181
+  offset: 0, 0
+  index: -1
+human_hair
+  rotate: false
+  xy: 1446, 890
+  size: 55, 138
+  orig: 55, 138
+  offset: 0, 0
+  index: -1
+human_left_arm
+  rotate: true
+  xy: 1214, 62
+  size: 137, 182
+  orig: 137, 182
+  offset: 0, 0
+  index: -1
+human_left_forearm
+  rotate: true
+  xy: 932, 33
+  size: 169, 97
+  orig: 169, 97
+  offset: 0, 0
+  index: -1
+human_left_hand
+  rotate: false
+  xy: 932, 204
+  size: 106, 107
+  orig: 106, 107
+  offset: 0, 0
+  index: -1
+human_left_manacle
+  rotate: true
+  xy: 1031, 7
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: -1
+human_lock_square
+  rotate: false
+  xy: 1446, 696
+  size: 48, 97
+  orig: 48, 97
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 1381, 671
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

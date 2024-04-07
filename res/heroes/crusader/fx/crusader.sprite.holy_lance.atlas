@@ -1,0 +1,41 @@
+
+crusader.sprite.holy_lance.png
+size: 2702,433
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: false
+  xy: 2, 59
+  size: 768, 372
+  orig: 768, 372
+  offset: 0, 0
+  index: -1
+ghost
+  rotate: false
+  xy: 772, 64
+  size: 756, 367
+  orig: 756, 367
+  offset: 0, 0
+  index: -1
+ghost_rim_light
+  rotate: false
+  xy: 1530, 78
+  size: 707, 353
+  orig: 707, 353
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 1530, 78
+  size: 707, 353
+  orig: 707, 353
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2239, 2
+  size: 429, 461
+  orig: 429, 461
+  offset: 0, 0
+  index: -1

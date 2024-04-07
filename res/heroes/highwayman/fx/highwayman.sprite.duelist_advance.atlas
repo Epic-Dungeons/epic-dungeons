@@ -1,0 +1,13 @@
+
+highwayman.sprite.duelist_advance.png
+size: 731,191
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dagger_trail
+  rotate: false
+  xy: 2, 2
+  size: 727, 187
+  orig: 727, 187
+  offset: 0, 0
+  index: -1

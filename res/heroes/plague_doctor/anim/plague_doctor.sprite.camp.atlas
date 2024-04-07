@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.camp.png
+size: 388,430
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+camp
+  rotate: false
+  xy: 2, 2
+  size: 319, 426
+  orig: 319, 426
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 323, 71
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

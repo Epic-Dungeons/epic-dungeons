@@ -1,0 +1,27 @@
+
+arbalest.sprite.heroic.png
+size: 2554,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+halo
+  rotate: true
+  xy: 2254, 820
+  size: 309, 298
+  orig: 309, 298
+  offset: 0, 0
+  index: -1
+heroic
+  rotate: true
+  xy: 1345, 113
+  size: 1016, 907
+  orig: 1016, 907
+  offset: 0, 0
+  index: -1

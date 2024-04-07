@@ -1,0 +1,20 @@
+
+hellion.sprite.attack_charge.png
+size: 889,549
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_charge
+  rotate: false
+  xy: 2, 2
+  size: 820, 545
+  orig: 820, 545
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 824, 190
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

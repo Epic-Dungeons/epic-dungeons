@@ -1,0 +1,62 @@
+
+grave_robber.sprite.poison_dart_target.png
+size: 224,146
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dart
+  rotate: true
+  xy: 2, 19
+  size: 125, 61
+  orig: 125, 61
+  offset: 0, 0
+  index: -1
+dart_glow
+  rotate: true
+  xy: 130, 65
+  size: 79, 92
+  orig: 79, 92
+  offset: 0, 0
+  index: -1
+splash01
+  rotate: false
+  xy: 65, 28
+  size: 63, 116
+  orig: 63, 116
+  offset: 0, 0
+  index: -1
+splash02
+  rotate: true
+  xy: 85, 7
+  size: 19, 18
+  orig: 19, 18
+  offset: 0, 0
+  index: -1
+splash03
+  rotate: true
+  xy: 130, 15
+  size: 48, 38
+  orig: 48, 38
+  offset: 0, 0
+  index: -1
+splash04
+  rotate: true
+  xy: 65, 6
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+splash05
+  rotate: false
+  xy: 170, 31
+  size: 41, 32
+  orig: 41, 32
+  offset: 0, 0
+  index: -1
+splash06
+  rotate: false
+  xy: 170, 2
+  size: 33, 27
+  orig: 33, 27
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+abomination.sprite.slam.png
+size: 1006,535
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rim_light
+  rotate: true
+  xy: 598, 24
+  size: 136, 406
+  orig: 136, 406
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 2
+  size: 531, 594
+  orig: 531, 594
+  offset: 0, 0
+  index: -1
+slam
+  rotate: false
+  xy: 598, 162
+  size: 336, 371
+  orig: 336, 371
+  offset: 0, 0
+  index: -1

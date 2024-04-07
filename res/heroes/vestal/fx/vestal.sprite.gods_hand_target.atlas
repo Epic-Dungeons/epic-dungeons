@@ -1,0 +1,41 @@
+
+vestal.sprite.gods_hand_target.png
+size: 755,390
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fist
+  rotate: false
+  xy: 314, 2
+  size: 138, 142
+  orig: 138, 142
+  offset: 0, 0
+  index: -1
+ring
+  rotate: false
+  xy: 557, 192
+  size: 196, 196
+  orig: 196, 196
+  offset: 0, 0
+  index: -1
+spikes
+  rotate: false
+  xy: 2, 78
+  size: 310, 310
+  orig: 310, 310
+  offset: 0, 0
+  index: -1
+sunburst
+  rotate: false
+  xy: 557, 17
+  size: 175, 173
+  orig: 175, 173
+  offset: 0, 0
+  index: -1
+sunburst_glow
+  rotate: false
+  xy: 314, 146
+  size: 241, 242
+  orig: 241, 242
+  offset: 0, 0
+  index: -1

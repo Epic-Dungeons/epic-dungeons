@@ -1,0 +1,34 @@
+
+abomination.sprite.heroic.png
+size: 2971,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+halo
+  rotate: true
+  xy: 2176, 37
+  size: 309, 298
+  orig: 309, 298
+  offset: 0, 0
+  index: -1
+heroic_beast
+  rotate: true
+  xy: 1345, 89
+  size: 1040, 829
+  orig: 1040, 829
+  offset: 0, 0
+  index: -1
+heroic_human
+  rotate: true
+  xy: 2176, 348
+  size: 781, 793
+  orig: 781, 793
+  offset: 0, 0
+  index: -1

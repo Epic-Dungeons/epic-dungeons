@@ -1,0 +1,209 @@
+
+vestal.sprite.combat.png
+size: 1544,247
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+book01
+  rotate: true
+  xy: 919, 171
+  size: 74, 101
+  orig: 74, 101
+  offset: 0, 0
+  index: -1
+book02
+  rotate: true
+  xy: 1433, 152
+  size: 93, 109
+  orig: 93, 109
+  offset: 0, 0
+  index: -1
+breastplate
+  rotate: true
+  xy: 964, 11
+  size: 158, 129
+  orig: 158, 129
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 1314, 152
+  size: 93, 117
+  orig: 93, 117
+  offset: 0, 0
+  index: -1
+hood
+  rotate: false
+  xy: 262, 45
+  size: 161, 200
+  orig: 161, 200
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: true
+  xy: 574, 12
+  size: 74, 111
+  orig: 74, 111
+  offset: 0, 0
+  index: -1
+left_pauldron
+  rotate: false
+  xy: 1314, 41
+  size: 86, 109
+  orig: 86, 109
+  offset: 0, 0
+  index: -1
+left_rerebrace
+  rotate: false
+  xy: 1402, 10
+  size: 64, 71
+  orig: 64, 71
+  offset: 0, 0
+  index: -1
+left_robe
+  rotate: true
+  xy: 784, 7
+  size: 156, 178
+  orig: 156, 178
+  offset: 0, 0
+  index: -1
+left_sabaton
+  rotate: false
+  xy: 401, 7
+  size: 60, 36
+  orig: 60, 36
+  offset: 0, 0
+  index: -1
+left_tasset01
+  rotate: false
+  xy: 1142, 184
+  size: 113, 61
+  orig: 113, 61
+  offset: 0, 0
+  index: -1
+left_tasset02
+  rotate: false
+  xy: 1022, 184
+  size: 118, 61
+  orig: 118, 61
+  offset: 0, 0
+  index: -1
+left_thumb
+  rotate: true
+  xy: 475, 62
+  size: 24, 48
+  orig: 24, 48
+  offset: 0, 0
+  index: -1
+mace
+  rotate: true
+  xy: 425, 153
+  size: 92, 333
+  orig: 92, 333
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: true
+  xy: 687, 3
+  size: 83, 95
+  orig: 83, 95
+  offset: 0, 0
+  index: -1
+right_index
+  rotate: false
+  xy: 339, 6
+  size: 60, 37
+  orig: 60, 37
+  offset: 0, 0
+  index: -1
+right_middle
+  rotate: false
+  xy: 425, 56
+  size: 48, 30
+  orig: 48, 30
+  offset: 0, 0
+  index: -1
+right_pauldron
+  rotate: false
+  xy: 1468, 13
+  size: 66, 68
+  orig: 66, 68
+  offset: 0, 0
+  index: -1
+right_pinky
+  rotate: true
+  xy: 1257, 200
+  size: 45, 25
+  orig: 45, 25
+  offset: 0, 0
+  index: -1
+right_rerebrace
+  rotate: true
+  xy: 1284, 218
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+right_robe
+  rotate: false
+  xy: 1214, 3
+  size: 98, 179
+  orig: 98, 179
+  offset: 0, 0
+  index: -1
+right_sabaton
+  rotate: false
+  xy: 262, 12
+  size: 75, 31
+  orig: 75, 31
+  offset: 0, 0
+  index: -1
+right_tasset01
+  rotate: true
+  xy: 463, 2
+  size: 52, 57
+  orig: 52, 57
+  offset: 0, 0
+  index: -1
+right_tasset02
+  rotate: false
+  xy: 522, 8
+  size: 50, 52
+  orig: 50, 52
+  offset: 0, 0
+  index: -1
+robe
+  rotate: false
+  xy: 2, 6
+  size: 258, 239
+  orig: 258, 239
+  offset: 0, 0
+  index: -1
+sash
+  rotate: false
+  xy: 760, 165
+  size: 157, 80
+  orig: 157, 80
+  offset: 0, 0
+  index: -1
+scarf
+  rotate: false
+  xy: 1402, 83
+  size: 99, 67
+  orig: 99, 67
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 425, 88
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+tunic
+  rotate: false
+  xy: 1095, 15
+  size: 117, 167
+  orig: 117, 167
+  offset: 0, 0
+  index: -1

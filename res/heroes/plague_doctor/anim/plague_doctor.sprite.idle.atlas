@@ -1,0 +1,216 @@
+
+plague_doctor.sprite.idle.png
+size: 666,545
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+abdomen
+  rotate: false
+  xy: 271, 188
+  size: 120, 54
+  orig: 120, 54
+  offset: 0, 0
+  index: -1
+ball01
+  rotate: true
+  xy: 393, 188
+  size: 64, 74
+  orig: 64, 74
+  offset: 0, 0
+  index: -1
+ball02
+  rotate: false
+  xy: 481, 3
+  size: 57, 70
+  orig: 57, 70
+  offset: 0, 0
+  index: -1
+ball03
+  rotate: false
+  xy: 481, 135
+  size: 46, 54
+  orig: 46, 54
+  offset: 0, 0
+  index: -1
+belt
+  rotate: false
+  xy: 481, 479
+  size: 183, 64
+  orig: 183, 64
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 481, 387
+  size: 168, 90
+  orig: 168, 90
+  offset: 0, 0
+  index: -1
+dagger
+  rotate: true
+  xy: 103, 7
+  size: 177, 158
+  orig: 177, 158
+  offset: 0, 0
+  index: -1
+hood
+  rotate: true
+  xy: 263, 2
+  size: 184, 216
+  orig: 184, 216
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: true
+  xy: 336, 444
+  size: 99, 93
+  orig: 99, 93
+  offset: 0, 0
+  index: -1
+left_coat
+  rotate: false
+  xy: 580, 75
+  size: 74, 116
+  orig: 74, 116
+  offset: 0, 0
+  index: -1
+left_foot
+  rotate: false
+  xy: 261, 389
+  size: 99, 45
+  orig: 99, 45
+  offset: 0, 0
+  index: -1
+left_glove
+  rotate: false
+  xy: 261, 436
+  size: 73, 107
+  orig: 73, 107
+  offset: 0, 0
+  index: -1
+left_index
+  rotate: false
+  xy: 540, 9
+  size: 36, 46
+  orig: 36, 46
+  offset: 0, 0
+  index: -1
+left_middle
+  rotate: true
+  xy: 530, 224
+  size: 36, 49
+  orig: 36, 49
+  offset: 0, 0
+  index: -1
+left_pauldron
+  rotate: false
+  xy: 584, 290
+  size: 75, 95
+  orig: 75, 95
+  offset: 0, 0
+  index: -1
+left_pinky
+  rotate: false
+  xy: 578, 14
+  size: 32, 41
+  orig: 32, 41
+  offset: 0, 0
+  index: -1
+mask
+  rotate: true
+  xy: 2, 3
+  size: 181, 99
+  orig: 181, 99
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 481, 89
+  size: 96, 44
+  orig: 96, 44
+  offset: 0, 0
+  index: -1
+right_coat
+  rotate: true
+  xy: 261, 244
+  size: 141, 128
+  orig: 141, 128
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: true
+  xy: 469, 191
+  size: 61, 59
+  orig: 61, 59
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: true
+  xy: 584, 193
+  size: 95, 75
+  orig: 95, 75
+  offset: 0, 0
+  index: -1
+right_index
+  rotate: true
+  xy: 228, 188
+  size: 49, 41
+  orig: 49, 41
+  offset: 0, 0
+  index: -1
+right_middle
+  rotate: false
+  xy: 67, 186
+  size: 52, 51
+  orig: 52, 51
+  offset: 0, 0
+  index: -1
+right_pauldron
+  rotate: true
+  xy: 391, 254
+  size: 131, 96
+  orig: 131, 96
+  offset: 0, 0
+  index: -1
+right_pinky
+  rotate: false
+  xy: 530, 152
+  size: 48, 70
+  orig: 48, 70
+  offset: 0, 0
+  index: -1
+right_thumb
+  rotate: true
+  xy: 540, 57
+  size: 30, 37
+  orig: 30, 37
+  offset: 0, 0
+  index: -1
+robe
+  rotate: true
+  xy: 67, 239
+  size: 304, 192
+  orig: 304, 192
+  offset: 0, 0
+  index: -1
+scarf
+  rotate: false
+  xy: 121, 188
+  size: 105, 49
+  orig: 105, 49
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 186
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+tunic
+  rotate: false
+  xy: 489, 262
+  size: 93, 123
+  orig: 93, 123
+  offset: 0, 0
+  index: -1

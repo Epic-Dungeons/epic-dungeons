@@ -1,0 +1,118 @@
+
+grave_robber.sprite.toxin_trickery.png
+size: 969,429
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+potion_glow
+  rotate: false
+  xy: 764, 231
+  size: 196, 196
+  orig: 196, 196
+  offset: 0, 0
+  index: -1
+short_ray01
+  rotate: true
+  xy: 882, 121
+  size: 34, 54
+  orig: 34, 54
+  offset: 0, 0
+  index: -1
+short_ray02
+  rotate: false
+  xy: 764, 128
+  size: 52, 101
+  orig: 52, 101
+  offset: 0, 0
+  index: -1
+short_ray03
+  rotate: false
+  xy: 764, 2
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+short_ray04
+  rotate: false
+  xy: 764, 65
+  size: 49, 61
+  orig: 49, 61
+  offset: 0, 0
+  index: -1
+short_ray05
+  rotate: true
+  xy: 818, 121
+  size: 34, 62
+  orig: 34, 62
+  offset: 0, 0
+  index: -1
+short_ray06
+  rotate: true
+  xy: 815, 84
+  size: 35, 58
+  orig: 35, 58
+  offset: 0, 0
+  index: -1
+short_ray07
+  rotate: false
+  xy: 856, 157
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray08
+  rotate: false
+  xy: 930, 164
+  size: 36, 65
+  orig: 36, 65
+  offset: 0, 0
+  index: -1
+short_ray09
+  rotate: false
+  xy: 933, 66
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray10
+  rotate: true
+  xy: 815, 48
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray11
+  rotate: false
+  xy: 893, 157
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray12
+  rotate: false
+  xy: 818, 157
+  size: 36, 72
+  orig: 36, 72
+  offset: 0, 0
+  index: -1
+short_ray13
+  rotate: true
+  xy: 875, 84
+  size: 35, 56
+  orig: 35, 56
+  offset: 0, 0
+  index: -1
+short_ray14
+  rotate: true
+  xy: 870, 50
+  size: 32, 47
+  orig: 32, 47
+  offset: 0, 0
+  index: -1
+smoke
+  rotate: true
+  xy: 2, 3
+  size: 424, 760
+  orig: 424, 760
+  offset: 0, 0
+  index: -1

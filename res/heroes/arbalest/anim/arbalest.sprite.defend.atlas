@@ -1,0 +1,20 @@
+
+arbalest.sprite.defend.png
+size: 624,402
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+defend
+  rotate: true
+  xy: 2, 2
+  size: 398, 555
+  orig: 398, 555
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 559, 43
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

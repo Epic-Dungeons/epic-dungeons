@@ -1,0 +1,27 @@
+
+arbalest.sprite.sniper_shot_target.png
+size: 564,118
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bolt
+  rotate: false
+  xy: 341, 52
+  size: 221, 64
+  orig: 221, 64
+  offset: 0, 0
+  index: -1
+hole
+  rotate: false
+  xy: 341, 12
+  size: 25, 38
+  orig: 25, 38
+  offset: 0, 0
+  index: -1
+trail
+  rotate: false
+  xy: 2, 2
+  size: 337, 114
+  orig: 337, 114
+  offset: 0, 0
+  index: -1

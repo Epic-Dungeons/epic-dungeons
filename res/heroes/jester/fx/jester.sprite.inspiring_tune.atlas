@@ -1,0 +1,76 @@
+
+jester.sprite.inspiring_tune.png
+size: 2209,462
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: true
+  xy: 979, 22
+  size: 438, 560
+  orig: 438, 560
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 1541, 163
+  size: 296, 297
+  orig: 296, 297
+  offset: 0, 0
+  index: -1
+note01
+  rotate: false
+  xy: 2108, 105
+  size: 99, 128
+  orig: 99, 128
+  offset: 0, 0
+  index: -1
+note02
+  rotate: false
+  xy: 881, 115
+  size: 74, 55
+  orig: 74, 55
+  offset: 0, 0
+  index: -1
+note03
+  rotate: true
+  xy: 712, 47
+  size: 123, 167
+  orig: 123, 167
+  offset: 0, 0
+  index: -1
+note04
+  rotate: true
+  xy: 1839, 2
+  size: 231, 267
+  orig: 231, 267
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 1839, 235
+  size: 337, 225
+  orig: 337, 225
+  offset: 0, 0
+  index: -1
+staff
+  rotate: false
+  xy: 2, 17
+  size: 708, 153
+  orig: 708, 153
+  offset: 0, 0
+  index: -1
+staff_shadow
+  rotate: false
+  xy: 2, 172
+  size: 975, 288
+  orig: 975, 288
+  offset: 0, 0
+  index: -1
+treble_clef
+  rotate: true
+  xy: 1541, 32
+  size: 129, 277
+  orig: 129, 277
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+jester.sprite.finale_target.png
+size: 647,290
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blood
+  rotate: true
+  xy: 2, 116
+  size: 172, 563
+  orig: 172, 563
+  offset: 0, 0
+  index: -1
+spear_bottom
+  rotate: true
+  xy: 332, 2
+  size: 112, 313
+  orig: 112, 313
+  offset: 0, 0
+  index: -1
+spear_top
+  rotate: true
+  xy: 2, 8
+  size: 106, 328
+  orig: 106, 328
+  offset: 0, 0
+  index: -1

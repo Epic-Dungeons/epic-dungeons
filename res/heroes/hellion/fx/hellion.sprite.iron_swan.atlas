@@ -1,0 +1,13 @@
+
+hellion.sprite.iron_swan.png
+size: 220,706
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+polearm_trail
+  rotate: false
+  xy: 2, 2
+  size: 216, 702
+  orig: 216, 702
+  offset: 0, 0
+  index: -1

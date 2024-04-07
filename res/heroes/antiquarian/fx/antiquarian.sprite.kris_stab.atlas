@@ -1,0 +1,13 @@
+
+antiquarian.sprite.kris_stab.png
+size: 555,390
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kris_trail
+  rotate: false
+  xy: 2, 2
+  size: 551, 386
+  orig: 551, 386
+  offset: 0, 0
+  index: -1

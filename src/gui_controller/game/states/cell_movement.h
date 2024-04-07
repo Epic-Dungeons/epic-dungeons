@@ -64,6 +64,11 @@ public:
             views::Dialog::create()->setTitle("Game Over").setMessage("You have lost!").show();
             return;
         }
+        if (m_keyboard_manager.isClicked(keyboard::KEY_R)) {
+            gm->changeState(GUIGameState::kRecruit);
+            return;
+        }
+
         if (m_keyboard_manager.isClicked(keyboard::KEY_TAB)) {
             gm->changeState(GUIGameState::kPartyMenu);
             return;

@@ -1,0 +1,104 @@
+
+highwayman.sprite.point_blank_shot.png
+size: 558,1039
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_hipshot
+  rotate: true
+  xy: 2, 639
+  size: 398, 542
+  orig: 398, 542
+  offset: 0, 0
+  index: -1
+muzzle_flash
+  rotate: true
+  xy: 372, 307
+  size: 147, 120
+  orig: 147, 120
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 2, 32
+  size: 285, 236
+  orig: 285, 236
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 270
+  size: 368, 367
+  orig: 368, 367
+  offset: 0, 0
+  index: -1
+shot
+  rotate: false
+  xy: 289, 10
+  size: 208, 72
+  orig: 208, 72
+  offset: 0, 0
+  index: -1
+smoke
+  rotate: true
+  xy: 289, 84
+  size: 184, 181
+  orig: 184, 181
+  offset: 0, 0
+  index: -1
+smoke_orange
+  rotate: false
+  xy: 372, 456
+  size: 184, 181
+  orig: 184, 181
+  offset: 0, 0
+  index: -1
+sparks01
+  rotate: false
+  xy: 472, 269
+  size: 40, 36
+  orig: 40, 36
+  offset: 0, 0
+  index: -1
+sparks02
+  rotate: false
+  xy: 74, 2
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+sparks03
+  rotate: false
+  xy: 372, 273
+  size: 43, 32
+  orig: 43, 32
+  offset: 0, 0
+  index: -1
+sparks04
+  rotate: false
+  xy: 104, 10
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1
+sparks05
+  rotate: false
+  xy: 417, 275
+  size: 44, 30
+  orig: 44, 30
+  offset: 0, 0
+  index: -1
+sparks06
+  rotate: false
+  xy: 37, 5
+  size: 35, 25
+  orig: 35, 25
+  offset: 0, 0
+  index: -1
+sparks07
+  rotate: true
+  xy: 2, 3
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1

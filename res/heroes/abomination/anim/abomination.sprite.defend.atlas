@@ -1,0 +1,27 @@
+
+abomination.sprite.defend.png
+size: 1209,544
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+defend_beast
+  rotate: true
+  xy: 2, 2
+  size: 540, 652
+  orig: 540, 652
+  offset: 0, 0
+  index: -1
+defend_human
+  rotate: true
+  xy: 656, 87
+  size: 455, 551
+  orig: 455, 551
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 656, 22
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

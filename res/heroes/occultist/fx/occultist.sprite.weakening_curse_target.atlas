@@ -1,0 +1,69 @@
+
+occultist.sprite.weakening_curse_target.png
+size: 882,1097
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+inner_ring
+  rotate: false
+  xy: 603, 562
+  size: 254, 254
+  orig: 254, 254
+  offset: 0, 0
+  index: -1
+main_symbol
+  rotate: false
+  xy: 730, 346
+  size: 143, 214
+  orig: 143, 214
+  offset: 0, 0
+  index: -1
+middle_ring
+  rotate: false
+  xy: 603, 818
+  size: 277, 277
+  orig: 277, 277
+  offset: 0, 0
+  index: -1
+outer_ring
+  rotate: false
+  xy: 2, 63
+  size: 387, 387
+  orig: 387, 387
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 452
+  size: 643, 599
+  orig: 643, 599
+  offset: 0, 0
+  index: -1
+symbol01
+  rotate: false
+  xy: 391, 2
+  size: 112, 112
+  orig: 112, 112
+  offset: 0, 0
+  index: -1
+symbol02
+  rotate: false
+  xy: 505, 2
+  size: 112, 112
+  orig: 112, 112
+  offset: 0, 0
+  index: -1
+symbol03
+  rotate: false
+  xy: 619, 2
+  size: 112, 112
+  orig: 112, 112
+  offset: 0, 0
+  index: -1
+words
+  rotate: true
+  xy: 391, 116
+  size: 334, 337
+  orig: 334, 337
+  offset: 0, 0
+  index: -1

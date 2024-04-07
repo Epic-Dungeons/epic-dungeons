@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.emboldening_vapours_target.png
+size: 828,649
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 399, 645
+  orig: 399, 645
+  offset: 0, 0
+  index: -1
+vapors
+  rotate: false
+  xy: 403, 69
+  size: 423, 578
+  orig: 423, 578
+  offset: 0, 0
+  index: -1

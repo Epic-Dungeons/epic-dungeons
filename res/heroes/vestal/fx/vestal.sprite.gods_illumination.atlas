@@ -1,0 +1,97 @@
+
+vestal.sprite.gods_illumination.png
+size: 1994,373
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: true
+  xy: 2, 107
+  size: 264, 534
+  orig: 264, 534
+  offset: 0, 0
+  index: -1
+mace_glow
+  rotate: false
+  xy: 1663, 129
+  size: 241, 242
+  orig: 241, 242
+  offset: 0, 0
+  index: -1
+primary_ray01
+  rotate: true
+  xy: 378, 14
+  size: 91, 184
+  orig: 91, 184
+  offset: 0, 0
+  index: -1
+primary_ray02
+  rotate: true
+  xy: 745, 42
+  size: 90, 181
+  orig: 90, 181
+  offset: 0, 0
+  index: -1
+primary_ray03
+  rotate: false
+  xy: 190, 15
+  size: 186, 90
+  orig: 186, 90
+  offset: 0, 0
+  index: -1
+primary_ray04
+  rotate: true
+  xy: 1906, 2
+  size: 181, 86
+  orig: 181, 86
+  offset: 0, 0
+  index: -1
+primary_ray05
+  rotate: false
+  xy: 1663, 38
+  size: 189, 89
+  orig: 189, 89
+  offset: 0, 0
+  index: -1
+primary_ray06
+  rotate: false
+  xy: 564, 39
+  size: 179, 93
+  orig: 179, 93
+  offset: 0, 0
+  index: -1
+primary_ray07
+  rotate: true
+  xy: 2, 9
+  size: 96, 186
+  orig: 96, 186
+  offset: 0, 0
+  index: -1
+primary_ray08
+  rotate: false
+  xy: 1906, 185
+  size: 85, 186
+  orig: 85, 186
+  offset: 0, 0
+  index: -1
+ray_glow
+  rotate: true
+  xy: 940, 3
+  size: 368, 371
+  orig: 368, 371
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: true
+  xy: 538, 134
+  size: 237, 400
+  orig: 237, 400
+  offset: 0, 0
+  index: -1
+secondary_rays
+  rotate: false
+  xy: 1313, 22
+  size: 348, 349
+  orig: 348, 349
+  offset: 0, 0
+  index: -1

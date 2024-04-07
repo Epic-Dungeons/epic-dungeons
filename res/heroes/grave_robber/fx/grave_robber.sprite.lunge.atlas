@@ -1,0 +1,13 @@
+
+grave_robber.sprite.lunge.png
+size: 739,214
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dagger_trail
+  rotate: false
+  xy: 2, 2
+  size: 735, 210
+  orig: 735, 210
+  offset: 0, 0
+  index: -1

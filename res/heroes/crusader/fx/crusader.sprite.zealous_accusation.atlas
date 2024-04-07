@@ -1,0 +1,41 @@
+
+crusader.sprite.zealous_accusation.png
+size: 696,648
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+halo
+  rotate: false
+  xy: 443, 2
+  size: 215, 178
+  orig: 215, 178
+  offset: 0, 0
+  index: -1
+ray01
+  rotate: true
+  xy: 2, 2
+  size: 39, 208
+  orig: 39, 208
+  offset: 0, 0
+  index: -1
+scroll_glow
+  rotate: false
+  xy: 443, 182
+  size: 251, 464
+  orig: 251, 464
+  offset: 0, 0
+  index: -1
+scroll_wash
+  rotate: true
+  xy: 2, 43
+  size: 107, 428
+  orig: 107, 428
+  offset: 0, 0
+  index: -1
+starburst
+  rotate: false
+  xy: 2, 152
+  size: 439, 494
+  orig: 439, 494
+  offset: 0, 0
+  index: -1

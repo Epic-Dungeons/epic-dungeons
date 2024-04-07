@@ -1,0 +1,55 @@
+
+bounty_hunter.sprite.flashbang_target.png
+size: 1726,487
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blast
+  rotate: false
+  xy: 885, 81
+  size: 404, 404
+  orig: 404, 404
+  offset: 0, 0
+  index: -1
+glow
+  rotate: true
+  xy: 484, 40
+  size: 445, 399
+  orig: 445, 399
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 480, 483
+  orig: 480, 483
+  offset: 0, 0
+  index: -1
+smoke01
+  rotate: false
+  xy: 1291, 70
+  size: 208, 206
+  orig: 208, 206
+  offset: 0, 0
+  index: -1
+smoke02
+  rotate: false
+  xy: 1291, 278
+  size: 223, 207
+  orig: 223, 207
+  offset: 0, 0
+  index: -1
+smoke03
+  rotate: false
+  xy: 1516, 265
+  size: 208, 220
+  orig: 208, 220
+  offset: 0, 0
+  index: -1
+smoke04
+  rotate: false
+  xy: 1501, 76
+  size: 210, 187
+  orig: 210, 187
+  offset: 0, 0
+  index: -1

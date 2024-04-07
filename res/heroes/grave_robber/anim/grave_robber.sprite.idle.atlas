@@ -1,0 +1,167 @@
+
+grave_robber.sprite.idle.png
+size: 468,565
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: false
+  xy: 361, 499
+  size: 102, 64
+  orig: 102, 64
+  offset: 0, 0
+  index: -1
+dagger
+  rotate: true
+  xy: 346, 333
+  size: 164, 78
+  orig: 164, 78
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 308, 64
+  size: 74, 81
+  orig: 74, 81
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 2, 360
+  size: 197, 138
+  orig: 197, 138
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: true
+  xy: 146, 3
+  size: 47, 113
+  orig: 47, 113
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: false
+  xy: 2, 17
+  size: 83, 180
+  orig: 83, 180
+  offset: 0, 0
+  index: -1
+left_coat
+  rotate: false
+  xy: 199, 238
+  size: 52, 120
+  orig: 52, 120
+  offset: 0, 0
+  index: -1
+left_forearm
+  rotate: false
+  xy: 261, 2
+  size: 49, 60
+  orig: 49, 60
+  offset: 0, 0
+  index: -1
+left_hair
+  rotate: true
+  xy: 221, 66
+  size: 55, 85
+  orig: 55, 85
+  offset: 0, 0
+  index: -1
+left_hand
+  rotate: true
+  xy: 312, 16
+  size: 46, 88
+  orig: 46, 88
+  offset: 0, 0
+  index: -1
+middle_coat
+  rotate: false
+  xy: 384, 64
+  size: 55, 89
+  orig: 55, 89
+  offset: 0, 0
+  index: -1
+pants
+  rotate: false
+  xy: 201, 361
+  size: 143, 137
+  orig: 143, 137
+  offset: 0, 0
+  index: -1
+pouch
+  rotate: false
+  xy: 332, 249
+  size: 90, 82
+  orig: 90, 82
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 253, 246
+  size: 77, 113
+  orig: 77, 113
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: false
+  xy: 146, 52
+  size: 73, 179
+  orig: 73, 179
+  offset: 0, 0
+  index: -1
+right_coat
+  rotate: false
+  xy: 136, 233
+  size: 61, 125
+  orig: 61, 125
+  offset: 0, 0
+  index: -1
+right_coat_bottom
+  rotate: false
+  xy: 87, 3
+  size: 57, 194
+  orig: 57, 194
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: false
+  xy: 293, 147
+  size: 53, 97
+  orig: 53, 97
+  offset: 0, 0
+  index: -1
+right_hair
+  rotate: false
+  xy: 221, 123
+  size: 70, 113
+  orig: 70, 113
+  offset: 0, 0
+  index: -1
+right_hand
+  rotate: true
+  xy: 402, 12
+  size: 50, 64
+  orig: 50, 64
+  offset: 0, 0
+  index: -1
+scarf
+  rotate: false
+  xy: 348, 155
+  size: 80, 92
+  orig: 80, 92
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 500
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+shirt
+  rotate: false
+  xy: 2, 199
+  size: 132, 159
+  orig: 132, 159
+  offset: 0, 0
+  index: -1

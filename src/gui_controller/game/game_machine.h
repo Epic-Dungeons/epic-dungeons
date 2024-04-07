@@ -17,6 +17,7 @@ enum class GUIGameState {
     kPartyMenu,
     kTreasure,
     kGameOver,
+    kRecruit,
 
     // DEMO
     kDialogueDemo

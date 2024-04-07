@@ -1,0 +1,20 @@
+
+leper.sprite.attack_hew.png
+size: 776,513
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_hew
+  rotate: false
+  xy: 2, 2
+  size: 707, 509
+  orig: 707, 509
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 711, 154
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

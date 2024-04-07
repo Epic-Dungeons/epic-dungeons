@@ -1,0 +1,20 @@
+
+crusader.sprite.attack_sword.png
+size: 649,593
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_sword
+  rotate: true
+  xy: 2, 2
+  size: 589, 580
+  orig: 589, 580
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 584, 234
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

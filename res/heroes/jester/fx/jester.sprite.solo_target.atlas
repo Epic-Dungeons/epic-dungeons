@@ -1,0 +1,34 @@
+
+jester.sprite.solo_target.png
+size: 989,509
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+left_half_circle
+  rotate: true
+  xy: 524, 306
+  size: 201, 402
+  orig: 201, 402
+  offset: 0, 0
+  index: -1
+right_half_circle
+  rotate: true
+  xy: 524, 103
+  size: 201, 402
+  orig: 201, 402
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 6
+  size: 501, 520
+  orig: 501, 520
+  offset: 0, 0
+  index: -1
+slash
+  rotate: false
+  xy: 928, 2
+  size: 59, 505
+  orig: 59, 505
+  offset: 0, 0
+  index: -1

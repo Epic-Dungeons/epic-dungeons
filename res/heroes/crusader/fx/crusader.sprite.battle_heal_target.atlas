@@ -1,0 +1,111 @@
+
+crusader.sprite.battle_heal_target.png
+size: 715,221
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: true
+  xy: 2, 2
+  size: 217, 528
+  orig: 217, 528
+  offset: 0, 0
+  index: -1
+short_ray01
+  rotate: true
+  xy: 659, 47
+  size: 34, 54
+  orig: 34, 54
+  offset: 0, 0
+  index: -1
+short_ray02
+  rotate: true
+  xy: 532, 167
+  size: 52, 101
+  orig: 52, 101
+  offset: 0, 0
+  index: -1
+short_ray03
+  rotate: false
+  xy: 673, 83
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+short_ray04
+  rotate: true
+  xy: 596, 57
+  size: 49, 61
+  orig: 49, 61
+  offset: 0, 0
+  index: -1
+short_ray05
+  rotate: true
+  xy: 532, 94
+  size: 34, 62
+  orig: 34, 62
+  offset: 0, 0
+  index: -1
+short_ray06
+  rotate: true
+  xy: 532, 57
+  size: 35, 58
+  orig: 35, 58
+  offset: 0, 0
+  index: -1
+short_ray07
+  rotate: true
+  xy: 635, 146
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray08
+  rotate: true
+  xy: 606, 108
+  size: 36, 65
+  orig: 36, 65
+  offset: 0, 0
+  index: -1
+short_ray09
+  rotate: false
+  xy: 532, 2
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray10
+  rotate: false
+  xy: 568, 2
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray11
+  rotate: true
+  xy: 532, 130
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray12
+  rotate: true
+  xy: 635, 183
+  size: 36, 72
+  orig: 36, 72
+  offset: 0, 0
+  index: -1
+short_ray13
+  rotate: true
+  xy: 638, 10
+  size: 35, 56
+  orig: 35, 56
+  offset: 0, 0
+  index: -1
+short_ray14
+  rotate: false
+  xy: 604, 8
+  size: 32, 47
+  orig: 32, 47
+  offset: 0, 0
+  index: -1

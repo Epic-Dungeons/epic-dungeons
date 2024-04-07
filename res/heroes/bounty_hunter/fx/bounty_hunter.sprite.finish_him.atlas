@@ -1,0 +1,13 @@
+
+bounty_hunter.sprite.finish_him.png
+size: 650,219
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+axe_trail
+  rotate: false
+  xy: 2, 2
+  size: 646, 215
+  orig: 646, 215
+  offset: 0, 0
+  index: -1

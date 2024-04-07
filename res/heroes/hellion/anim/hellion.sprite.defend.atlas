@@ -1,0 +1,20 @@
+
+hellion.sprite.defend.png
+size: 865,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+defend
+  rotate: true
+  xy: 2, 13
+  size: 346, 796
+  orig: 346, 796
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 800, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+abomination.sprite.attack_claw.png
+size: 962,561
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_claw
+  rotate: false
+  xy: 2, 2
+  size: 893, 557
+  orig: 893, 557
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 897, 202
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

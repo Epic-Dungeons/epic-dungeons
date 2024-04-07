@@ -1,0 +1,20 @@
+
+grave_robber.sprite.flashing_daggers_target.png
+size: 503,115
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dagger
+  rotate: false
+  xy: 340, 22
+  size: 161, 91
+  orig: 161, 91
+  offset: 0, 0
+  index: -1
+dagger_trail
+  rotate: false
+  xy: 2, 2
+  size: 336, 111
+  orig: 336, 111
+  offset: 0, 0
+  index: -1

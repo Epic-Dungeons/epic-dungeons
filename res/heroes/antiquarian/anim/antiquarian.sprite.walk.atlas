@@ -1,0 +1,321 @@
+
+antiquarian.sprite.walk.png
+size: 794,531
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+back_satchel
+  rotate: true
+  xy: 611, 347
+  size: 63, 67
+  orig: 63, 67
+  offset: 0, 0
+  index: -1
+bag
+  rotate: false
+  xy: 630, 209
+  size: 40, 85
+  orig: 40, 85
+  offset: 0, 0
+  index: -1
+bottom_belt
+  rotate: true
+  xy: 365, 339
+  size: 190, 58
+  orig: 190, 58
+  offset: 0, 0
+  index: -1
+bottom_necklace
+  rotate: false
+  xy: 679, 436
+  size: 108, 93
+  orig: 108, 93
+  offset: 0, 0
+  index: -1
+bottom_robes
+  rotate: false
+  xy: 67, 257
+  size: 227, 272
+  orig: 227, 272
+  offset: 0, 0
+  index: -1
+cap
+  rotate: true
+  xy: 582, 412
+  size: 117, 95
+  orig: 117, 95
+  offset: 0, 0
+  index: -1
+censer
+  rotate: false
+  xy: 296, 337
+  size: 67, 192
+  orig: 67, 192
+  offset: 0, 0
+  index: -1
+front_satchel
+  rotate: true
+  xy: 179, 174
+  size: 81, 126
+  orig: 81, 126
+  offset: 0, 0
+  index: -1
+haversack
+  rotate: true
+  xy: 680, 365
+  size: 69, 104
+  orig: 69, 104
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 67, 173
+  size: 110, 82
+  orig: 110, 82
+  offset: 0, 0
+  index: -1
+left_bracelet01
+  rotate: false
+  xy: 735, 7
+  size: 50, 61
+  orig: 50, 61
+  offset: 0, 0
+  index: -1
+left_bracelet02
+  rotate: true
+  xy: 549, 3
+  size: 31, 66
+  orig: 31, 66
+  offset: 0, 0
+  index: -1
+left_censer_strap
+  rotate: true
+  xy: 537, 188
+  size: 17, 57
+  orig: 17, 57
+  offset: 0, 0
+  index: -1
+left_forearm
+  rotate: false
+  xy: 679, 98
+  size: 65, 56
+  orig: 65, 56
+  offset: 0, 0
+  index: -1
+left_hand
+  rotate: false
+  xy: 296, 258
+  size: 70, 77
+  orig: 70, 77
+  offset: 0, 0
+  index: -1
+left_robes
+  rotate: false
+  xy: 2, 3
+  size: 200, 167
+  orig: 200, 167
+  offset: 0, 0
+  index: -1
+left_sleeve
+  rotate: false
+  xy: 751, 199
+  size: 41, 39
+  orig: 41, 39
+  offset: 0, 0
+  index: -1
+left_thumb
+  rotate: false
+  xy: 633, 112
+  size: 28, 25
+  orig: 28, 25
+  offset: 0, 0
+  index: -1
+pouch01
+  rotate: false
+  xy: 679, 2
+  size: 54, 65
+  orig: 54, 65
+  offset: 0, 0
+  index: -1
+pouch02
+  rotate: false
+  xy: 307, 175
+  size: 47, 81
+  orig: 47, 81
+  offset: 0, 0
+  index: -1
+pouch03
+  rotate: true
+  xy: 680, 240
+  size: 60, 75
+  orig: 60, 75
+  offset: 0, 0
+  index: -1
+pouch04
+  rotate: false
+  xy: 630, 296
+  size: 48, 49
+  orig: 48, 49
+  offset: 0, 0
+  index: -1
+pouch_strap
+  rotate: false
+  xy: 679, 156
+  size: 67, 50
+  orig: 67, 50
+  offset: 0, 0
+  index: -1
+right_bracelet
+  rotate: false
+  xy: 507, 2
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+right_censer_strap
+  rotate: true
+  xy: 596, 193
+  size: 12, 64
+  orig: 12, 64
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: true
+  xy: 617, 2
+  size: 45, 60
+  orig: 45, 60
+  offset: 0, 0
+  index: -1
+right_hand
+  rotate: true
+  xy: 680, 302
+  size: 61, 88
+  orig: 61, 88
+  offset: 0, 0
+  index: -1
+right_robes
+  rotate: false
+  xy: 368, 181
+  size: 147, 156
+  orig: 147, 156
+  offset: 0, 0
+  index: -1
+right_sleeve
+  rotate: false
+  xy: 679, 208
+  size: 70, 30
+  orig: 70, 30
+  offset: 0, 0
+  index: -1
+ring
+  rotate: false
+  xy: 517, 182
+  size: 18, 23
+  orig: 18, 23
+  offset: 0, 0
+  index: -1
+scarf_back
+  rotate: false
+  xy: 441, 36
+  size: 137, 143
+  orig: 137, 143
+  offset: 0, 0
+  index: -1
+scarf_front
+  rotate: false
+  xy: 204, 8
+  size: 164, 164
+  orig: 164, 164
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 172
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+skirt
+  rotate: false
+  xy: 425, 346
+  size: 155, 183
+  orig: 155, 183
+  offset: 0, 0
+  index: -1
+strap
+  rotate: false
+  xy: 517, 207
+  size: 111, 137
+  orig: 111, 137
+  offset: 0, 0
+  index: -1
+tassel01
+  rotate: false
+  xy: 748, 138
+  size: 28, 59
+  orig: 28, 59
+  offset: 0, 0
+  index: -1
+tassel02
+  rotate: false
+  xy: 757, 240
+  size: 31, 60
+  orig: 31, 60
+  offset: 0, 0
+  index: -1
+tassel03
+  rotate: false
+  xy: 633, 50
+  size: 27, 60
+  orig: 27, 60
+  offset: 0, 0
+  index: -1
+tassel04
+  rotate: false
+  xy: 633, 139
+  size: 29, 52
+  orig: 29, 52
+  offset: 0, 0
+  index: -1
+tassel05
+  rotate: true
+  xy: 662, 69
+  size: 27, 57
+  orig: 27, 57
+  offset: 0, 0
+  index: -1
+tassel06
+  rotate: false
+  xy: 582, 346
+  size: 27, 64
+  orig: 27, 64
+  offset: 0, 0
+  index: -1
+tassel07
+  rotate: true
+  xy: 441, 2
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+tassel08
+  rotate: true
+  xy: 721, 70
+  size: 26, 59
+  orig: 26, 59
+  offset: 0, 0
+  index: -1
+top_belt
+  rotate: true
+  xy: 580, 49
+  size: 137, 51
+  orig: 137, 51
+  offset: 0, 0
+  index: -1
+top_necklace
+  rotate: true
+  xy: 370, 2
+  size: 177, 69
+  orig: 177, 69
+  offset: 0, 0
+  index: -1

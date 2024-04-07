@@ -1,0 +1,272 @@
+
+hellion.sprite.walk.png
+size: 1306,400
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+back_robes
+  rotate: false
+  xy: 1166, 5
+  size: 61, 63
+  orig: 61, 63
+  offset: 0, 0
+  index: -1
+belt
+  rotate: true
+  xy: 831, 2
+  size: 80, 96
+  orig: 80, 96
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 1158, 159
+  size: 145, 121
+  orig: 145, 121
+  offset: 0, 0
+  index: -1
+collar
+  rotate: false
+  xy: 660, 145
+  size: 200, 188
+  orig: 200, 188
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 1019, 282
+  size: 116, 243
+  orig: 116, 243
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: true
+  xy: 1112, 70
+  size: 87, 93
+  orig: 87, 93
+  offset: 0, 0
+  index: -1
+left_belt_fur
+  rotate: false
+  xy: 1264, 324
+  size: 40, 74
+  orig: 40, 74
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: true
+  xy: 862, 94
+  size: 66, 136
+  orig: 66, 136
+  offset: 0, 0
+  index: -1
+left_cuff
+  rotate: false
+  xy: 929, 6
+  size: 68, 86
+  orig: 68, 86
+  offset: 0, 0
+  index: -1
+left_foot
+  rotate: false
+  xy: 771, 44
+  size: 56, 36
+  orig: 56, 36
+  offset: 0, 0
+  index: -1
+left_hand
+  rotate: false
+  xy: 1094, 5
+  size: 70, 63
+  orig: 70, 63
+  offset: 0, 0
+  index: -1
+left_index
+  rotate: true
+  xy: 703, 2
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+left_middle
+  rotate: true
+  xy: 1284, 38
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+left_pinky
+  rotate: true
+  xy: 1207, 79
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+left_robes
+  rotate: true
+  xy: 190, 3
+  size: 61, 161
+  orig: 61, 161
+  offset: 0, 0
+  index: -1
+left_thumb
+  rotate: false
+  xy: 1264, 291
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+left_tunic
+  rotate: true
+  xy: 660, 82
+  size: 61, 169
+  orig: 61, 169
+  offset: 0, 0
+  index: -1
+middle_robes
+  rotate: true
+  xy: 2, 7
+  size: 57, 186
+  orig: 57, 186
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 1229, 31
+  size: 53, 69
+  orig: 53, 69
+  offset: 0, 0
+  index: -1
+polearm
+  rotate: true
+  xy: 2, 66
+  size: 332, 656
+  orig: 332, 656
+  offset: 0, 0
+  index: -1
+ponytail
+  rotate: true
+  xy: 484, 3
+  size: 61, 95
+  orig: 61, 95
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: true
+  xy: 353, 7
+  size: 57, 129
+  orig: 57, 129
+  offset: 0, 0
+  index: -1
+right_belt_fur
+  rotate: true
+  xy: 999, 7
+  size: 75, 93
+  orig: 75, 93
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: true
+  xy: 1000, 84
+  size: 76, 110
+  orig: 76, 110
+  offset: 0, 0
+  index: -1
+right_cuff
+  rotate: false
+  xy: 581, 4
+  size: 76, 60
+  orig: 76, 60
+  offset: 0, 0
+  index: -1
+right_foot
+  rotate: false
+  xy: 771, 8
+  size: 54, 34
+  orig: 54, 34
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: true
+  xy: 1207, 102
+  size: 55, 88
+  orig: 55, 88
+  offset: 0, 0
+  index: -1
+right_hand
+  rotate: false
+  xy: 660, 32
+  size: 58, 48
+  orig: 58, 48
+  offset: 0, 0
+  index: -1
+right_robes
+  rotate: false
+  xy: 862, 162
+  size: 121, 171
+  orig: 121, 171
+  offset: 0, 0
+  index: -1
+right_tunic
+  rotate: true
+  xy: 985, 162
+  size: 118, 171
+  orig: 118, 171
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 660, 335
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+tatters01
+  rotate: false
+  xy: 985, 286
+  size: 29, 47
+  orig: 29, 47
+  offset: 0, 0
+  index: -1
+tatters02
+  rotate: true
+  xy: 720, 34
+  size: 46, 49
+  orig: 46, 49
+  offset: 0, 0
+  index: -1
+tatters03
+  rotate: false
+  xy: 1284, 66
+  size: 17, 34
+  orig: 17, 34
+  offset: 0, 0
+  index: -1
+tatters04
+  rotate: true
+  xy: 723, 9
+  size: 23, 34
+  orig: 23, 34
+  offset: 0, 0
+  index: -1
+tatters05
+  rotate: true
+  xy: 1229, 7
+  size: 22, 44
+  orig: 22, 44
+  offset: 0, 0
+  index: -1
+tatters06
+  rotate: false
+  xy: 831, 84
+  size: 29, 59
+  orig: 29, 59
+  offset: 0, 0
+  index: -1
+tatters07
+  rotate: true
+  xy: 659, 6
+  size: 24, 42
+  orig: 24, 42
+  offset: 0, 0
+  index: -1

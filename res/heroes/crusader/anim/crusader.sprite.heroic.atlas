@@ -1,0 +1,27 @@
+
+crusader.sprite.heroic.png
+size: 2310,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+halo
+  rotate: true
+  xy: 1345, 116
+  size: 309, 298
+  orig: 309, 298
+  offset: 0, 0
+  index: -1
+heroic
+  rotate: true
+  xy: 1345, 427
+  size: 702, 963
+  orig: 702, 963
+  offset: 0, 0
+  index: -1

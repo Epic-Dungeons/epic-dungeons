@@ -1,0 +1,20 @@
+
+abomination.sprite.attack_kneel.png
+size: 533,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_kneel
+  rotate: true
+  xy: 2, 43
+  size: 316, 464
+  orig: 316, 464
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 468, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

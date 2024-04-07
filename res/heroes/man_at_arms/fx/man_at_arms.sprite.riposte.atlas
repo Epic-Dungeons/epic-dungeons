@@ -1,0 +1,13 @@
+
+man_at_arms.sprite.riposte.png
+size: 626,140
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shield_trail
+  rotate: false
+  xy: 2, 2
+  size: 622, 136
+  orig: 622, 136
+  offset: 0, 0
+  index: -1

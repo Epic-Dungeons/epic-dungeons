@@ -1,0 +1,118 @@
+
+antiquarian.sprite.fortifying_vapours_target.png
+size: 1314,419
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+black_smoke
+  rotate: true
+  xy: 2, 18
+  size: 399, 631
+  orig: 399, 631
+  offset: 0, 0
+  index: -1
+green_smoke
+  rotate: true
+  xy: 635, 9
+  size: 408, 568
+  orig: 408, 568
+  offset: 0, 0
+  index: -1
+short_ray01
+  rotate: true
+  xy: 1205, 2
+  size: 34, 54
+  orig: 34, 54
+  offset: 0, 0
+  index: -1
+short_ray02
+  rotate: false
+  xy: 1205, 316
+  size: 52, 101
+  orig: 52, 101
+  offset: 0, 0
+  index: -1
+short_ray03
+  rotate: false
+  xy: 1242, 126
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+short_ray04
+  rotate: false
+  xy: 1205, 253
+  size: 49, 61
+  orig: 49, 61
+  offset: 0, 0
+  index: -1
+short_ray05
+  rotate: false
+  xy: 1242, 189
+  size: 34, 62
+  orig: 34, 62
+  offset: 0, 0
+  index: -1
+short_ray06
+  rotate: false
+  xy: 1243, 66
+  size: 35, 58
+  orig: 35, 58
+  offset: 0, 0
+  index: -1
+short_ray07
+  rotate: false
+  xy: 1205, 179
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray08
+  rotate: false
+  xy: 1205, 38
+  size: 36, 65
+  orig: 36, 65
+  offset: 0, 0
+  index: -1
+short_ray09
+  rotate: true
+  xy: 1259, 309
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray10
+  rotate: false
+  xy: 1278, 217
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray11
+  rotate: false
+  xy: 1205, 105
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray12
+  rotate: false
+  xy: 1259, 345
+  size: 36, 72
+  orig: 36, 72
+  offset: 0, 0
+  index: -1
+short_ray13
+  rotate: true
+  xy: 1256, 272
+  size: 35, 56
+  orig: 35, 56
+  offset: 0, 0
+  index: -1
+short_ray14
+  rotate: false
+  xy: 1280, 168
+  size: 32, 47
+  orig: 32, 47
+  offset: 0, 0
+  index: -1

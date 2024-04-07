@@ -1,0 +1,20 @@
+
+vestal.sprite.attack_lectionary.png
+size: 790,394
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_lectionary
+  rotate: true
+  xy: 2, 2
+  size: 390, 721
+  orig: 390, 721
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 725, 35
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

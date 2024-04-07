@@ -1,0 +1,20 @@
+
+bounty_hunter.sprite.attack_throw.png
+size: 598,411
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_throw
+  rotate: true
+  xy: 2, 2
+  size: 407, 529
+  orig: 407, 529
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 533, 52
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

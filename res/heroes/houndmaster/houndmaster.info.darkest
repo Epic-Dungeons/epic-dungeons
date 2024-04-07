@@ -1,0 +1,56 @@
+resistances: .stun 40% .poison 40% .bleed 40% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 40%
+crit: .effects "on_crit_bleedchance"
+weapon: .name "houndmaster_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 5
+weapon: .name "houndmaster_weapon_1" .atk 0% .dmg 5 8 .crit 5% .spd 5 .upgradeRequirementCode 0
+weapon: .name "houndmaster_weapon_2" .atk 0% .dmg 6 10 .crit 6% .spd 6 .upgradeRequirementCode 1
+weapon: .name "houndmaster_weapon_3" .atk 0% .dmg 6 11 .crit 7% .spd 6 .upgradeRequirementCode 2
+weapon: .name "houndmaster_weapon_4" .atk 0% .dmg 7 13 .crit 8% .spd 7 .upgradeRequirementCode 3
+armour: .name "houndmaster_armour_0" .def 10% .prot 0 .hp 21 .spd 0
+armour: .name "houndmaster_armour_1" .def 15% .prot 0 .hp 25 .spd 0 .upgradeRequirementCode 0
+armour: .name "houndmaster_armour_2" .def 20% .prot 0 .hp 29 .spd 0 .upgradeRequirementCode 1
+armour: .name "houndmaster_armour_3" .def 25% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 2
+armour: .name "houndmaster_armour_4" .def 30% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 85% .dmg 0% .crit 5% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "Hound Bleed 1" .generation_guaranteed true
+combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 90% .dmg 0% .crit 6% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 2" "Hound Bleed 2"
+combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg 0% .crit 7% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 3" "Hound Bleed 3"
+combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg 0% .crit 8% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 4" "Hound Bleed 4"
+combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg 0% .crit 9% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 5" "Hound Bleed 5"
+combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 85% .dmg -75% .crit -5% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 1"
+combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 90% .dmg -75% .crit -4% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 2"
+combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 95% .dmg -75% .crit -3% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 3"
+combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 100% .dmg -75% .crit -2% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 4"
+combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 105% .dmg -75% .crit -1% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 5"
+combat_skill: .id "whistle" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 1" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 2" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 3" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 4" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 5" .is_stall_invalidating false
+combat_skill: .id "howl" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 1" .is_stall_invalidating false
+combat_skill: .id "howl" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 2" .is_stall_invalidating false
+combat_skill: .id "howl" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 3" .is_stall_invalidating false
+combat_skill: .id "howl" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 4" .is_stall_invalidating false
+combat_skill: .id "howl" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 5" .is_stall_invalidating false
+combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+combat_skill: .id "guard_dog" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 4321 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "HM Guard 1" "Hound Protect 1"
+combat_skill: .id "guard_dog" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 4321 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "HM Guard 1" "Hound Protect 2"
+combat_skill: .id "guard_dog" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 4321 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "HM Guard 1" "Hound Protect 3"
+combat_skill: .id "guard_dog" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 4321 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "HM Guard 1" "Hound Protect 4"
+combat_skill: .id "guard_dog" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 4321 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "HM Guard 1" "Hound Protect 5"
+combat_skill: .id "lick_wounds" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 1" .is_stall_invalidating false
+combat_skill: .id "lick_wounds" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 2" .is_stall_invalidating false
+combat_skill: .id "lick_wounds" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 3" .is_stall_invalidating false
+combat_skill: .id "lick_wounds" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 4" .is_stall_invalidating false
+combat_skill: .id "lick_wounds" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 5" .is_stall_invalidating false
+combat_skill: .id "blackjack" .level 0 .type "melee" .atk 95% .dmg -65% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 1"
+combat_skill: .id "blackjack" .level 1 .type "melee" .atk 100% .dmg -65% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 2"
+combat_skill: .id "blackjack" .level 2 .type "melee" .atk 105% .dmg -65% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 3"
+combat_skill: .id "blackjack" .level 3 .type "melee" .atk 110% .dmg -65% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 4"
+combat_skill: .id "blackjack" .level 4 .type "melee" .atk 115% .dmg -65% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 5"
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "training_ring"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 4
+id_index: .index 12
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 6 .card_chance 1.0

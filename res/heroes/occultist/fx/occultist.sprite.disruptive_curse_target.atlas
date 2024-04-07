@@ -1,0 +1,62 @@
+
+occultist.sprite.disruptive_curse_target.png
+size: 1363,510
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+big_square
+  rotate: false
+  xy: 2, 73
+  size: 435, 435
+  orig: 435, 435
+  offset: 0, 0
+  index: -1
+inner_ring
+  rotate: false
+  xy: 828, 2
+  size: 227, 227
+  orig: 227, 227
+  offset: 0, 0
+  index: -1
+main_symbol
+  rotate: true
+  xy: 439, 20
+  size: 99, 144
+  orig: 99, 144
+  offset: 0, 0
+  index: -1
+middle_ring
+  rotate: false
+  xy: 1107, 254
+  size: 254, 254
+  orig: 254, 254
+  offset: 0, 0
+  index: -1
+outer_ring
+  rotate: false
+  xy: 828, 231
+  size: 277, 277
+  orig: 277, 277
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 439, 121
+  size: 387, 387
+  orig: 387, 387
+  offset: 0, 0
+  index: -1
+square01
+  rotate: true
+  xy: 1107, 9
+  size: 243, 244
+  orig: 243, 244
+  offset: 0, 0
+  index: -1
+square02
+  rotate: true
+  xy: 1107, 9
+  size: 243, 244
+  orig: 243, 244
+  offset: 0, 0
+  index: -1

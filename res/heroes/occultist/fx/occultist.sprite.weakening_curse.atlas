@@ -1,0 +1,55 @@
+
+occultist.sprite.weakening_curse.png
+size: 920,526
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hand_aura
+  rotate: true
+  xy: 2, 200
+  size: 324, 327
+  orig: 324, 327
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 331, 330
+  size: 434, 194
+  orig: 434, 194
+  offset: 0, 0
+  index: -1
+ring
+  rotate: false
+  xy: 2, 2
+  size: 208, 196
+  orig: 208, 196
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 654, 47
+  size: 281, 264
+  orig: 281, 264
+  offset: 0, 0
+  index: -1
+skull_aura
+  rotate: true
+  xy: 331, 10
+  size: 318, 321
+  orig: 318, 321
+  offset: 0, 0
+  index: -1
+skull_eye_glow
+  rotate: false
+  xy: 212, 2
+  size: 35, 15
+  orig: 35, 15
+  offset: 0, 0
+  index: -1
+skull_eye_rays
+  rotate: true
+  xy: 212, 19
+  size: 179, 84
+  orig: 179, 84
+  offset: 0, 0
+  index: -1

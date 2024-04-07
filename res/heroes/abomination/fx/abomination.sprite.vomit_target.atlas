@@ -1,0 +1,41 @@
+
+abomination.sprite.vomit_target.png
+size: 646,229
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+slime01
+  rotate: false
+  xy: 522, 4
+  size: 122, 223
+  orig: 122, 223
+  offset: 0, 0
+  index: -1
+slime02
+  rotate: true
+  xy: 2, 2
+  size: 35, 71
+  orig: 35, 71
+  offset: 0, 0
+  index: -1
+slime03
+  rotate: false
+  xy: 383, 3
+  size: 137, 224
+  orig: 137, 224
+  offset: 0, 0
+  index: -1
+slime04
+  rotate: true
+  xy: 75, 3
+  size: 34, 55
+  orig: 34, 55
+  offset: 0, 0
+  index: -1
+slime05
+  rotate: false
+  xy: 2, 39
+  size: 379, 188
+  orig: 379, 188
+  offset: 0, 0
+  index: -1

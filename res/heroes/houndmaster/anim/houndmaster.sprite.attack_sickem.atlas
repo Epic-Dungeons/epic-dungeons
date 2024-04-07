@@ -1,0 +1,27 @@
+
+houndmaster.sprite.attack_sickem.png
+size: 579,1020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hound
+  rotate: false
+  xy: 2, 67
+  size: 575, 342
+  orig: 575, 342
+  offset: 0, 0
+  index: -1
+master
+  rotate: true
+  xy: 2, 411
+  size: 607, 532
+  orig: 607, 532
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+bounty_hunter.sprite.afflicted.png
+size: 1985,1186
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: false
+  xy: 1345, 297
+  size: 638, 887
+  orig: 638, 887
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 57
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 1345, 2
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

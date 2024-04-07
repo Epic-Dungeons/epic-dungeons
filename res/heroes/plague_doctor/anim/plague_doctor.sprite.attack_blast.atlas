@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.attack_blast.png
+size: 605,455
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_blast
+  rotate: true
+  xy: 2, 2
+  size: 451, 536
+  orig: 451, 536
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 540, 96
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

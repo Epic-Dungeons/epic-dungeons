@@ -1,0 +1,20 @@
+
+plague_doctor.sprite.attack_dagger.png
+size: 692,426
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_dagger
+  rotate: true
+  xy: 2, 2
+  size: 422, 623
+  orig: 422, 623
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 627, 67
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

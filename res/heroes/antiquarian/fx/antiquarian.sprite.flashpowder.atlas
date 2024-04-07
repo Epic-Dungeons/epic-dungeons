@@ -1,0 +1,20 @@
+
+antiquarian.sprite.flashpowder.png
+size: 671,536
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rim_light
+  rotate: false
+  xy: 403, 2
+  size: 266, 532
+  orig: 266, 532
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 6
+  size: 399, 528
+  orig: 399, 528
+  offset: 0, 0
+  index: -1

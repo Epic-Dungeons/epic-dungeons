@@ -1,0 +1,20 @@
+
+occultist.sprite.attack_skull.png
+size: 790,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_skull
+  rotate: true
+  xy: 2, 28
+  size: 331, 721
+  orig: 331, 721
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 725, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

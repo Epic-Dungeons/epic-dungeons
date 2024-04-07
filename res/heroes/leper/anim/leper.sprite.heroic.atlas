@@ -1,0 +1,27 @@
+
+leper.sprite.heroic.png
+size: 2301,1188
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 59
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+halo
+  rotate: true
+  xy: 1345, 2
+  size: 309, 298
+  orig: 309, 298
+  offset: 0, 0
+  index: -1
+heroic
+  rotate: true
+  xy: 1345, 313
+  size: 873, 954
+  orig: 873, 954
+  offset: 0, 0
+  index: -1

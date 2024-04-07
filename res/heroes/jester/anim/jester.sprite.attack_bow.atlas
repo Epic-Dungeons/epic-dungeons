@@ -1,0 +1,20 @@
+
+jester.sprite.attack_bow.png
+size: 746,466
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_bow
+  rotate: true
+  xy: 2, 2
+  size: 462, 677
+  orig: 462, 677
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 681, 107
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+highwayman.sprite.wicked_slice.png
+size: 743,197
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dagger_trail
+  rotate: false
+  xy: 2, 2
+  size: 739, 193
+  orig: 739, 193
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+highwayman.sprite.heroic.png
+size: 2307,1188
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 59
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+halo
+  rotate: false
+  xy: 1345, 2
+  size: 309, 298
+  orig: 309, 298
+  offset: 0, 0
+  index: -1
+heroic
+  rotate: true
+  xy: 1345, 302
+  size: 884, 960
+  orig: 884, 960
+  offset: 0, 0
+  index: -1

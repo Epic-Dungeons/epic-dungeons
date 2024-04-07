@@ -1,0 +1,41 @@
+
+jester.sprite.finale.png
+size: 2224,869
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blood
+  rotate: true
+  xy: 1658, 283
+  size: 172, 563
+  orig: 172, 563
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 1658, 457
+  size: 450, 410
+  orig: 450, 410
+  offset: 0, 0
+  index: -1
+spear_bottom
+  rotate: false
+  xy: 2110, 554
+  size: 112, 313
+  orig: 112, 313
+  offset: 0, 0
+  index: -1
+spear_top
+  rotate: true
+  xy: 1658, 174
+  size: 107, 328
+  orig: 107, 328
+  offset: 0, 0
+  index: -1
+spotlight
+  rotate: true
+  xy: 2, 2
+  size: 865, 1654
+  orig: 865, 1654
+  offset: 0, 0
+  index: -1

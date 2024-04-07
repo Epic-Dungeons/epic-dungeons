@@ -1,0 +1,76 @@
+
+jester.sprite.walk.png
+size: 760,543
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: true
+  xy: 669, 9
+  size: 128, 61
+  orig: 128, 61
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 2, 2
+  size: 216, 180
+  orig: 216, 180
+  offset: 0, 0
+  index: -1
+legs
+  rotate: false
+  xy: 308, 255
+  size: 282, 286
+  orig: 282, 286
+  offset: 0, 0
+  index: -1
+lute
+  rotate: false
+  xy: 67, 211
+  size: 239, 330
+  orig: 239, 330
+  offset: 0, 0
+  index: -1
+mask
+  rotate: false
+  xy: 592, 255
+  size: 160, 286
+  orig: 160, 286
+  offset: 0, 0
+  index: -1
+pants_top
+  rotate: false
+  xy: 308, 218
+  size: 125, 35
+  orig: 125, 35
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: true
+  xy: 669, 139
+  size: 114, 89
+  orig: 114, 89
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: false
+  xy: 493, 54
+  size: 174, 199
+  orig: 174, 199
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 184
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 220, 5
+  size: 271, 204
+  orig: 271, 204
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+occultist.sprite.investigate.png
+size: 623,407
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+investigate
+  rotate: true
+  xy: 2, 2
+  size: 403, 554
+  orig: 403, 554
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 558, 48
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

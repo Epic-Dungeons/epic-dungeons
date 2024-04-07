@@ -1,0 +1,97 @@
+
+jester.sprite.combat.png
+size: 1292,310
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt
+  rotate: false
+  xy: 702, 15
+  size: 123, 68
+  orig: 123, 68
+  offset: 0, 0
+  index: -1
+dagger
+  rotate: false
+  xy: 658, 85
+  size: 77, 223
+  orig: 77, 223
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: true
+  xy: 827, 3
+  size: 101, 99
+  orig: 101, 99
+  offset: 0, 0
+  index: -1
+left_forearm
+  rotate: true
+  xy: 502, 42
+  size: 266, 154
+  orig: 266, 154
+  offset: 0, 0
+  index: -1
+legs
+  rotate: false
+  xy: 175, 33
+  size: 325, 275
+  orig: 325, 275
+  offset: 0, 0
+  index: -1
+lute
+  rotate: true
+  xy: 926, 196
+  size: 112, 364
+  orig: 112, 364
+  offset: 0, 0
+  index: -1
+mask01
+  rotate: false
+  xy: 2, 11
+  size: 171, 297
+  orig: 171, 297
+  offset: 0, 0
+  index: -1
+mask02
+  rotate: false
+  xy: 658, 14
+  size: 42, 69
+  orig: 42, 69
+  offset: 0, 0
+  index: -1
+pants_top
+  rotate: true
+  xy: 928, 2
+  size: 127, 57
+  orig: 127, 57
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 1081, 16
+  size: 148, 113
+  orig: 148, 113
+  offset: 0, 0
+  index: -1
+right_forearm
+  rotate: false
+  xy: 987, 6
+  size: 92, 123
+  orig: 92, 123
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 928, 131
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 737, 106
+  size: 187, 202
+  orig: 187, 202
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+man_at_arms.sprite.afflicted.png
+size: 2091,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: true
+  xy: 1345, 323
+  size: 806, 744
+  orig: 806, 744
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 1345, 28
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

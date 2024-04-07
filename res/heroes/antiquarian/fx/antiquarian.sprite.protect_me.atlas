@@ -1,0 +1,34 @@
+
+antiquarian.sprite.protect_me.png
+size: 806,757
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow
+  rotate: false
+  xy: 456, 75
+  size: 329, 329
+  orig: 329, 329
+  offset: 0, 0
+  index: -1
+long_rays
+  rotate: false
+  xy: 2, 299
+  size: 452, 456
+  orig: 452, 456
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 2, 2
+  size: 259, 295
+  orig: 259, 295
+  offset: 0, 0
+  index: -1
+short_rays
+  rotate: false
+  xy: 456, 406
+  size: 348, 349
+  orig: 348, 349
+  offset: 0, 0
+  index: -1

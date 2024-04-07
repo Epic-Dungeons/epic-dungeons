@@ -1,0 +1,13 @@
+
+plague_doctor.sprite.plague_grenade.png
+size: 586,150
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+grenade_trail
+  rotate: false
+  xy: 2, 2
+  size: 582, 146
+  orig: 582, 146
+  offset: 0, 0
+  index: -1

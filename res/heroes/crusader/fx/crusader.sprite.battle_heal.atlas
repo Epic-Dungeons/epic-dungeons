@@ -1,0 +1,55 @@
+
+crusader.sprite.battle_heal.png
+size: 1683,676
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: false
+  xy: 2, 60
+  size: 475, 614
+  orig: 475, 614
+  offset: 0, 0
+  index: -1
+cross
+  rotate: false
+  xy: 1235, 33
+  size: 234, 265
+  orig: 234, 265
+  offset: 0, 0
+  index: -1
+green_glow
+  rotate: false
+  xy: 938, 2
+  size: 295, 296
+  orig: 295, 296
+  offset: 0, 0
+  index: -1
+inner_rays
+  rotate: false
+  xy: 938, 300
+  size: 373, 374
+  orig: 373, 374
+  offset: 0, 0
+  index: -1
+orange_glow
+  rotate: false
+  xy: 1313, 303
+  size: 368, 371
+  orig: 368, 371
+  offset: 0, 0
+  index: -1
+outer_rays
+  rotate: false
+  xy: 479, 215
+  size: 457, 459
+  orig: 457, 459
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 479, 26
+  size: 265, 187
+  orig: 265, 187
+  offset: 0, 0
+  index: -1

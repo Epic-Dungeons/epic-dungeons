@@ -1,0 +1,20 @@
+
+houndmaster.sprite.defend.png
+size: 622,478
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+defend
+  rotate: true
+  xy: 2, 2
+  size: 474, 553
+  orig: 474, 553
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 557, 119
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

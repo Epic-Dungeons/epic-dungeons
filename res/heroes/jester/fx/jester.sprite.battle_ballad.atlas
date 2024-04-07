@@ -1,0 +1,55 @@
+
+jester.sprite.battle_ballad.png
+size: 1201,462
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: true
+  xy: 2, 22
+  size: 438, 560
+  orig: 438, 560
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 564, 163
+  size: 296, 297
+  orig: 296, 297
+  offset: 0, 0
+  index: -1
+note01
+  rotate: false
+  xy: 733, 33
+  size: 99, 128
+  orig: 99, 128
+  offset: 0, 0
+  index: -1
+note02
+  rotate: true
+  xy: 1131, 159
+  size: 74, 55
+  orig: 74, 55
+  offset: 0, 0
+  index: -1
+note03
+  rotate: true
+  xy: 564, 38
+  size: 123, 167
+  orig: 123, 167
+  offset: 0, 0
+  index: -1
+note04
+  rotate: true
+  xy: 862, 2
+  size: 231, 267
+  orig: 231, 267
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: false
+  xy: 862, 235
+  size: 337, 225
+  orig: 337, 225
+  offset: 0, 0
+  index: -1

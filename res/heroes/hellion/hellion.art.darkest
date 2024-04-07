@@ -1,0 +1,25 @@
+commonfx: .deathfx death_medium
+
+weapon: .name "hellion_weapon_0" .icon "eqp_weapon_0.png"
+weapon: .name "hellion_weapon_1" .icon "eqp_weapon_1.png"
+weapon: .name "hellion_weapon_2" .icon "eqp_weapon_2.png"
+weapon: .name "hellion_weapon_3" .icon "eqp_weapon_3.png"
+weapon: .name "hellion_weapon_4" .icon "eqp_weapon_4.png"
+
+armour: .name "hellion_armour_0" .icon "eqp_armour_0.png"
+armour: .name "hellion_armour_1" .icon "eqp_armour_1.png"
+armour: .name "hellion_armour_2" .icon "eqp_armour_2.png"
+armour: .name "hellion_armour_3" .icon "eqp_armour_3.png"
+armour: .name "hellion_armour_4" .icon "eqp_armour_4.png"
+
+combat_skill: .id "wicked_hack" .icon "one" .anim "attack_high" .fx "wicked_hack" .targchestfx "blood_splatter"
+combat_skill: .id "iron_swan" .icon "two" .anim "attack_leap" .fx "iron_swan" .targchestfx "blood_splatter"
+combat_skill: .id "barbaric_yawp" .icon "three" .anim "attack_ranged" .fx "barbaric_yawp" .targchestfx "blood_splatter" .condensed_tooltip_effects true
+combat_skill: .id "if_it_bleeds" .icon "four" .anim "attack_high" .fx "if_it_bleeds" .targchestfx "blood_splatter"
+combat_skill: .id "breakthru" .icon "five" .anim "attack_charge" .fx "breakthru" .targchestfx "blood_splatter" .area_pos_offset 50 0 .target_area_pos_offset -50 0 .condensed_tooltip_stats true .condensed_tooltip_effects false
+combat_skill: .id "adrenaline_rush" .icon "six" .anim "attack_buff" .fx "adrenaline_rush" .can_display_performer_selection_after_turn false
+combat_skill: .id "bleed_out" .icon "seven" .anim "attack_low" .fx "bleed_out" .targchestfx "blood_splatter" .condensed_tooltip_stats true .condensed_tooltip_effects true
+				
+combat_move_skill: .id "move" .icon "generic_move" .anim "idle"
+
+act_out_display: .attack_friendly_anim "attack_high" .attack_friendly_fx "wicked_hack" .attack_friendly_targchestfx "blood_splatter" .attack_friendly_sfx "/char/ally/hellion_wicked_hack"

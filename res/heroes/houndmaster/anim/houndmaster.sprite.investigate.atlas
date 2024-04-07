@@ -1,0 +1,20 @@
+
+houndmaster.sprite.investigate.png
+size: 804,508
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+investigate
+  rotate: false
+  xy: 2, 2
+  size: 735, 504
+  orig: 735, 504
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 739, 149
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

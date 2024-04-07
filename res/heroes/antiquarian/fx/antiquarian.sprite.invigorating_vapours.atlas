@@ -1,0 +1,20 @@
+
+antiquarian.sprite.invigorating_vapours.png
+size: 719,412
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rim_light
+  rotate: false
+  xy: 544, 186
+  size: 173, 224
+  orig: 173, 224
+  offset: 0, 0
+  index: -1
+smoke
+  rotate: false
+  xy: 2, 2
+  size: 540, 408
+  orig: 540, 408
+  offset: 0, 0
+  index: -1

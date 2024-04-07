@@ -1,0 +1,13 @@
+
+jester.sprite.dirk_stab.png
+size: 645,120
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dirk_trail
+  rotate: false
+  xy: 2, 2
+  size: 641, 116
+  orig: 641, 116
+  offset: 0, 0
+  index: -1

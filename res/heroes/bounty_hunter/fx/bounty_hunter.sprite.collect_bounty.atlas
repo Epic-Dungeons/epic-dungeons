@@ -1,0 +1,20 @@
+
+bounty_hunter.sprite.collect_bounty.png
+size: 847,294
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+axe_trail
+  rotate: false
+  xy: 2, 2
+  size: 713, 290
+  orig: 713, 290
+  offset: 0, 0
+  index: -1
+blood
+  rotate: true
+  xy: 717, 150
+  size: 142, 128
+  orig: 142, 128
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,153 @@
+
+man_at_arms.sprite.combat.png
+size: 406,1065
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+breastplate
+  rotate: true
+  xy: 2, 575
+  size: 240, 277
+  orig: 240, 277
+  offset: 0, 0
+  index: -1
+codpiece
+  rotate: true
+  xy: 170, 285
+  size: 86, 91
+  orig: 86, 91
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 253
+  size: 118, 166
+  orig: 118, 166
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: true
+  xy: 263, 446
+  size: 110, 139
+  orig: 110, 139
+  offset: 0, 0
+  index: -1
+left_boot
+  rotate: true
+  xy: 281, 558
+  size: 105, 122
+  orig: 105, 122
+  offset: 0, 0
+  index: -1
+left_pants
+  rotate: false
+  xy: 259, 20
+  size: 145, 154
+  orig: 145, 154
+  offset: 0, 0
+  index: -1
+left_pauldron01
+  rotate: true
+  xy: 322, 778
+  size: 141, 80
+  orig: 141, 80
+  offset: 0, 0
+  index: -1
+left_pauldron02
+  rotate: false
+  xy: 263, 369
+  size: 134, 75
+  orig: 134, 75
+  offset: 0, 0
+  index: -1
+left_tasset
+  rotate: false
+  xy: 160, 111
+  size: 97, 85
+  orig: 97, 85
+  offset: 0, 0
+  index: -1
+medal
+  rotate: false
+  xy: 160, 2
+  size: 84, 107
+  orig: 84, 107
+  offset: 0, 0
+  index: -1
+morningstar
+  rotate: false
+  xy: 2, 817
+  size: 318, 181
+  orig: 318, 181
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: true
+  xy: 78, 38
+  size: 59, 77
+  orig: 59, 77
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: true
+  xy: 261, 176
+  size: 100, 143
+  orig: 100, 143
+  offset: 0, 0
+  index: -1
+right_boot
+  rotate: true
+  xy: 263, 278
+  size: 89, 113
+  orig: 89, 113
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: true
+  xy: 281, 665
+  size: 111, 123
+  orig: 111, 123
+  offset: 0, 0
+  index: -1
+right_pants
+  rotate: true
+  xy: 2, 99
+  size: 152, 156
+  orig: 152, 156
+  offset: 0, 0
+  index: -1
+right_pauldron01
+  rotate: true
+  xy: 322, 921
+  size: 77, 82
+  orig: 77, 82
+  offset: 0, 0
+  index: -1
+right_pauldron02
+  rotate: false
+  xy: 2, 18
+  size: 74, 79
+  orig: 74, 79
+  offset: 0, 0
+  index: -1
+right_tasset
+  rotate: true
+  xy: 170, 198
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 1000
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 2, 373
+  size: 259, 200
+  orig: 259, 200
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+man_at_arms.sprite.attack_mace.png
+size: 873,519
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_mace
+  rotate: false
+  xy: 2, 2
+  size: 804, 515
+  orig: 804, 515
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 808, 160
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

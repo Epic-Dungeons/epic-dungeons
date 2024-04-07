@@ -1,0 +1,20 @@
+
+highwayman.sprite.attack_slice.png
+size: 647,535
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_slice
+  rotate: false
+  xy: 2, 2
+  size: 578, 531
+  orig: 578, 531
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 582, 176
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

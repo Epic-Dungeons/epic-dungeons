@@ -1,0 +1,209 @@
+
+arbalest.sprite.walk.png
+size: 1196,281
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bevor
+  rotate: false
+  xy: 2, 5
+  size: 89, 56
+  orig: 89, 56
+  offset: 0, 0
+  index: -1
+breastplate
+  rotate: false
+  xy: 2, 63
+  size: 160, 216
+  orig: 160, 216
+  offset: 0, 0
+  index: -1
+crossbow
+  rotate: true
+  xy: 573, 136
+  size: 143, 317
+  orig: 143, 317
+  offset: 0, 0
+  index: -1
+crossbow_prod
+  rotate: false
+  xy: 164, 110
+  size: 108, 169
+  orig: 108, 169
+  offset: 0, 0
+  index: -1
+crossbow_strap
+  rotate: true
+  xy: 1107, 203
+  size: 76, 77
+  orig: 76, 77
+  offset: 0, 0
+  index: -1
+crossbow_string
+  rotate: true
+  xy: 433, 9
+  size: 104, 38
+  orig: 104, 38
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 746, 6
+  size: 89, 128
+  orig: 89, 128
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 452, 120
+  size: 119, 159
+  orig: 119, 159
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 359, 9
+  size: 72, 104
+  orig: 72, 104
+  offset: 0, 0
+  index: -1
+left_foot
+  rotate: false
+  xy: 837, 2
+  size: 74, 67
+  orig: 74, 67
+  offset: 0, 0
+  index: -1
+left_gauntlet
+  rotate: true
+  xy: 358, 115
+  size: 164, 92
+  orig: 164, 92
+  offset: 0, 0
+  index: -1
+left_greave
+  rotate: false
+  xy: 274, 114
+  size: 82, 165
+  orig: 82, 165
+  offset: 0, 0
+  index: -1
+left_hand
+  rotate: true
+  xy: 1107, 158
+  size: 43, 76
+  orig: 43, 76
+  offset: 0, 0
+  index: -1
+left_index
+  rotate: true
+  xy: 1128, 34
+  size: 35, 33
+  orig: 35, 33
+  offset: 0, 0
+  index: -1
+left_lower_rerebrace
+  rotate: true
+  xy: 164, 63
+  size: 45, 38
+  orig: 45, 38
+  offset: 0, 0
+  index: -1
+left_middle
+  rotate: false
+  xy: 1128, 3
+  size: 35, 29
+  orig: 35, 29
+  offset: 0, 0
+  index: -1
+left_pants
+  rotate: false
+  xy: 892, 138
+  size: 118, 141
+  orig: 118, 141
+  offset: 0, 0
+  index: -1
+left_pauldron
+  rotate: false
+  xy: 913, 2
+  size: 66, 67
+  orig: 66, 67
+  offset: 0, 0
+  index: -1
+left_pinky
+  rotate: false
+  xy: 1096, 3
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+left_upper_rerebrace
+  rotate: true
+  xy: 1096, 31
+  size: 38, 30
+  orig: 38, 30
+  offset: 0, 0
+  index: -1
+quiver
+  rotate: true
+  xy: 204, 3
+  size: 105, 153
+  orig: 105, 153
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 1012, 140
+  size: 93, 139
+  orig: 93, 139
+  offset: 0, 0
+  index: -1
+right_glove
+  rotate: true
+  xy: 617, 6
+  size: 128, 127
+  orig: 128, 127
+  offset: 0, 0
+  index: -1
+right_lower_rerebrace
+  rotate: true
+  xy: 981, 7
+  size: 62, 34
+  orig: 62, 34
+  offset: 0, 0
+  index: -1
+right_pants
+  rotate: true
+  xy: 473, 2
+  size: 116, 142
+  orig: 116, 142
+  offset: 0, 0
+  index: -1
+right_pauldron
+  rotate: false
+  xy: 1017, 8
+  size: 77, 61
+  orig: 77, 61
+  offset: 0, 0
+  index: -1
+right_upper_rerebrace
+  rotate: true
+  xy: 93, 5
+  size: 56, 34
+  orig: 56, 34
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 837, 71
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1
+strap
+  rotate: false
+  xy: 129, 14
+  size: 61, 47
+  orig: 61, 47
+  offset: 0, 0
+  index: -1

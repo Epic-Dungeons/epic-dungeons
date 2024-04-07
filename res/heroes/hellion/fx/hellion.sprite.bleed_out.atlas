@@ -1,0 +1,20 @@
+
+hellion.sprite.bleed_out.png
+size: 1154,550
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blood_splatter
+  rotate: false
+  xy: 566, 54
+  size: 586, 494
+  orig: 586, 494
+  offset: 0, 0
+  index: -1
+polearm_trail
+  rotate: true
+  xy: 2, 2
+  size: 546, 562
+  orig: 546, 562
+  offset: 0, 0
+  index: -1

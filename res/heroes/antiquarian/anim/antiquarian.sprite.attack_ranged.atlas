@@ -1,0 +1,20 @@
+
+antiquarian.sprite.attack_ranged.png
+size: 621,536
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_ranged
+  rotate: false
+  xy: 2, 2
+  size: 552, 532
+  orig: 552, 532
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 556, 177
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

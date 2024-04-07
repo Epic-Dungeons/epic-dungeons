@@ -1,0 +1,27 @@
+
+jester.sprite.afflicted.png
+size: 2133,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: true
+  xy: 1345, 317
+  size: 812, 786
+  orig: 812, 786
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 1345, 22
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

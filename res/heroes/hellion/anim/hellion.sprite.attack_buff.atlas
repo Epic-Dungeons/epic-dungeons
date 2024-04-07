@@ -1,0 +1,20 @@
+
+hellion.sprite.attack_buff.png
+size: 652,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_buff
+  rotate: true
+  xy: 2, 33
+  size: 326, 583
+  orig: 326, 583
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 587, 2
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+hellion.sprite.attack_high.png
+size: 782,562
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_high
+  rotate: false
+  xy: 2, 2
+  size: 713, 558
+  orig: 713, 558
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 717, 203
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

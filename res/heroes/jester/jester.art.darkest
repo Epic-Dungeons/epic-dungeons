@@ -1,0 +1,25 @@
+commonfx: .deathfx death_medium
+
+weapon: .name "jester_weapon_0" .icon "eqp_weapon_0.png"
+weapon: .name "jester_weapon_1" .icon "eqp_weapon_1.png"
+weapon: .name "jester_weapon_2" .icon "eqp_weapon_2.png"
+weapon: .name "jester_weapon_3" .icon "eqp_weapon_3.png"
+weapon: .name "jester_weapon_4" .icon "eqp_weapon_4.png"
+
+armour: .name "jester_armour_0" .icon "eqp_armour_0.png"
+armour: .name "jester_armour_1" .icon "eqp_armour_1.png"
+armour: .name "jester_armour_2" .icon "eqp_armour_2.png"
+armour: .name "jester_armour_3" .icon "eqp_armour_3.png"
+armour: .name "jester_armour_4" .icon "eqp_armour_4.png"
+
+combat_skill: .id "dirk_stab" .icon "one" .anim "attack_dirk" .fx "dirk_stab" .targchestfx "blood_splatter"
+combat_skill: .id "harvest" .icon "two" .anim "attack_sickle" .fx "harvest" .targchestfx "blood_splatter" .area_pos_offset 0 25 .condensed_tooltip_effects true	
+combat_skill: .id "heroic_end" .icon "three" .anim "attack_bow" .fx "finale" .targchestfx "finale_target" .condensed_tooltip_stats true .condensed_tooltip_effects true
+combat_skill: .id "solo" .icon "four" .anim "attack_powerslide" .fx "solo" .targchestfx "solo_target" .area_pos_offset 75 25 .target_area_pos_offset -150 25 .condensed_tooltip_stats true .condensed_tooltip_effects true
+combat_skill: .id "slice_off" .icon "five" .anim "attack_sickle" .fx "slice_off" .targchestfx "blood_splatter" .area_pos_offset 0 25 .condensed_tooltip_stats true .condensed_tooltip_effects true
+combat_skill: .id "battle_ballad" .icon "six" .anim "attack_lute" .fx "battle_ballad" .targchestfx "battle_ballad_target" .can_display_performer_selection_after_turn false
+combat_skill: .id "inspiring_tune" .icon "seven" .fx "inspiring_tune" .anim "attack_lute" .can_display_performer_selection_after_turn false
+
+combat_move_skill: .id "move" .icon "generic_move" .anim "idle"
+
+act_out_display: .attack_friendly_anim "attack_dirk" .attack_friendly_fx "dirk_stab" .attack_friendly_targchestfx "blood_splatter" .attack_friendly_sfx "/char/ally/jester_dirk_stab"

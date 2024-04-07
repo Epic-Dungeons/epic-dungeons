@@ -1,0 +1,20 @@
+
+occultist.sprite.attack_ranged.png
+size: 626,488
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_ranged
+  rotate: true
+  xy: 2, 2
+  size: 484, 557
+  orig: 484, 557
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 561, 129
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

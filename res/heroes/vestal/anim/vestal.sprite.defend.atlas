@@ -1,0 +1,20 @@
+
+vestal.sprite.defend.png
+size: 621,375
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+defend
+  rotate: true
+  xy: 2, 2
+  size: 371, 552
+  orig: 371, 552
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 556, 16
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

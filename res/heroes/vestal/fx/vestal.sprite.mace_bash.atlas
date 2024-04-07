@@ -1,0 +1,13 @@
+
+vestal.sprite.mace_bash.png
+size: 535,287
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mace_trail
+  rotate: false
+  xy: 2, 2
+  size: 531, 283
+  orig: 531, 283
+  offset: 0, 0
+  index: -1

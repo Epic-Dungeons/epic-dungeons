@@ -1,0 +1,56 @@
+resistances: .stun 30% .poison 30% .bleed 40% .disease 30% .move 30% .debuff 30% .death_blow 67% .trap 10%
+crit: .effects "on_crit_healdone"
+weapon: .name "vestal_weapon_0" .atk 0% .dmg 4 8 .crit 1% .spd 4
+weapon: .name "vestal_weapon_1" .atk 0% .dmg 5 10 .crit 2% .spd 4 .upgradeRequirementCode 0
+weapon: .name "vestal_weapon_2" .atk 0% .dmg 6 11 .crit 3% .spd 5 .upgradeRequirementCode 1
+weapon: .name "vestal_weapon_3" .atk 0% .dmg 6 13 .crit 4% .spd 5 .upgradeRequirementCode 2
+weapon: .name "vestal_weapon_4" .atk 0% .dmg 7 14 .crit 5% .spd 6 .upgradeRequirementCode 3
+armour: .name "vestal_armour_0" .def 0% .prot 0 .hp 24 .spd 0
+armour: .name "vestal_armour_1" .def 5% .prot 0 .hp 29 .spd 0 .upgradeRequirementCode 0
+armour: .name "vestal_armour_2" .def 10% .prot 0 .hp 34 .spd 0 .upgradeRequirementCode 1
+armour: .name "vestal_armour_3" .def 15% .prot 0 .hp 39 .spd 0 .upgradeRequirementCode 2
+armour: .name "vestal_armour_4" .def 20% .prot 0 .hp 44 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "mace_bash" .level 0 .type "melee" .atk 85% .dmg 0% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 1"
+combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 2"
+combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3"
+combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4"
+combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5"
+combat_skill: .id "judgement" .level 0 .type "ranged" .atk 85% .dmg -25% .crit 5% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 1"
+combat_skill: .id "judgement" .level 1 .type "ranged" .atk 90% .dmg -25% .crit 6% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 1"
+combat_skill: .id "judgement" .level 2 .type "ranged" .atk 95% .dmg -25% .crit 7% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 2"
+combat_skill: .id "judgement" .level 3 .type "ranged" .atk 100% .dmg -25% .crit 8% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 2"
+combat_skill: .id "judgement" .level 4 .type "ranged" .atk 105% .dmg -25% .crit 9% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 3"
+combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 5% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 6% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
+combat_skill: .id "divine_grace" .level 0 .heal 4 5 .launch 43 .target @4321  .generation_guaranteed true .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 1 .heal 5 6 .launch 43 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 2 .heal 6 7 .launch 43 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 3 .heal 7 8 .launch 43 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 4 .heal 8 9 .launch 43 .target @4321  .is_stall_invalidating false
+combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
+combat_skill: .id "gods_comfort" .level 0 .heal 1 3 .launch 432 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 1 .heal 2 3 .launch 432 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 2 .heal 3 3 .launch 432 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 3 .heal 3 4 .launch 432 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 432 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 1" "Vestal Light 1" "Destealth"
+combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 2" "Vestal Light 2" "Destealth"
+combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 3" "Vestal Light 3" "Destealth"
+combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 4" "Vestal Light 4" "Destealth"
+combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 5" "Vestal Light 5" "Destealth"
+combat_skill: .id "gods_hand" .level 0 .type "ranged" .atk 85% .dmg -50% .crit 1% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 1" "Unholy Killer 1"
+combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 90% .dmg -50% .crit 2% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 2" "Unholy Killer 2"
+combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 95% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"
+combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 100% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"
+combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 105% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"
+tag: .id "religious"
+tag: .id "heavy"
+tag: .id "altar_of_light"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 4
+id_index: .index 3
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 8 .card_chance 1.0

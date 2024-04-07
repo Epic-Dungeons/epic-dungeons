@@ -1,0 +1,20 @@
+
+man_at_arms.sprite.defend.png
+size: 618,477
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+defend
+  rotate: true
+  xy: 2, 2
+  size: 473, 549
+  orig: 473, 549
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 553, 118
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

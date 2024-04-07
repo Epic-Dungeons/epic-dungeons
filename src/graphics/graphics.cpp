@@ -67,6 +67,11 @@ void Renderer::draw(const sf::Drawable &drawable) const {
     window.draw(drawable);
 }
 
+void Renderer::draw(const sf::VertexArray &vertexArray,
+                    const sf::RenderStates &states = sf::RenderStates::Default) const {
+    window.draw(vertexArray, states);
+}
+
 void Renderer::draw(const std::shared_ptr<Drawable> &drawable) const {
     drawable->draw(*this);
 }

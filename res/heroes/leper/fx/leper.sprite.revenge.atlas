@@ -1,0 +1,83 @@
+
+leper.sprite.revenge.png
+size: 1255,342
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+flames
+  rotate: true
+  xy: 448, 26
+  size: 314, 409
+  orig: 314, 409
+  offset: 0, 0
+  index: -1
+flames_background
+  rotate: false
+  xy: 1209, 138
+  size: 44, 202
+  orig: 44, 202
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: true
+  xy: 859, 36
+  size: 304, 348
+  orig: 304, 348
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 2
+  size: 338, 444
+  orig: 338, 444
+  offset: 0, 0
+  index: -1
+spark01
+  rotate: true
+  xy: 521, 8
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+spark02
+  rotate: false
+  xy: 1209, 104
+  size: 19, 32
+  orig: 19, 32
+  offset: 0, 0
+  index: -1
+spark03
+  rotate: false
+  xy: 1209, 73
+  size: 18, 29
+  orig: 18, 29
+  offset: 0, 0
+  index: -1
+spark04
+  rotate: false
+  xy: 1209, 45
+  size: 20, 26
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+spark05
+  rotate: false
+  xy: 1230, 107
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+spark06
+  rotate: true
+  xy: 448, 4
+  size: 20, 36
+  orig: 20, 36
+  offset: 0, 0
+  index: -1
+spark07
+  rotate: true
+  xy: 486, 7
+  size: 17, 33
+  orig: 17, 33
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+abomination.sprite.afflicted.png
+size: 1930,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+afflicted
+  rotate: false
+  xy: 1345, 419
+  size: 583, 710
+  orig: 583, 710
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 1345, 124
+  size: 369, 293
+  orig: 369, 293
+  offset: 0, 0
+  index: -1

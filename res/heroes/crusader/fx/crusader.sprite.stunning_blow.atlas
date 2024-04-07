@@ -1,0 +1,20 @@
+
+crusader.sprite.stunning_blow.png
+size: 404,817
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_glow
+  rotate: false
+  xy: 2, 210
+  size: 400, 605
+  orig: 400, 605
+  offset: 0, 0
+  index: -1
+rim_light
+  rotate: true
+  xy: 2, 2
+  size: 206, 355
+  orig: 206, 355
+  offset: 0, 0
+  index: -1

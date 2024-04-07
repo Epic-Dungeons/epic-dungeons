@@ -1,0 +1,20 @@
+
+arbalest.sprite.camp.png
+size: 539,464
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+camp
+  rotate: true
+  xy: 2, 2
+  size: 460, 470
+  orig: 460, 470
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 474, 105
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

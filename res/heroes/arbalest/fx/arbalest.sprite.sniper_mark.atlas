@@ -1,0 +1,20 @@
+
+arbalest.sprite.sniper_mark.png
+size: 648,363
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rim_light
+  rotate: false
+  xy: 2, 2
+  size: 404, 359
+  orig: 404, 359
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 408, 11
+  size: 350, 238
+  orig: 350, 238
+  offset: 0, 0
+  index: -1

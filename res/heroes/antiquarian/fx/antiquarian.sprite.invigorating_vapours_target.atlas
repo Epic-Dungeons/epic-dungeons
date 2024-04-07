@@ -1,0 +1,83 @@
+
+antiquarian.sprite.invigorating_vapours_target.png
+size: 1244,412
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+black_smoke
+  rotate: true
+  xy: 2, 11
+  size: 399, 608
+  orig: 399, 608
+  offset: 0, 0
+  index: -1
+blue_smoke
+  rotate: true
+  xy: 612, 2
+  size: 408, 568
+  orig: 408, 568
+  offset: 0, 0
+  index: -1
+mote01
+  rotate: false
+  xy: 1182, 304
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+mote02
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+mote09
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+mote08
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+mote04
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+mote05
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+mote06
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+mote07
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+mote03
+  rotate: false
+  xy: 1182, 350
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1

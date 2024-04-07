@@ -1,0 +1,20 @@
+
+man_at_arms.sprite.attack_ranged.png
+size: 942,487
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack_ranged
+  rotate: true
+  xy: 2, 2
+  size: 483, 873
+  orig: 483, 873
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 877, 128
+  size: 357, 63
+  orig: 357, 63
+  offset: 0, 0
+  index: -1

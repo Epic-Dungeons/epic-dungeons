@@ -1,0 +1,25 @@
+commonfx: .deathfx death_medium
+
+weapon: .name "antiquarian_weapon_0" .icon "eqp_weapon_0.png"
+weapon: .name "antiquarian_weapon_1" .icon "eqp_weapon_1.png"
+weapon: .name "antiquarian_weapon_2" .icon "eqp_weapon_2.png"
+weapon: .name "antiquarian_weapon_3" .icon "eqp_weapon_3.png"
+weapon: .name "antiquarian_weapon_4" .icon "eqp_weapon_4.png"
+
+armour: .name "antiquarian_armour_0" .icon "eqp_armour_0.png"
+armour: .name "antiquarian_armour_1" .icon "eqp_armour_1.png"
+armour: .name "antiquarian_armour_2" .icon "eqp_armour_2.png"
+armour: .name "antiquarian_armour_3" .icon "eqp_armour_3.png"
+armour: .name "antiquarian_armour_4" .icon "eqp_armour_4.png"
+
+combat_skill: .id "kris_stab" .icon "one" .anim "attack_melee" .fx "kris_stab" .targchestfx "blood_splatter"
+combat_skill: .id "festering_vapours" .icon "two" .anim "attack_censer" .fx "festering_vapours" .targchestfx "festering_vapours_target" .condensed_tooltip_stats true .condensed_tooltip_effects false
+combat_skill: .id "cower" .icon "three" .anim "defend" .fx "cower" .can_display_performer_selection_after_turn false
+combat_skill: .id "flashpowder" .icon "four" .anim "attack_ranged" .fx "flashpowder" .targfx "flashpowder_target"
+combat_skill: .id "fortifying_vapours" .icon "five" .anim "attack_heal" .fx "fortifying_vapours" .targfx "fortifying_vapours_target" .can_display_performer_selection_after_turn false
+combat_skill: .id "invigorating_vapours" .icon "six" .anim "attack_heal" .fx "invigorating_vapours" .targfx "invigorating_vapours_target" .can_display_performer_selection_after_turn false
+combat_skill: .id "protect_me" .icon "seven" .anim "attack_guard" .fx "protect_me" .can_display_performer_selection_after_turn false
+
+combat_move_skill: .id "move" .icon "generic_move" .anim "idle"
+
+act_out_display: .attack_friendly_anim "attack_melee" .attack_friendly_fx "kris_stab" .attack_friendly_targchestfx "blood_splatter" .attack_friendly_sfx "/char/ally/antiquarian_kris_stab"

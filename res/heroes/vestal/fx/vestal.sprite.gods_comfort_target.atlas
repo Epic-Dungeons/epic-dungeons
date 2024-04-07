@@ -1,0 +1,132 @@
+
+vestal.sprite.gods_comfort_target.png
+size: 398,532
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: false
+  xy: 2, 2
+  size: 217, 528
+  orig: 217, 528
+  offset: 0, 0
+  index: -1
+glow_ray01
+  rotate: false
+  xy: 221, 2
+  size: 86, 528
+  orig: 86, 528
+  offset: 0, 0
+  index: -1
+glow_ray03
+  rotate: false
+  xy: 221, 2
+  size: 86, 528
+  orig: 86, 528
+  offset: 0, 0
+  index: -1
+glow_ray02
+  rotate: false
+  xy: 221, 2
+  size: 86, 528
+  orig: 86, 528
+  offset: 0, 0
+  index: -1
+short_ray01
+  rotate: false
+  xy: 347, 181
+  size: 34, 54
+  orig: 34, 54
+  offset: 0, 0
+  index: -1
+short_ray02
+  rotate: false
+  xy: 309, 429
+  size: 52, 101
+  orig: 52, 101
+  offset: 0, 0
+  index: -1
+short_ray03
+  rotate: false
+  xy: 309, 88
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+short_ray04
+  rotate: false
+  xy: 309, 366
+  size: 49, 61
+  orig: 49, 61
+  offset: 0, 0
+  index: -1
+short_ray05
+  rotate: false
+  xy: 309, 24
+  size: 34, 62
+  orig: 34, 62
+  offset: 0, 0
+  index: -1
+short_ray06
+  rotate: false
+  xy: 346, 295
+  size: 35, 58
+  orig: 35, 58
+  offset: 0, 0
+  index: -1
+short_ray07
+  rotate: false
+  xy: 309, 292
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray08
+  rotate: false
+  xy: 309, 151
+  size: 36, 65
+  orig: 36, 65
+  offset: 0, 0
+  index: -1
+short_ray09
+  rotate: false
+  xy: 347, 126
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray10
+  rotate: false
+  xy: 347, 71
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray11
+  rotate: false
+  xy: 309, 218
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray12
+  rotate: false
+  xy: 360, 355
+  size: 36, 72
+  orig: 36, 72
+  offset: 0, 0
+  index: -1
+short_ray13
+  rotate: false
+  xy: 346, 237
+  size: 35, 56
+  orig: 35, 56
+  offset: 0, 0
+  index: -1
+short_ray14
+  rotate: false
+  xy: 363, 483
+  size: 32, 47
+  orig: 32, 47
+  offset: 0, 0
+  index: -1

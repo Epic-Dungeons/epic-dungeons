@@ -1,0 +1,27 @@
+
+hellion.sprite.heroic.png
+size: 3029,1131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 2
+  size: 1341, 1127
+  orig: 1341, 1127
+  offset: 0, 0
+  index: -1
+halo
+  rotate: true
+  xy: 2729, 820
+  size: 309, 298
+  orig: 309, 298
+  offset: 0, 0
+  index: -1
+heroic
+  rotate: false
+  xy: 1345, 64
+  size: 1382, 1065
+  orig: 1382, 1065
+  offset: 0, 0
+  index: -1

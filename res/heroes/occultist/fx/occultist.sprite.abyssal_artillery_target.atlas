@@ -1,0 +1,34 @@
+
+occultist.sprite.abyssal_artillery_target.png
+size: 2699,401
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: false
+  xy: 892, 52
+  size: 790, 347
+  orig: 790, 347
+  offset: 0, 0
+  index: -1
+tentacle01
+  rotate: true
+  xy: 1684, 2
+  size: 397, 702
+  orig: 397, 702
+  offset: 0, 0
+  index: -1
+tentacle02
+  rotate: false
+  xy: 2388, 22
+  size: 309, 377
+  orig: 309, 377
+  offset: 0, 0
+  index: -1
+tentacle03
+  rotate: true
+  xy: 2, 7
+  size: 392, 888
+  orig: 392, 888
+  offset: 0, 0
+  index: -1

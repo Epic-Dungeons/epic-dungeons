@@ -1,0 +1,118 @@
+
+leper.sprite.solemnity.png
+size: 1001,348
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: true
+  xy: 2, 39
+  size: 307, 527
+  orig: 307, 527
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 531, 8
+  size: 338, 394
+  orig: 338, 394
+  offset: 0, 0
+  index: -1
+short_ray01
+  rotate: false
+  xy: 965, 24
+  size: 34, 54
+  orig: 34, 54
+  offset: 0, 0
+  index: -1
+short_ray02
+  rotate: false
+  xy: 927, 245
+  size: 52, 101
+  orig: 52, 101
+  offset: 0, 0
+  index: -1
+short_ray03
+  rotate: false
+  xy: 927, 14
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+short_ray04
+  rotate: false
+  xy: 927, 144
+  size: 49, 61
+  orig: 49, 61
+  offset: 0, 0
+  index: -1
+short_ray05
+  rotate: false
+  xy: 965, 80
+  size: 34, 62
+  orig: 34, 62
+  offset: 0, 0
+  index: -1
+short_ray06
+  rotate: true
+  xy: 150, 2
+  size: 35, 58
+  orig: 35, 58
+  offset: 0, 0
+  index: -1
+short_ray07
+  rotate: true
+  xy: 2, 2
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray08
+  rotate: false
+  xy: 927, 77
+  size: 36, 65
+  orig: 36, 65
+  offset: 0, 0
+  index: -1
+short_ray09
+  rotate: true
+  xy: 268, 3
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray10
+  rotate: true
+  xy: 323, 3
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1
+short_ray11
+  rotate: true
+  xy: 76, 2
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+short_ray12
+  rotate: true
+  xy: 927, 207
+  size: 36, 72
+  orig: 36, 72
+  offset: 0, 0
+  index: -1
+short_ray13
+  rotate: true
+  xy: 210, 2
+  size: 35, 56
+  orig: 35, 56
+  offset: 0, 0
+  index: -1
+short_ray14
+  rotate: true
+  xy: 378, 5
+  size: 32, 47
+  orig: 32, 47
+  offset: 0, 0
+  index: -1

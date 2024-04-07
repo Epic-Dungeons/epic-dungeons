@@ -1,0 +1,41 @@
+
+occultist.sprite.daemons_pull_target.png
+size: 1374,462
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aura
+  rotate: false
+  xy: 1121, 132
+  size: 251, 328
+  orig: 251, 328
+  offset: 0, 0
+  index: -1
+flash
+  rotate: true
+  xy: 618, 80
+  size: 380, 501
+  orig: 380, 501
+  offset: 0, 0
+  index: -1
+portal
+  rotate: true
+  xy: 2, 183
+  size: 277, 614
+  orig: 277, 614
+  offset: 0, 0
+  index: -1
+tentacle01
+  rotate: false
+  xy: 2, 2
+  size: 543, 179
+  orig: 543, 179
+  offset: 0, 0
+  index: -1
+tentacle02
+  rotate: false
+  xy: 1121, 6
+  size: 210, 124
+  orig: 210, 124
+  offset: 0, 0
+  index: -1
