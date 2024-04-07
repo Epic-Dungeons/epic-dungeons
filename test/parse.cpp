@@ -13,6 +13,7 @@ int main() {
     for (const auto &row : level0_rows) {
         auto skill = engine::parsing::CombatSkill::parse(row);
         std::cout << "Skill: " << skill->name << std::endl;
+        std::cout << "ID: " << skill->id << std::endl;
         std::cout << "Level: " << (int) skill->level << std::endl;
         std::cout << "Type: " << (int) skill->type << std::endl;
         std::cout << "Attack mod: " << skill->attackMod << std::endl;
