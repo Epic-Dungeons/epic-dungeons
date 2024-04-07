@@ -69,9 +69,9 @@ endif()
 
 if (CMAKE_BUILD_TYPE MATCHES Debug)
     # add test executable
-    file(GLOB_RECURSE PARSING_SOURCES src/engine/parsing/*.cpp)
-    add_executable(ParserTest test/parse.cpp ${PARSING_SOURCES})
+    add_executable(ParserTest test/parse.cpp ${SOURCES} ${HEADERS})
     target_include_directories(ParserTest PRIVATE src)
     target_link_libraries(ParserTest PRIVATE spdlog::spdlog)
     target_link_libraries(EpicDungeons PRIVATE Threads::Threads)
+    target_link_libraries(ParserTest PRIVATE sfml-graphics sfml-audio)
 endif()

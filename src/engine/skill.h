@@ -11,11 +11,7 @@ namespace engine {
 
 namespace skills {
 
-enum class Type {
-    kMelee,
-    kRanged,
-    kMove,
-};
+enum class Type { kMelee, kRanged, kMove };
 
 enum class TargetType {
     kSelf,

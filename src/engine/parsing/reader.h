@@ -18,7 +18,9 @@ public:
     uint32_t size() const;
 
     template<typename T = std::string>
-    T getValue(uint32_t index = 0) const;
+    T getValue(uint32_t index = 0) const {
+        return T(values[index]);
+    }
 
     template<>
     std::string getValue<std::string>(uint32_t index) const {
