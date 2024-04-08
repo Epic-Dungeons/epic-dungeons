@@ -33,3 +33,5 @@ build/
 сmake-build-profile/
 сmake-build-asm/
 сmake-build-obj/
+
+*.pyc

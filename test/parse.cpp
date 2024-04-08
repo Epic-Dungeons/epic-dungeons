@@ -9,9 +9,11 @@ int main() {
 
     std::shared_ptr<engine::parsing::FileData> data = engine::parsing::FileReader::read(path);
 
-    auto level0_rows = data->findRows("combat_skill", engine::parsing::IntParam("level", 0));
+    std::vector<engine::parsing::DataRowPtr> level0_rows =
+        data->findRows("combat_skill", engine::parsing::IntParam("level", 0));
+
     for (const auto &row : level0_rows) {
-        auto skill = engine::parsing::CombatSkill::parse(row);
+        std::shared_ptr<engine::skills::CombatSkill> skill = engine::parsing::CombatSkill::parse(row);
         std::cout << "Skill: " << skill->name << std::endl;
         std::cout << "ID: " << skill->id << std::endl;
         std::cout << "Level: " << (int) skill->level << std::endl;
