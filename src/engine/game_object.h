@@ -12,6 +12,8 @@ size_t object_counter = 0;
 
 class GameObject {
 public:
+    std::vector<std::string> tags = {};
+
     GameObject() : objectId(object_counter++) {}
 
     GameObject(const GameObject &other) : objectId(object_counter++) {}

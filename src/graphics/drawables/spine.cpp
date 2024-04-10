@@ -76,12 +76,16 @@ Spine::Spine(const std::string &skeletonPath, const std::string &atlasPath, floa
     spSkeleton_setToSetupPose(m_skeleton.get());
     spSkeleton_updateWorldTransform(m_skeleton.get());
 
-    m_state->listener = (spAnimationStateListener) callback;
+    m_state->spine = this;
+    m_state->listener = getCallback();
 }
 
-void Spine::update(uint64_t deltaTime) {
-    spSkeleton_update(m_skeleton.get(), deltaTime / 1000.0f);
-    spAnimationState_update(m_state.get(), deltaTime / 1000.0f);
+void Spine::update(uint32_t deltaTime) {
+    // if (!m_is_running)
+    //     return;
+    float delta = (float) deltaTime / 1000.0f;
+    spSkeleton_update(m_skeleton.get(), delta);
+    spAnimationState_update(m_state.get(), delta);
     spAnimationState_apply(m_state.get(), m_skeleton.get());
     spSkeleton_updateWorldTransform(m_skeleton.get());
 }
@@ -104,6 +108,10 @@ Spine &Spine::setTimeScale(float timeScale) {
     return *this;
 }
 
+bool Spine::hasAnimation(const std::string &animation) const {
+    return spSkeletonData_findAnimation(m_skeleton->data, animation.c_str()) != nullptr;
+}
+
 Spine &Spine::setAnimation(const std::string &animation) {
     spAnimation *anim = spSkeletonData_findAnimation(m_skeleton->data, animation.c_str());
     if (!anim) {
@@ -111,6 +119,40 @@ Spine &Spine::setAnimation(const std::string &animation) {
         exit(0);
     }
     spAnimationState_setAnimationByName(m_state.get(), 0, animation.c_str(), true);
+    return *this;
+}
+
+Spine &Spine::setColor(const Color &color) {
+    m_color = color;
+    return *this;
+}
+
+Spine &Spine::setLoop(bool loop) {
+    isLoop = loop;
+    return *this;
+}
+
+Spine &Spine::start() {
+    m_is_running = true;
+    return *this;
+}
+
+Spine &Spine::stop() {
+    m_is_running = false;
+    return *this;
+}
+
+bool Spine::isRunning() const {
+    return m_is_running;
+}
+
+bool Spine::isLooping() const {
+    return isLoop;
+}
+
+Spine &Spine::reset() {
+    spSkeleton_setToSetupPose(m_skeleton.get());
+    spAnimationState_clearTracks(m_state.get());
     return *this;
 }
 
@@ -149,10 +191,10 @@ void Spine::draw(const Renderer &renderer) const {
             texture = (sf::Texture *) ((spAtlasRegion *) regionAttachment->rendererObject)->page->rendererObject;
             spRegionAttachment_computeWorldVertices(regionAttachment, slot->bone, m_worldVertices.get());
 
-            sf::Uint8 r = static_cast<sf::Uint8>(m_skeleton->r * slot->r * 255);
-            sf::Uint8 g = static_cast<sf::Uint8>(m_skeleton->g * slot->g * 255);
-            sf::Uint8 b = static_cast<sf::Uint8>(m_skeleton->b * slot->b * 255);
-            sf::Uint8 a = static_cast<sf::Uint8>(m_skeleton->a * slot->a * 255);
+            sf::Uint8 r = static_cast<sf::Uint8>(m_skeleton->r * slot->r * m_color.r);
+            sf::Uint8 g = static_cast<sf::Uint8>(m_skeleton->g * slot->g * m_color.g);
+            sf::Uint8 b = static_cast<sf::Uint8>(m_skeleton->b * slot->b * m_color.b);
+            sf::Uint8 a = static_cast<sf::Uint8>(m_skeleton->a * slot->a * m_color.a);
 
             sf::Vector2u size = texture->getSize();
             vertices[0].color.r = r;
@@ -205,10 +247,10 @@ void Spine::draw(const Renderer &renderer) const {
             texture = (sf::Texture *) ((spAtlasRegion *) mesh->rendererObject)->page->rendererObject;
             spMeshAttachment_computeWorldVertices(mesh, slot, m_worldVertices.get());
 
-            sf::Uint8 r = static_cast<sf::Uint8>(m_skeleton->r * slot->r * 255);
-            sf::Uint8 g = static_cast<sf::Uint8>(m_skeleton->g * slot->g * 255);
-            sf::Uint8 b = static_cast<sf::Uint8>(m_skeleton->b * slot->b * 255);
-            sf::Uint8 a = static_cast<sf::Uint8>(m_skeleton->a * slot->a * 255);
+            sf::Uint8 r = static_cast<sf::Uint8>(m_skeleton->r * slot->r * m_color.r);
+            sf::Uint8 g = static_cast<sf::Uint8>(m_skeleton->g * slot->g * m_color.g);
+            sf::Uint8 b = static_cast<sf::Uint8>(m_skeleton->b * slot->b * m_color.b);
+            sf::Uint8 a = static_cast<sf::Uint8>(m_skeleton->a * slot->a * m_color.a);
             vertex.color.r = r;
             vertex.color.g = g;
             vertex.color.b = b;
@@ -231,10 +273,10 @@ void Spine::draw(const Renderer &renderer) const {
             texture = (sf::Texture *) ((spAtlasRegion *) mesh->rendererObject)->page->rendererObject;
             spSkinnedMeshAttachment_computeWorldVertices(mesh, slot, m_worldVertices.get());
 
-            sf::Uint8 r = static_cast<sf::Uint8>(m_skeleton->r * slot->r * 255);
-            sf::Uint8 g = static_cast<sf::Uint8>(m_skeleton->g * slot->g * 255);
-            sf::Uint8 b = static_cast<sf::Uint8>(m_skeleton->b * slot->b * 255);
-            sf::Uint8 a = static_cast<sf::Uint8>(m_skeleton->a * slot->a * 255);
+            sf::Uint8 r = static_cast<sf::Uint8>(m_skeleton->r * slot->r * m_color.r);
+            sf::Uint8 g = static_cast<sf::Uint8>(m_skeleton->g * slot->g * m_color.g);
+            sf::Uint8 b = static_cast<sf::Uint8>(m_skeleton->b * slot->b * m_color.b);
+            sf::Uint8 a = static_cast<sf::Uint8>(m_skeleton->a * slot->a * m_color.a);
             vertex.color.r = r;
             vertex.color.g = g;
             vertex.color.b = b;
@@ -266,25 +308,19 @@ void Spine::draw(const Renderer &renderer) const {
     renderer.draw(*m_vertexArray, states);
 }
 
-void Spine::callback(spAnimationState *state, int trackIndex, spEventType type, spEvent *event, int loopCount) {
-    spTrackEntry *entry = spAnimationState_getCurrent(state, trackIndex);
-    const char *animationName = (entry && entry->animation) ? entry->animation->name : 0;
+spAnimationStateListener Spine::getCallback() {
+    return [](spAnimationState *state, int trackIndex, spEventType type, spEvent *event, int loopCount) {
+        if (type == SP_ANIMATION_END) {
+            auto spine = static_cast<Spine *>(state->spine);
+            if (!spine->isLoop) {
+                spine->m_is_running = false;
+            }
+        }
+    };
+}
 
-    switch (type) {
-        case SP_ANIMATION_START:
-            LOG_DEBUG("%d start: %s\n", trackIndex, animationName);
-            break;
-        case SP_ANIMATION_END:
-            LOG_DEBUG("%d end: %s\n", trackIndex, animationName);
-            break;
-        case SP_ANIMATION_COMPLETE:
-            LOG_DEBUG("%d complete: %s, %d\n", trackIndex, animationName, loopCount);
-            break;
-        case SP_ANIMATION_EVENT:
-            LOG_DEBUG("%d event: %s, %s: %d, %f, %s\n", trackIndex, animationName, event->data->name, event->intValue,
-                      event->floatValue, event->stringValue);
-            break;
-    }
+std::shared_ptr<Spine> Spine::load(const std::string &skeletonPath, const std::string &atlasPath, float scale) {
+    return std::make_shared<Spine>(skeletonPath, atlasPath, scale);
 }
 
 }   // namespace graphics

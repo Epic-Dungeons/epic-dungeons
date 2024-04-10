@@ -76,9 +76,11 @@ struct spAnimationState {
     spTrackEntry **tracks;
 
     void *rendererObject;
+    void *spine;   // Spine
 
 #ifdef __cplusplus
-    spAnimationState() : data(0), timeScale(0), listener(0), tracksCount(0), tracks(0), rendererObject(0) {}
+    spAnimationState() :
+        data(0), timeScale(0), listener(0), tracksCount(0), tracks(0), rendererObject(0), spine(nullptr) {}
 #endif
 };
 

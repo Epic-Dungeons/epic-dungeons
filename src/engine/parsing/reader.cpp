@@ -83,6 +83,34 @@ uint32_t DataRow::size() const {
     return parameters.size();
 }
 
+bool DataRow::hasParameter(const std::string &name) const {
+    return parameters.find(name) != parameters.end();
+}
+
+std::string DataRow::getString(const std::string &name, uint32_t index, const std::string &defaultValue) const {
+    if (!hasParameter(name))
+        return defaultValue;
+    return getParameter(name)->getValue(index);
+}
+
+int32_t DataRow::getInt(const std::string &name, uint32_t index, const int32_t &defaultValue) const {
+    if (!hasParameter(name))
+        return defaultValue;
+    return getParameter(name)->getValue<int32_t>(index);
+}
+
+float DataRow::getFloat(const std::string &name, uint32_t index, const float &defaultValue) const {
+    if (!hasParameter(name))
+        return defaultValue;
+    return getParameter(name)->getValue<float>(index);
+}
+
+bool DataRow::getBool(const std::string &name, uint32_t index, const bool &defaultValue) const {
+    if (!hasParameter(name))
+        return defaultValue;
+    return getParameter(name)->getValue<bool>(index);
+}
+
 /* ----------------- FileData ----------------- */
 
 FileData::FileData(const std::string &rawData) : rows() {

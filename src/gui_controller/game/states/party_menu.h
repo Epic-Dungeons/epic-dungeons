@@ -178,7 +178,9 @@ class PartyMenu : public GameState {
         } else if (m_state == PartyMenuState::kTeammateChoice) {
             updateTeammateChoice(gm);
         }
-
+        for (const auto &entity : gm->m_engine.lock()->getParty()->getMembers()) {
+            views::Entity::getView(entity)->update(gm->getDeltaTime());
+        }
         render(gm->m_renderer.lock());
     }
 

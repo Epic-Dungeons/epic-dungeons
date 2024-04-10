@@ -1,5 +1,8 @@
 #include "hero.h"
+#include "engine/parsing/reader.h"
+#include "engine/skill.h"
 #include "logging/logger.h"
+#include <chrono>
 
 namespace gui {
 namespace views {
@@ -27,6 +30,23 @@ static std::string toSignedString(const int &value) {
         return "+" + std::to_string(value);
     return std::to_string(value);
 }
+
+static std::unordered_map<std::string, std::shared_ptr<graphics::Spine>> spineCache;
+
+static std::shared_ptr<graphics::Spine> getSpine(const std::string &heroId, const std::string &animationId,
+                                                 const std ::uint32_t objectId) {
+    std::string path = "res/heroes/" + heroId + "/anim/" + heroId + ".sprite." + animationId;
+    std::string key = path + std::to_string(objectId);
+    if (spineCache.find(key) != spineCache.end())
+        return spineCache[key];
+    std::shared_ptr<graphics::Spine> spine = graphics::Spine::load(path + ".json", path + ".atlas");
+    LOG_DEBUG("Loaded spine animation: {}", path);
+    if (spine && spine->hasAnimation(animationId))
+        spine->setAnimation(animationId);
+
+    spineCache[key] = spine;
+    return spine;
+}
 }   // namespace
 
 void Entity::bind(const std::shared_ptr<engine::entities::Entity> &entity) {
@@ -36,14 +56,76 @@ void Entity::bind(const std::shared_ptr<engine::entities::Entity> &entity) {
     m_grave = nullptr;
 
     if (entity) {
-        m_portrait = getSprite("heroes/" + entity->getId() + "/portrait.png");
-        m_grave = getSprite("heroes/grave.png");
+        m_last_update =
+            std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch())
+                .count();
+        m_portrait = nullptr;
+        m_grave = getSprite("res/sprites/heroes/grave.png");
         m_grave->setScale(0.4f).setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER);
-        m_animations[State::kIdle] = getAnimation("heroes/" + entity->getId() + "/idle.gif");
-        m_animations[State::kCombat] = getAnimation("heroes/" + entity->getId() + "/combat.gif");
-        m_animations[State::kWalking] = getAnimation("heroes/" + entity->getId() + "/walk.gif");
+
+        engine::parsing::FileDataPtr art_data =
+            engine::parsing::FileReader::read("res/heroes/" + entity->getId() + "/" + entity->getId() + ".art.darkest");
+        m_animations["idle"] = getSpine(entity->getId(), "idle", objectId);
+        m_animations["idle"]->setLoop(true);
+        m_animations["walk"] = getSpine(entity->getId(), "walk", objectId);
+        m_animations["walk"]->setLoop(true);
+        m_animations["combat"] = getSpine(entity->getId(), "combat", objectId);
+        m_animations["combat"]->setLoop(true);
+        m_animations["camp"] = getSpine(entity->getId(), "camp", objectId);
+        m_animations["camp"]->setLoop(true);
+
+        for (const auto &row : art_data->getRows("combat_skill")) {
+            std::string id = row->getString("anim", 0, "");
+            if (!id.empty())
+                m_animations[id] = getSpine(entity->getId(), id, objectId);
+            else
+                LOG_ERROR("Animation id not found: {}", id);
+        }
         m_prev_hp = entity->getHealth();
     }
+}
+
+void Entity::attack(const std::shared_ptr<engine::skills::Skill> &skill,
+                    const std::vector<std::shared_ptr<engine::entities::Entity>> &targets) {
+    auto entity = m_entity.lock();
+    if (!entity) {
+        logging::error("Entity::attack: Entity is not bound");
+        throw std::runtime_error("Entity::attack: Entity is not bound");
+    }
+    engine::parsing::FileDataPtr art_data =
+        engine::parsing::FileReader::read("res/heroes/" + entity->getId() + "/" + entity->getId() + ".art.darkest");
+    std::string skill_id = skill->id;
+    skill_id = skill_id.substr(skill_id.find_last_of('/') + 1);   // remove owner from skill id
+    engine::parsing::DataRowPtr skill_art =
+        art_data->findRows("combat_skill", engine::parsing::StringParam("id", skill_id)).front();
+    if (!skill_art) {
+        LOG_ERROR("Skill art not found: {}", skill_id);
+        throw std::runtime_error("Skill art not found: " + skill_id);
+    }
+    std::string animation = skill_art->getString("anim", 0, "none");
+    if (m_animations.find(animation) != m_animations.end()) {
+        m_animations[animation]->setLoop(false);   // setup animation
+        setState(animation);
+        if (m_animations[animation]->hasAnimation(animation)) {
+            is_attacking = true;
+        }
+    } else {
+        LOG_ERROR("Animation not found: {}", animation);
+        throw std::runtime_error("Entity::attack: Animation not found: " + animation);
+    }
+}
+
+bool Entity::update(uint64_t deltaTime) {
+    auto entity = m_entity.lock();
+    if (!entity) {
+        logging::error("Entity::update: Entity is not bound");
+        throw std::runtime_error("Entity::update: Entity is not bound");
+    }
+    if (m_damage_anim.isRunning()) {
+        m_damage_anim.update(deltaTime);
+    }
+    m_animations[m_state]->update(deltaTime);
+    return false;
 }
 
 void Entity::draw(const graphics::Renderer &renderer) const {
@@ -58,7 +140,7 @@ void Entity::draw(const graphics::Renderer &renderer) const {
         m_prev_hp = entity->getHealth();
     }
 
-    if (m_draw_stats || m_selection == Selection::kSelected && m_state == State::kCombat)
+    if (m_draw_stats || m_selection == Selection::kSelected && m_state == "combat")
         drawStats(renderer, {0, 0});
 
     static std::map<Selection, graphics::Color> selection_colors = {
@@ -76,35 +158,46 @@ void Entity::draw(const graphics::Renderer &renderer) const {
     };
 
     graphics::Color selection_color = 0xffffff;
-    if (m_state == State::kIdle || m_state == State::kWalking)
+    if (m_state == "idle" || m_state == "walk")
         selection_color = selection_colors.find(m_selection)->second;
-    else if (m_state == State::kCombat) {
+    else if (m_state == "combat") {
         selection_color = battle_selection_colors.find(m_selection)->second;
     }
 
-    graphics::SpritePtr sprite;
     if (!entity->isAlive()) {
-        sprite = m_grave;
-    } else {
-        sprite = m_animations.find(m_state)->second;
-    }
-    if (sprite) {
-        sprite->setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER).setColor(selection_color);
+        m_grave->setOrigin(graphics::Sprite::Origin::BOTTOM_CENTER).setColor(selection_color);
         if (m_direction == Direction::kLeft)
-            sprite->setFlip(true, false);
+            m_grave->setFlip(true, false);
         else if (m_direction == Direction::kRight)
-            sprite->setFlip(false, false);
-        renderer.draw(sprite->setPosition(m_position));
+            m_grave->setFlip(false, false);
+        renderer.draw(m_grave->setPosition(m_position));
     } else {
-        logging::error("No animation found for state " + std::to_string(static_cast<uint8_t>(m_state)));
-        renderer.draw(graphics::Sprite("missing.png").setPosition(m_position));
+        uint64_t current_time =
+            std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch())
+                .count();
+        uint64_t delta_time = current_time - m_last_update;
+        m_last_update = current_time;
+        auto animation = m_animations.find(m_state);
+        if (animation != m_animations.end()) {
+            auto spine = animation->second;
+            spine->update(delta_time);
+            spine->setColor(selection_color);
+            if (m_direction == Direction::kLeft)
+                spine->setFlip(true, false);
+            else if (m_direction == Direction::kRight)
+                spine->setFlip(false, false);
+            spine->setPosition(m_position);
+            renderer.draw(spine);
+        } else {
+            LOG_ERROR("[{}] Animation not found: {}", entity->getId(), m_state);
+            throw std::runtime_error("Entity::draw: Animation not found: " + m_state);
+        }
     }
 
     if (m_damage_anim.isRunning()) {
-        m_damage_anim.update();
         renderer.draw(m_damage_anim.setPosition(m_position));
     }
-    if (m_draw_chance && m_state == State::kCombat && m_selection == Selection::kSelected) {
+    if (m_draw_chance && m_state == "combat" && m_selection == Selection::kSelected) {
         graphics::Text text(std::to_string(static_cast<int>(m_chance)) + "%");
         graphics::Color color =
             graphics::Color::fromHSV(m_chance * 120 / 100, 1, 1);   // 0-120 green, 120-240 yellow, 240-360 red
@@ -142,8 +235,13 @@ Entity &Entity::setPosition(const Vector2d &position) {
     return *this;
 }
 
-Entity &Entity::setState(const State &state) {
+Entity &Entity::setState(const std::string &state) {
+    m_animations[m_state]->stop();
     m_state = state;
+    m_animations[state]->reset();
+    if (m_animations[state]->hasAnimation(state))   // [state] == animation name
+        m_animations[state]->setAnimation(state);   // set animation [state]
+    m_animations[state]->start();
     return *this;
 }
 
@@ -177,7 +275,7 @@ const graphics::SpritePtr &Entity::getPortrait() const {
 }
 
 void Entity::reset() {
-    m_state = State::kIdle;
+    m_state = "idle";
     m_selection = Selection::kNone;
     m_position = {0, 0};
     m_draw_stats = false;
@@ -243,8 +341,8 @@ void DamageAnimation::draw(const graphics::Renderer &renderer) const {
     renderer.draw(text);
 }
 
-DamageAnimation &DamageAnimation::update() {
-    m_timer.update();
+DamageAnimation &DamageAnimation::update(uint64_t deltaTime) {
+    m_timer.update(deltaTime);
     return *this;
 }
 

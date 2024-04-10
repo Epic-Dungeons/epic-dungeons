@@ -29,7 +29,7 @@ public:
         m_anim.start();
         sound::playSound("walking-sound", 80);
         for (const auto &entity : gm->m_engine.lock()->getParty()->getMembers()) {
-            views::Entity::getView(entity)->setState(views::Entity::State::kWalking);
+            views::Entity::getView(entity)->setState("walk");
         }
         v_map->bind(gm->m_engine.lock()->getDungeon());
         v_map->startAnimation();
@@ -41,6 +41,9 @@ public:
         m_anim.update(gm->getDeltaTime());
         if (m_anim.isEnded() && v_map->isAnimationEnded()) {
             gm->changeState(GUIGameState::kEvent);
+        }
+        for (const auto &entity : gm->m_engine.lock()->getCampTeammates()) {
+            views::Entity::getView(entity)->update(gm->getDeltaTime());
         }
         render(r, gm->m_engine.lock());
     }
@@ -75,7 +78,7 @@ public:
     void exit(GameMachine *gm) {
         gm->m_engine.lock()->getDungeon()->setCurrentCell(gm->m_engine.lock()->getDungeon()->getNextCell().lock());
         for (const auto &entity : gm->m_engine.lock()->getParty()->getMembers()) {
-            views::Entity::getView(entity)->setState(views::Entity::State::kIdle);
+            views::Entity::getView(entity)->setState("idle");
         }
     }
 

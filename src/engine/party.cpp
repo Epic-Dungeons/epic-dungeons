@@ -135,7 +135,7 @@ std::shared_ptr<items::Storage> Party::getInventory() const {
 std::vector<std::shared_ptr<skills::Skill>> Party::getSkills() const {
     std::vector<std::shared_ptr<skills::Skill>> skills;
     if (m_inventory->containsItem<items::Bandage>()) {
-        skills.push_back(std::make_shared<skills::Bandage>(m_inventory->getItem<items::Bandage>(), m_inventory));
+        // skills.push_back(std::make_shared<skills::Bandage>(m_inventory->getItem<items::Bandage>(), m_inventory));
     }
     return skills;
 }

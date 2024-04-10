@@ -17,7 +17,7 @@ public:
     DamageAnimation &start();
     DamageAnimation &setPosition(const Vector2d &position);
     DamageAnimation &setDamage(const int &damage);
-    DamageAnimation &update();
+    DamageAnimation &update(uint64_t deltaTime);
 
     const bool isRunning() const;
 
@@ -36,12 +36,6 @@ public:
         bind(entity);
         reset();
     }
-
-    enum class State {
-        kIdle,
-        kCombat,
-        kWalking,
-    };
 
     enum class Selection {
         kNone,
@@ -63,13 +57,21 @@ public:
 
     void reset();
 
-    Entity &setState(const State &state);
+    Entity &setState(const std::string &state);
     Entity &setPosition(const Vector2d &position);
     Entity &setSelection(const Selection &selection);
     Entity &setDrawStats(bool draw_stats);
     Entity &setDirection(const Direction &direction);
     Entity &setChance(const float &chance);
     Entity &setDrawChance(const bool &draw_chance);
+
+    void attack(const std::shared_ptr<engine::skills::Skill> &skill,
+                const std::vector<std::shared_ptr<engine::entities::Entity>> &targets);
+
+    /// @brief Updates the entity view
+    /// @param deltaTime
+    /// @return True if busy(animations are playing, should not be interrupted and "blocks" the game), false otherwise
+    bool update(uint64_t deltaTime);
 
     Direction getDirection() const;
     Vector2d getPosition() const;
@@ -83,20 +85,22 @@ protected:
     void drawStats(const graphics::Renderer &renderer, const Vector2d &position) const;
 
     std::weak_ptr<engine::entities::Entity> m_entity;
-    std::map<State, std::shared_ptr<graphics::Animation>> m_animations;
+    std::unordered_map<std::string, std::shared_ptr<graphics::Spine>> m_animations;
     std::shared_ptr<graphics::Sprite> m_portrait;
     std::shared_ptr<graphics::Sprite> m_grave;
-    State m_state = State::kIdle;
+    std::string m_state = "idle";
     Selection m_selection;
     Vector2d m_position = {0, 0};
 
 private:
+    mutable uint64_t m_last_update = 0;
     bool m_draw_stats = false;
     mutable DamageAnimation m_damage_anim;
     mutable int32_t m_prev_hp = 0;
     Direction m_direction = Direction::kRight;
     float m_chance = 0.0f;
     bool m_draw_chance = false;
+    bool is_attacking = false;
 };
 
 }   // namespace views

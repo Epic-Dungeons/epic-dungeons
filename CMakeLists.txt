@@ -23,6 +23,10 @@ target_link_libraries(EpicDungeons PRIVATE Threads::Threads)
 find_package(SFML 2.5.1 COMPONENTS graphics audio REQUIRED)
 target_link_libraries(EpicDungeons PRIVATE sfml-graphics sfml-audio)
 
+# add fmod
+# find_package(FMOD REQUIRED)
+# target_link_libraries(EpicDungeons PRIVATE FMOD::FMOD)
+
 # unpack gif into frames
 if (NOT DEFINED CLEAN_RES)
     set(CLEAN_RES FALSE)
@@ -51,6 +55,26 @@ if (UNPACK_GIFS)
         execute_process(COMMAND convert -coalesce ${GIF} ${CMAKE_BINARY_DIR}/res/${FRAME_DIR}/frame.png)
     endforeach()
 endif()
+
+file(GLOB HEROES ${CMAKE_BINARY_DIR}/res/heroes/*)
+foreach(HERO ${HEROES})
+    if (IS_DIRECTORY ${HERO})
+        get_filename_component(HERO_NAME ${HERO} NAME)
+        if (EXISTS ${HERO}/${HERO_NAME}_A)
+            # copy recusively all files from the hero_a to the hero folder
+            file(GLOB_RECURSE HERO_A ${HERO}/${HERO_NAME}_A/*)
+            foreach(HERO_A_FILE ${HERO_A})
+                file(RELATIVE_PATH RELATIVE_HERO_A ${HERO}/${HERO_NAME}_A ${HERO_A_FILE})
+                #remove filename
+                get_filename_component(RELATIVE_HERO_A_DIR ${RELATIVE_HERO_A} DIRECTORY)
+                file(COPY ${HERO_A_FILE} DESTINATION ${HERO}/${RELATIVE_HERO_A_DIR})
+            endforeach()
+        else()
+            message(FATAL_ERROR "${HERO_NAME}_A does not exist in ${HERO}")
+        endif()
+    endif()
+endforeach()
+
 
 # add define for debug mode
 if (CMAKE_BUILD_TYPE MATCHES Debug)

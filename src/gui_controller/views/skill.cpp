@@ -1,5 +1,7 @@
 #include "skill.h"
+#include "engine/parsing/reader.h"
 #include "logging/logger.h"
+#include <string>
 
 namespace gui {
 namespace views {
@@ -16,7 +18,25 @@ static std::shared_ptr<graphics::Sprite> getSprite(const std::string &path) {
 }   // namespace
 
 Skill::Skill(const std::shared_ptr<engine::skills::Skill> &skill) : m_skill(skill) {
-    m_sprite = getSprite("skills/" + skill->id + ".png");
+    auto split = skill->id.find_first_of('/');
+    if (split == std::string::npos) {
+        LOG_ERROR("Invalid skill id: {}, (has no owner, for now unknown)", skill->id);
+        throw std::runtime_error("Invalid skill id: " + skill->id);
+    }
+    std::string owner = skill->id.substr(0, split);
+    std::string name = skill->id.substr(split + 1);
+
+    engine::parsing::FileDataPtr art_data =
+        engine::parsing::FileReader::read("res/heroes/" + owner + "/" + owner + ".art.darkest");
+    engine::parsing::DataRowPtr art_row =
+        art_data->findRows("combat_skill", engine::parsing::StringParam("id", name)).front();
+    if (!art_row) {
+        LOG_ERROR("Skill art not found: {}", name);
+        throw std::runtime_error("Skill art not found: " + name);
+    }
+    std::string icon = art_row->getString("icon");
+    std::string icon_path = "res/heroes/" + owner + "/" + owner + ".ability." + icon + ".png";
+    m_sprite = getSprite(icon_path);
 }
 
 void Skill::draw(const graphics::Renderer &renderer) const {

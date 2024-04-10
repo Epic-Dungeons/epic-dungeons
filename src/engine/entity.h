@@ -18,6 +18,10 @@ struct Weapon;
 struct Armor;
 }   // namespace items
 
+namespace parsing {
+class Hero;
+}   // namespace parsing
+
 namespace entities {
 class Party;
 
@@ -34,6 +38,7 @@ struct Resistances {
 
 class Entity : public GameObject, public std::enable_shared_from_this<Entity> {
     friend class Party;
+    friend class engine::parsing::Hero;
 
 public:
     Entity();
@@ -46,11 +51,6 @@ public:
     void setArmor(const std::shared_ptr<items::Armor> &armor);
     const std::shared_ptr<items::Armor> &getArmor() const;
     void updateHealth(const int32_t &amount);
-
-    template<typename skill>
-    void addSkill() {
-        m_skills.push_back(std::make_shared<skill>());
-    }
 
     std::vector<std::shared_ptr<skills::Skill>> getSkills() const;
 
@@ -88,6 +88,7 @@ protected:
     bool m_is_alive = true;
     int32_t m_max_health = 20;
     int32_t m_health = 20;
+    int32_t m_level = 0;
     std::shared_ptr<items::Weapon> m_weapon = nullptr;
     std::shared_ptr<items::Armor> m_armor = nullptr;
     std::vector<std::shared_ptr<skills::Skill>> m_skills;

@@ -11,15 +11,6 @@ namespace engine {
 
 namespace skills {
 
-enum class Type { kMelee, kRanged, kMove };
-
-enum class TargetType {
-    kSelf,
-    kIndividual,
-    kParty,
-    kOtherParty,
-};
-
 struct Skill : public GameObject, public std::enable_shared_from_this<Skill> {
     Skill() = default;
     virtual ~Skill() = default;
@@ -27,8 +18,9 @@ struct Skill : public GameObject, public std::enable_shared_from_this<Skill> {
     std::string id;
     std::string name;
     uint8_t level = 0;
-    Type type = Type::kMelee;
-    TargetType targetType = TargetType::kIndividual;
+    enum class Type { Melee, Ranged, None } type = Type::None;
+    enum class Target { Single, Ranged, Random } target = Target::Single;
+    enum class Side { Self, Party, OtherParty } side = Side::OtherParty;
     std::vector<uint8_t> launchablePositions;
     std::vector<uint8_t> targetablePositions;
 
@@ -44,16 +36,20 @@ struct Skill : public GameObject, public std::enable_shared_from_this<Skill> {
 struct Move : public Skill {
     std::string id = "move";
     std::string name = "Move";
-    Type type = Type::kMove;
-    TargetType targetType = TargetType::kIndividual;
-
+    uint8_t level = 0;
     uint8_t distance = 0;
+    std::vector<uint8_t> launchablePositions = {1, 2, 3, 4};
+    std::vector<uint8_t> targetablePositions = {1, 2, 3, 4};
 };
 
 struct CombatSkill : public Skill {
     float damageMod = 0;
     float attackMod = 0;
     float criticalChanceMod = 0;
+    int8_t healMin = 0;
+    int8_t healMax = 0;
+
+    Type type = Type::Melee;
 };
 
 struct AttackResult {
@@ -68,7 +64,9 @@ struct ConsumeItemSkill : public Skill {
         id = consumable->id;
         name = consumable->name;
         level = 0;
-        targetType = TargetType::kSelf;
+        type = Type::None;
+        target = Target::Single;
+        side = Side::Self;
         launchablePositions = {1, 2, 3, 4};
         targetablePositions = {1, 2, 3, 4};
     }
@@ -76,6 +74,10 @@ struct ConsumeItemSkill : public Skill {
     std::shared_ptr<items::Consumable> consumable;
     std::shared_ptr<items::Storage> storage;
 };
+
+using Type = Skill::Type;
+using Target = Skill::Target;
+using Side = Skill::Side;
 
 }   // namespace skills
 }   // namespace engine

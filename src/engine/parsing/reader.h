@@ -110,6 +110,12 @@ public:
 
     std::vector<std::string> getParameterNames() const;
 
+    bool hasParameter(const std::string &name) const;
+    std::string getString(const std::string &name, uint32_t index = 0, const std::string &defaultValue = "") const;
+    float getFloat(const std::string &name, uint32_t index = 0, const float &defaultValue = 0.0f) const;
+    int32_t getInt(const std::string &name, uint32_t index = 0, const int32_t &defaultValue = 0) const;
+    bool getBool(const std::string &name, uint32_t index = 0, const bool &defaultValue = false) const;
+
     uint32_t size() const;
 
 private:
@@ -164,7 +170,7 @@ typedef std::shared_ptr<DataRow> DataRowPtr;
 typedef std::shared_ptr<FileData> FileDataPtr;
 typedef std::pair<const char *, int32_t> IntParam;
 typedef std::pair<const char *, float> FloatParam;
-typedef std::pair<const char *, const char *> StringParam;
+typedef std::pair<const char *, std::string> StringParam;
 
 }   // namespace parsing
 }   // namespace engine

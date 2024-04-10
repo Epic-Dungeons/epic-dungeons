@@ -78,7 +78,7 @@ public:
         renderer->clear();
 
         uint8_t alpha = std::round(m_anim.get());
-        static graphics::Sprite background = graphics::Sprite("background/main_menu/background.png")
+        static graphics::Sprite background = graphics::Sprite("res/sprites/background/main_menu/background.png")
                                                  .toSizeX(cfg::WINDOW_WIDTH)
                                                  .setPosition({0, 0});   // NOLINT
         static graphics::Text title = graphics::Text("Epic Dungeon")

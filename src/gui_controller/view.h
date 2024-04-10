@@ -9,6 +9,7 @@ namespace views {
 
 class View : public graphics::Drawable, public std::enable_shared_from_this<View> {
 public:
+    View() = default;
     virtual ~View() = default;
 
 protected:

@@ -54,15 +54,14 @@ class Battle : public GameState {
         views::Entity::Direction entity_team = entity.getDirection();
         logging::info("Entity team: {}", entity_team == views::Entity::Direction::kRight ? "Right" : "Left");
 
-        if (skill.targetType == engine::skills::TargetType::kSelf) {
+        if (skill.side == engine::skills::Side::Self) {
             logging::info("Target team: Self");
             if (skill.isUsable(getPosition(entity.getEntity())))
                 return {entity.getEntity()};
             return {};
         }
 
-        if (skill.targetType == engine::skills::TargetType::kIndividual
-            || skill.targetType == engine::skills::TargetType::kOtherParty) {
+        if (skill.side == engine::skills::Side::OtherParty) {
             target_team = entity_team == views::Entity::Direction::kRight ? views::Entity::Direction::kLeft
                                                                           : views::Entity::Direction::kRight;
         } else {   // kParty or kSelf
@@ -91,7 +90,7 @@ class Battle : public GameState {
         });
 
         for (const auto &entity : m_queue) {
-            views::Entity::getView(entity)->setState(views::Entity::State::kCombat);
+            views::Entity::getView(entity)->setState("combat");
         }
         m_current_entity = 0;
         auto party = gm->m_engine.lock()->getParty();
@@ -126,8 +125,7 @@ class Battle : public GameState {
             return;
         m_targets.clear();
         m_current_skill = skill;
-        if (skill->targetType == engine::skills::TargetType::kIndividual
-            && skill->type == engine::skills::Type::kMelee) {
+        if (skill->side == engine::skills::Side::OtherParty && skill->target == engine::skills::Target::Single) {
             auto target = targets[rand() % targets.size()];
             m_targets.push_back(target);
         } else {
@@ -153,7 +151,7 @@ class Battle : public GameState {
             if (km.isClicked(keyboard::KEY_ENTER)) {
                 m_current_skill = m_skill_selection.getSelectedSkill();
                 m_targets.clear();
-                if (m_current_skill->targetType == engine::skills::TargetType::kSelf) {
+                if (m_current_skill->side == engine::skills::Side::Self) {
                     m_targets.push_back(entity);
                     m_state = State::kAttack;
                 } else {
@@ -164,8 +162,8 @@ class Battle : public GameState {
                         return;
                     }
                     selected_enemy = 0;
-                    if (m_current_skill->targetType == engine::skills::TargetType::kIndividual
-                        && m_current_skill->type == engine::skills::Type::kMelee) {
+                    if (m_current_skill->side == engine::skills::Side::OtherParty
+                        && m_current_skill->type == engine::skills::Type::Melee) {
                         views::Entity::getView(m_targets[selected_enemy])
                             ->setSelection(views::Entity::Selection::kSelected)
                             .setChance(entity->calculateHitChance(m_targets[selected_enemy], m_current_skill))
@@ -182,7 +180,7 @@ class Battle : public GameState {
                 }
             }
         } else {
-            if (m_current_skill->targetType == engine::skills::TargetType::kIndividual) {
+            if (m_current_skill->target == engine::skills::Target::Single) {
                 if (km.isClicked(keyboard::Hotkey::MOVE_RIGHT)) {
                     views::Entity::getView(m_targets[selected_enemy])
                         ->setSelection(views::Entity::Selection::kSelectable)
@@ -250,6 +248,7 @@ class Battle : public GameState {
     void attack(GameMachine *gm) {
         auto attacker = m_queue[m_current_entity];
         auto skill = m_current_skill;
+        auto v_attacker = views::Entity::getView(attacker);
         if (!attack_started) {
             attack_timer.init(0, 1, 250, [](float x) {
                 return sin(x * M_PI);
@@ -259,6 +258,7 @@ class Battle : public GameState {
             attack_started = true;
             attack_ended = false;
             attack_timer.start();
+            v_attacker->attack(skill, m_targets);
             return;
         }
         if (!attack_ended) {
@@ -287,6 +287,7 @@ class Battle : public GameState {
             m_current_skill = nullptr;
             m_targets.clear();
             m_state = State::kNextEntity;
+            v_attacker->setState("combat");
             attack_started = false;
             attack_ended = false;
         }
@@ -345,6 +346,8 @@ class Battle : public GameState {
 
     void update(GameMachine *gm) override {
         km.update();
+        for (const auto &entity : m_queue)
+            views::Entity::getView(entity)->update(gm->getDeltaTime());
         render(gm->m_renderer.lock(), gm->m_engine.lock());
         if (skip_count > 8) {
             skip_count = 0;
@@ -463,7 +466,7 @@ class Battle : public GameState {
         m_queue.clear();
         m_targets.clear();
         for (const auto &entity : gm->m_engine.lock()->getParty()->getMembers()) {
-            views::Entity::getView(entity)->setState(views::Entity::State::kIdle);
+            views::Entity::getView(entity)->setState("idle");
         }
         m_current_skill = nullptr;
     }

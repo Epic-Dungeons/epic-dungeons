@@ -28,7 +28,7 @@ static std::shared_ptr<graphics::Sprite> getSprite(const std::string &path) {
 }   // namespace
 
 Map::Map() : View() {
-    const std::string map_path = "map/";
+    const std::string map_path = "res/sprites/map/";
     // clang-format off
     logging::info("Loading map sprites");
     m_hall_sprites = {

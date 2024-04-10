@@ -1,16 +1,17 @@
 #pragma once
 
-#include "engine/skill.h"
+#include "engine/item.h"
 #include "reader.h"
 #include <memory>
 #include <string>
+#include <vector>
 
 namespace engine {
 namespace parsing {
 
-class CombatSkill {
+class Weapon {
 public:
-    static std::shared_ptr<skills::CombatSkill> parse(const DataRowPtr &data, const std::string &prefix = "");
+    static std::shared_ptr<items::Weapon> parse(const DataRowPtr &data);
 };
 
 }   // namespace parsing

@@ -43,6 +43,7 @@ protected:
     std::shared_ptr<graphics::Sprite> m_sprite;
     Selection m_selection;
     Vector2d m_position = {0, 0};
+    std::string m_animation;
 };
 
 }   // namespace views

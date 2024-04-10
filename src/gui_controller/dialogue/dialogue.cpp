@@ -97,12 +97,12 @@ std::vector<std::string> splitByLines(const std::string &str) {
 DialogueWindow::DialogueWindow(const std::string &content, const std::string &sprite) :
     m_content(splitByLines(preprocessString(content))), m_sprite(sprite), m_content_len(content.length()),
     m_current_index(0), m_current_line(0), m_font_size(cfg::DIALOGUE_FONT_SIZE), m_is_finished(false),
-    m_demo_sprite(std::make_shared<graphics::Sprite>("test1.png")) {}
+    m_demo_sprite(std::make_shared<graphics::Sprite>("res/sprites/test1.png")) {}
 
 DialogueWindow::DialogueWindow() :
     m_content(std::vector<std::string>()), m_sprite(""), m_content_len(0), m_current_index(0), m_current_line(0),
     m_font_size(cfg::DIALOGUE_FONT_SIZE), m_is_finished(false),
-    m_demo_sprite(std::make_shared<graphics::Sprite>("test1.png")) {}
+    m_demo_sprite(std::make_shared<graphics::Sprite>("res/sprites/test1.png")) {}
 
 void DialogueWindow::changeQuote(const std::string &new_content, const std::string &new_sprite) {
     std::string preprocessed_str = preprocessString(new_content);

@@ -34,7 +34,7 @@ Chest &Chest::bind(const std::shared_ptr<engine::Chest> &chest) {
     } else {
         m_chest = chest;
         v_storage->bind(chest->getStorage());
-        m_sprite = getSprite("chest.png");
+        m_sprite = getSprite("res/sprites/chest.png");
     }
     is_open = false;
     return *this;

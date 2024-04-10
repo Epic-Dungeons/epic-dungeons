@@ -24,7 +24,6 @@ struct Item : public GameObject {
     std::string id;
     std::string name;
     std::string description = "";
-
     bool isStackable = false;
 
     virtual ~Item() {
@@ -71,6 +70,7 @@ struct Armor : public Item {
     int32_t defenseMod = 0;
     int32_t protectionMod = 0;
     int32_t speedMod = 0;
+    int32_t healthMod = 0;
 };
 
 typedef std::shared_ptr<Item> ItemPtr;
